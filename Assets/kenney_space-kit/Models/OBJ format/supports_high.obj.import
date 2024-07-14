@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cu7mo3vf3wvvt"
+path="res://.godot/imported/supports_high.obj-31a4c6ffc932e5237af87223b5c7c58b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/supports_high.obj-31a4c6ffc932e5237af87223b5c7c58b.mesh"]
+
+source_file="res://Assets/kenney_space-kit/Models/OBJ format/supports_high.obj"
+dest_files=["res://.godot/imported/supports_high.obj-31a4c6ffc932e5237af87223b5c7c58b.mesh", "res://.godot/imported/supports_high.obj-31a4c6ffc932e5237af87223b5c7c58b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

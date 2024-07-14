@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://4nrhomahwt48"
+path="res://.godot/imported/platform_straight.obj-3c26c60397a6140ee585e1f7b8c03d71.mesh"
+
+[deps]
+
+files=["res://.godot/imported/platform_straight.obj-3c26c60397a6140ee585e1f7b8c03d71.mesh"]
+
+source_file="res://Assets/kenney_space-kit/Models/OBJ format/platform_straight.obj"
+dest_files=["res://.godot/imported/platform_straight.obj-3c26c60397a6140ee585e1f7b8c03d71.mesh", "res://.godot/imported/platform_straight.obj-3c26c60397a6140ee585e1f7b8c03d71.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

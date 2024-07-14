@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5nah2x0id46t"
+path="res://.godot/imported/tunnel_diagonal_long_A.obj-5e97bcd50dc9a1a2ee33efb5dc3c0cd1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tunnel_diagonal_long_A.obj-5e97bcd50dc9a1a2ee33efb5dc3c0cd1.mesh"]
+
+source_file="res://Assets/KayKit_Space_Base_Bits_1.0_FREE/Assets/obj/tunnel_diagonal_long_A.obj"
+dest_files=["res://.godot/imported/tunnel_diagonal_long_A.obj-5e97bcd50dc9a1a2ee33efb5dc3c0cd1.mesh", "res://.godot/imported/tunnel_diagonal_long_A.obj-5e97bcd50dc9a1a2ee33efb5dc3c0cd1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b6ni2qnll8u7s"
+path="res://.godot/imported/chimney.obj-909614a132c81b0bbd1d0398ce3a3938.mesh"
+
+[deps]
+
+files=["res://.godot/imported/chimney.obj-909614a132c81b0bbd1d0398ce3a3938.mesh"]
+
+source_file="res://Assets/kenney_space-kit/Models/OBJ format/chimney.obj"
+dest_files=["res://.godot/imported/chimney.obj-909614a132c81b0bbd1d0398ce3a3938.mesh", "res://.godot/imported/chimney.obj-909614a132c81b0bbd1d0398ce3a3938.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,104 @@
+[gd_scene load_steps=11 format=3 uid="uid://dno1gnvkkkf1c"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy/enemy.gd" id="1_84k4e"]
+[ext_resource type="Texture2D" uid="uid://fgvvcllvkc4x" path="res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_red.png" id="2_dds41"]
+[ext_resource type="Texture2D" uid="uid://den8lsqssejly" path="res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_blue.png" id="3_2lk1y"]
+[ext_resource type="Texture2D" uid="uid://njepx503ji5x" path="res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png" id="4_rb6dw"]
+[ext_resource type="Texture2D" uid="uid://m0vo3wlmy4pw" path="res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed01.png" id="5_wnjqo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2bbs"]
+size = Vector2(82, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgow0"]
+size = Vector2(20, 38)
+
+[sub_resource type="Animation" id="Animation_tptno"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_4t3h7"]
+resource_name = "muzzleflash"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t0sli"]
+_data = {
+"RESET": SubResource("Animation_tptno"),
+"muzzleflash": SubResource("Animation_4t3h7")
+}
+
+[node name="Enemy" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_84k4e")
+
+[node name="RedSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_dds41")
+
+[node name="BlueSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("3_2lk1y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 13)
+shape = SubResource("RectangleShape2D_k2bbs")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_lgow0")
+
+[node name="Muzzle1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -41)
+rotation = -3.14159
+scale = Vector2(2.36, 1)
+texture = ExtResource("4_rb6dw")
+region_enabled = true
+region_rect = Rect2(0, 0, 9, 13.6122)
+
+[node name="Muzzle2" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(0, -41)
+rotation = -3.14159
+scale = Vector2(2.36, 1)
+texture = ExtResource("5_wnjqo")
+region_enabled = true
+region_rect = Rect2(0, 0, 9, 13.6122)
+
+[node name="MuzzleFlash" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Muzzle1")
+libraries = {
+"": SubResource("AnimationLibrary_t0sli")
+}
+
+[node name="SpawnPos" type="Marker2D" parent="."]
+position = Vector2(0, -37)
+
+[node name="FireSpeed" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[connection signal="timeout" from="FireSpeed" to="." method="_on_fire_speed_timeout"]

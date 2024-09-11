@@ -1,0 +1,10 @@
+Label
+Control
+Timer
+AnimationPlayer
+Sprite2D
+Marker2D
+ProgressBar
+CollisionShape2D
+Area2D
+CharacterBody2D

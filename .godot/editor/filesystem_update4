@@ -1,0 +1,14 @@
+res://Scenes/Player.tscn
+res://Scripts/player.gd
+res://Scenes/Level1.tscn
+res://Scripts/global.gd
+res://Scenes/PlayerBullet.tscn
+res://Scripts/playerBullet.gd
+res://Scenes/LevelHUD.tscn
+res://Scenes/Player/Player.tscn
+res://Scenes/Player/PlayerBullet.tscn
+res://Scenes/Enemy/Enemy.tscn
+res://Scripts/Enemy/enemy.gd
+res://Scenes/Enemy/EnemyBullet.tscn
+res://Scripts/Player/player.gd
+res://Scripts/Player/playerBullet.gd

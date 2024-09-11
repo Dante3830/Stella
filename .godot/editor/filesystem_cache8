@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1726007938
+::res://::1726007973
 icon.svg::CompressedTexture2D::4937016793600591067::1720913996::1720915726::1::::<><>::
 README.md::TextFile::-1::1720382064::0::1::::<><>::
-::res://Assets/::1725928830
+::res://Assets/::1726071426
 ::res://Assets/Fonts/::1725928938
 forgotten futurist bd it.otf::FontFile::4325569289589301681::1725839880::1725928938::1::::<><>::
 forgotten futurist bd.otf::FontFile::425499719322032264::1725839880::1725928938::1::::<><>::
@@ -14,7 +14,341 @@ Orbitron-ExtraBold.ttf::FontFile::1943827225772768768::1725491480::1725928938::1
 Orbitron-Medium.ttf::FontFile::4624569212821058717::1725491480::1725928938::1::::<><>::
 Orbitron-Regular.ttf::FontFile::4043794727836709219::1725491480::1725928938::1::::<><>::
 Orbitron-SemiBold.ttf::FontFile::4006814550937178539::1725491480::1725928938::1::::<><>::
-::res://Assets/kenney_space-shooter-redux/::1725835714
+::res://Assets/Foozle_2DS0011_Void_MainShip/::1726071443
+Readme.txt::TextFile::-1::1660832304::0::1::::<><>::
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/::1726071443
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Bases/::1726071443
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Bases/Aseprite/::1660826628
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Bases/PNGs/::1660826628
+Main Ship - Base - Damaged.png::CompressedTexture2D::5089573456812241532::1645793962::1726071542::1::::<><>::
+Main Ship - Base - Full health.png::CompressedTexture2D::6964951268480607774::1645793962::1726071542::1::::<><>::
+Main Ship - Base - Slight damage.png::CompressedTexture2D::1639664569097385667::1645793962::1726071542::1::::<><>::
+Main Ship - Base - Very damaged.png::CompressedTexture2D::1754181520704299687::1645793962::1726071542::1::::<><>::
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Engine Effects/::1726071454
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Engine Effects/Aseprite/::1660831562
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Engine Effects/PNGs/::1660826628
+Main Ship - Engines - Base Engine - Idle.png::CompressedTexture2D::7753629206158880660::1645793962::1726071542::1::::<><>::
+Main Ship - Engines - Base Engine - Powering.png::CompressedTexture2D::7804308156825843064::1645793962::1726071542::1::::<><>::
+Main Ship - Engines - Base Engine - Spritesheet.png::CompressedTexture2D::2314687669748367618::1645793962::1726071542::1::::<><>::
+Main Ship - Engines - Big Pulse Engine - Idle.png::CompressedTexture2D::2318337042684666750::1645793962::1726071542::1::::<><>::
+Main Ship - Engines - Big Pulse Engine - Powering.png::CompressedTexture2D::1921659072606562125::1645793962::1726071542::1::::<><>::
+Main Ship - Engines - Big Pulse Engine - Spritesheet.png::CompressedTexture2D::5445123949705161034::1645793962::1726071542::1::::<><>::
+Main Ship - Engines - Burst Engine - Idle.png::CompressedTexture2D::8441829325067513987::1645793962::1726071542::1::::<><>::
+Main Ship - Engines - Burst Engine - Powering.png::CompressedTexture2D::7770152679851483740::1645793962::1726071542::1::::<><>::
+Main Ship - Engines - Burst Engine - Spritesheet.png::CompressedTexture2D::8767525146237609023::1645793962::1726071542::1::::<><>::
+Main Ship - Engines - Supercharged Engine - Idle.png::CompressedTexture2D::8663100204172133826::1645793962::1726071542::1::::<><>::
+Main Ship - Engines - Supercharged Engine - Powering.png::CompressedTexture2D::4497857952232505798::1645793962::1726071542::1::::<><>::
+Main Ship - Engines - Supercharged Engine - Spritesheet.png::CompressedTexture2D::4188441337329730828::1645793962::1726071542::1::::<><>::
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Engines/::1660826628
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Engines/Aseprite/::1660826628
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Engines/PNGs/::1660826628
+Main Ship - Engines - Base Engine.png::CompressedTexture2D::6670138545400095183::1645793962::1726071542::1::::<><>::
+Main Ship - Engines - Big Pulse Engine.png::CompressedTexture2D::2583117724908192865::1645793962::1726071542::1::::<><>::
+Main Ship - Engines - Burst Engine.png::CompressedTexture2D::8402758636657859135::1645793962::1726071542::1::::<><>::
+Main Ship - Engines - Supercharged Engine.png::CompressedTexture2D::7561362964175730310::1645793962::1726071542::1::::<><>::
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Shields/::1660826628
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Shields/Aseprite/::1660826628
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Shields/PNGs/::1660826628
+Main Ship - Shields - Front and Side Shield.png::CompressedTexture2D::9135223423128430680::1645793962::1726071542::1::::<><>::
+Main Ship - Shields - Front Shield.png::CompressedTexture2D::1286485597056433646::1645793962::1726071542::1::::<><>::
+Main Ship - Shields - Invincibility Shield.png::CompressedTexture2D::1833674116774717566::1645793962::1726071542::1::::<><>::
+Main Ship - Shields - Round Shield.png::CompressedTexture2D::583011517813954688::1645793962::1726071542::1::::<><>::
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Weapons/::1660826628
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Weapons/Aseprite/::1660829182
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Weapons/PNGs/::1660826628
+Main Ship - Weapons - Auto Cannon.png::CompressedTexture2D::830423505118248869::1645793962::1726071542::1::::<><>::
+Main Ship - Weapons - Big Space Gun.png::CompressedTexture2D::3411889209880079092::1645793962::1726071541::1::::<><>::
+Main Ship - Weapons - Rockets.png::CompressedTexture2D::6555670496586423665::1645793962::1726071541::1::::<><>::
+Main Ship - Weapons - Zapper.png::CompressedTexture2D::7399266098584761107::1645793962::1726071541::1::::<><>::
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main ship weapons/::1726071465
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main ship weapons/Aseprite/::1660829366
+::res://Assets/Foozle_2DS0011_Void_MainShip/Main ship weapons/PNGs/::1660829366
+Main ship weapon - Projectile - Auto cannon bullet.png::CompressedTexture2D::2473561049646990607::1645793962::1726071541::1::::<><>::
+Main ship weapon - Projectile - Big Space Gun.png::CompressedTexture2D::5310671283463447472::1645793962::1726071541::1::::<><>::
+Main ship weapon - Projectile - Rocket.png::CompressedTexture2D::2547924430208025064::1645793962::1726071541::1::::<><>::
+Main ship weapon - Projectile - Zapper.png::CompressedTexture2D::1028543080153373839::1645793964::1726071541::1::::<><>::
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/::1726071470
+Kla'ed - Ships Preview.png::CompressedTexture2D::1637540900117834292::1646894150::1726071538::1::::<><>::
+Readme.txt::TextFile::-1::1660835688::0::1::::<><>::
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/_Previews/::1660834176
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/_Previews/Kla'ed/::1660834170
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/_Previews/Kla'ed/Bases/::1660834168
+Kla'ed - Battlecruiser - Base.png::CompressedTexture2D::4950684635942837626::1647000396::1726071537::1::::<><>::
+Kla'ed - Bomber - Base.png::CompressedTexture2D::5818612705772897284::1647000394::1726071537::1::::<><>::
+Kla'ed - Dreadnought - Base.png::CompressedTexture2D::8767526529017180613::1647000420::1726071537::1::::<><>::
+Kla'ed - Fighter - Base.png::CompressedTexture2D::5164201283369369695::1647000416::1726071537::1::::<><>::
+Kla'ed - Frigate - Base.png::CompressedTexture2D::6276332950787830072::1647000410::1726071537::1::::<><>::
+Kla'ed - Scout - Base.png::CompressedTexture2D::3347130013095149675::1647000408::1726071537::1::::<><>::
+Kla'ed - Support ship - Base.png::CompressedTexture2D::5014581089808920588::1647000402::1726071537::1::::<><>::
+Kla'ed - Torpedo Ship - Base.png::CompressedTexture2D::2752649994615868499::1647000400::1726071537::1::::<><>::
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/_Previews/Kla'ed/Destruction/::1660834170
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/_Previews/Kla'ed/Engine/::1660834170
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/_Previews/Kla'ed/Projectiles/::1660834170
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/_Previews/Kla'ed/Shield/::1660834170
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/_Previews/Kla'ed/Weapons/::1660834170
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/::1726071470
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/::1660834142
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/Aseprite/::1660834142
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/::1660834142
+Kla'ed - Battlecruiser - Base.png::CompressedTexture2D::7107239004724972480::1647000988::1726071537::1::::<><>::
+Kla'ed - Bomber - Base.png::CompressedTexture2D::8511586909708580927::1647001008::1726071537::1::::<><>::
+Kla'ed - Dreadnought - Base.png::CompressedTexture2D::4828510463605651702::1647001024::1726071537::1::::<><>::
+Kla'ed - Fighter - Base.png::CompressedTexture2D::7744873745286891990::1647001042::1726071537::1::::<><>::
+Kla'ed - Frigate - Base.png::CompressedTexture2D::2492742044764738225::1647001060::1726071537::1::::<><>::
+Kla'ed - Scout - Base.png::CompressedTexture2D::97638945950001902::1647001072::1726071537::1::::<><>::
+Kla'ed - Support ship - Base.png::CompressedTexture2D::8035966897749856878::1647001076::1726071537::1::::<><>::
+Kla'ed - Torpedo Ship - Base.png::CompressedTexture2D::8190137816839377768::1647001004::1726071537::1::::<><>::
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Destruction/::1660834142
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Destruction/Aseprite/::1660834142
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Destruction/PNGs/::1660834142
+Kla'ed - Battlecruiser - Destruction.png::CompressedTexture2D::3311773606214505862::1647001260::1726071537::1::::<><>::
+Kla'ed - Bomber - Destruction.png::CompressedTexture2D::1067545108714103699::1647001278::1726071537::1::::<><>::
+Kla'ed - Dreadnought - Destruction.png::CompressedTexture2D::1125563542844399950::1647001284::1726071537::1::::<><>::
+Kla'ed - Fighter - Destruction.png::CompressedTexture2D::7888010032418676682::1647001206::1726071541::1::::<><>::
+Kla'ed - Frigate - Destruction.png::CompressedTexture2D::1202427481338716256::1647001214::1726071541::1::::<><>::
+Kla'ed - Scout - Destruction.png::CompressedTexture2D::6549252826716578984::1647001224::1726071541::1::::<><>::
+Kla'ed - Support ship - Destruction.png::CompressedTexture2D::8669765011842701792::1647001230::1726071541::1::::<><>::
+Kla'ed - Torpedo Ship - Destruction.png::CompressedTexture2D::4119009739087722919::1647001238::1726071541::1::::<><>::
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Engine/::1660834142
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Engine/Aseprite/::1660834142
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Engine/PNGs/::1660834142
+Kla'ed - Battlecruiser - Engine.png::CompressedTexture2D::8514053986376180358::1647001334::1726071541::1::::<><>::
+Kla'ed - Bomber - Engine.png::CompressedTexture2D::196267233836042280::1647001520::1726071541::1::::<><>::
+Kla'ed - Dreadnought - Engine.png::CompressedTexture2D::8939297103406289573::1647001338::1726071541::1::::<><>::
+Kla'ed - Fighter - Engine.png::CompressedTexture2D::8544446468746859800::1647001406::1726071541::1::::<><>::
+Kla'ed - Frigate - Engine.png::CompressedTexture2D::7116974647117544325::1647001412::1726071541::1::::<><>::
+Kla'ed - Scout - Engine.png::CompressedTexture2D::420262627620473043::1647001430::1726071541::1::::<><>::
+Kla'ed - Support ship - Engine.png::CompressedTexture2D::1503784073358543093::1647001448::1726071541::1::::<><>::
+Kla'ed - Torpedo Ship - Engine.png::CompressedTexture2D::1801937810221863914::1647001502::1726071541::1::::<><>::
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Projectiles/::1726071476
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Projectiles/Aseprite/::1660834142
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Projectiles/PNGs/::1660834142
+Kla'ed - Big Bullet.png::CompressedTexture2D::368834510965646804::1647001576::1726071541::1::::<><>::
+Kla'ed - Bullet.png::CompressedTexture2D::3844999510900897115::1647001598::1726071541::1::::<><>::
+Kla'ed - Ray.png::CompressedTexture2D::7079775838506994772::1647001606::1726071541::1::::<><>::
+Kla'ed - Torpedo.png::CompressedTexture2D::1197953247728142869::1647001624::1726071541::1::::<><>::
+Kla'ed - Wave.png::CompressedTexture2D::7298012346512427058::1647001594::1726071541::1::::<><>::
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Shield/::1660834142
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Shield/Aseprite/::1660834142
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Shield/PNGs/::1660834142
+Kla'ed - Battlecruiser - Shield.png::CompressedTexture2D::5444781203461664201::1647001664::1726071541::1::::<><>::
+Kla'ed - Bomber - Shield.png::CompressedTexture2D::8043042251497764690::1647001678::1726071541::1::::<><>::
+Kla'ed - Dreadnought - Shield.png::CompressedTexture2D::4990276793591124742::1647001684::1726071541::1::::<><>::
+Kla'ed - Fighter - Shield.png::CompressedTexture2D::389773631752017132::1647001718::1726071541::1::::<><>::
+Kla'ed - Frigate - Shield.png::CompressedTexture2D::5675686746332265981::1647001738::1726071541::1::::<><>::
+Kla'ed - Scout - Shield.png::CompressedTexture2D::3043531091840435583::1647001752::1726071541::1::::<><>::
+Kla'ed - Torpedo Ship - Shield.png::CompressedTexture2D::8483527054209818010::1647001790::1726071541::1::::<><>::
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Weapons/::1660834142
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Weapons/Aseprite/::1660834142
+::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Weapons/PNGs/::1660834142
+Kla'ed - Battlecruiser - Weapons.png::CompressedTexture2D::3024357183741780820::1647002098::1726071538::1::::<><>::
+Kla'ed - Dreadnought - Weapons.png::CompressedTexture2D::8036988604117818613::1647002112::1726071538::1::::<><>::
+Kla'ed - Fighter - Weapons.png::CompressedTexture2D::8350579827868837701::1647002140::1726071538::1::::<><>::
+Kla'ed - Frigate - Weapons.png::CompressedTexture2D::3557727518150954317::1647002150::1726071538::1::::<><>::
+Kla'ed - Scout - Weapons.png::CompressedTexture2D::8383001117834631595::1647002078::1726071538::1::::<><>::
+Kla'ed - Torpedo Ship - Weapons.png::CompressedTexture2D::4685988738654914147::1647002088::1726071538::1::::<><>::
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/::1660835696
+Nairan - Ships Preview.png::CompressedTexture2D::7547347778050548435::1646894344::1726071537::1::::<><>::
+Readme.txt::TextFile::-1::1660835700::0::1::::<><>::
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/_Previews/::1660834832
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/_Previews/Nairan/::1660834826
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/_Previews/Nairan/Bases/::1660834826
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/_Previews/Nairan/Destruction/::1660834826
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/_Previews/Nairan/Engines/::1660834826
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/_Previews/Nairan/Projectiles/::1660834826
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/_Previews/Nairan/Shields/::1660834826
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/_Previews/Nairan/Weapons/::1660834826
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/::1660834822
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Designs - Base/::1660834822
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Designs - Base/Aseprite/::1660834822
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Designs - Base/PNGs/::1660834822
+Nairan - Battlecruiser - Base.png::CompressedTexture2D::476014832821155541::1647002332::1726071542::1::::<><>::
+Nairan - Bomber - Base.png::CompressedTexture2D::8112382669874987432::1647002338::1726071542::1::::<><>::
+Nairan - Dreadnought - Base.png::CompressedTexture2D::4690616270368150891::1647002328::1726071542::1::::<><>::
+Nairan - Fighter - Base.png::CompressedTexture2D::7278919462536884420::1647002310::1726071542::1::::<><>::
+Nairan - Frigate - Base.png::CompressedTexture2D::3777730416970235688::1647002210::1726071542::1::::<><>::
+Nairan - Scout - Base.png::CompressedTexture2D::2713803054437379615::1647002240::1726071542::1::::<><>::
+Nairan - Support Ship - Base.png::CompressedTexture2D::2893621778452838657::1647002254::1726071542::1::::<><>::
+Nairan - Torpedo Ship - Base.png::CompressedTexture2D::6666621020703372823::1647002270::1726071542::1::::<><>::
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Destruction/::1660834822
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Destruction/Aseprite/::1660834822
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Destruction/PNGs/::1660834822
+Nairan - Battlecruiser  -  Destruction.png::CompressedTexture2D::1456959266806653708::1647002372::1726071542::1::::<><>::
+Nairan - Bomber -  Destruction.png::CompressedTexture2D::2372255038765355765::1647002380::1726071542::1::::<><>::
+Nairan - Dreadnought -  Destruction.png::CompressedTexture2D::7865911863262521957::1647002388::1726071542::1::::<><>::
+Nairan - Fighter -  Destruction.png::CompressedTexture2D::6230500845674250522::1647002394::1726071542::1::::<><>::
+Nairan - Frigate -  Destruction.png::CompressedTexture2D::5764283611968214731::1647002400::1726071537::1::::<><>::
+Nairan - Scout -  Destruction.png::CompressedTexture2D::8860977155141065919::1647002408::1726071537::1::::<><>::
+Nairan - Support Ship -  Destruction.png::CompressedTexture2D::8180801945756805405::1647002416::1726071537::1::::<><>::
+Nairan - Torpedo Ship -  Destruction.png::CompressedTexture2D::2105130535254236445::1647002422::1726071537::1::::<><>::
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Engine Effects/::1660834822
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Engine Effects/Aseprite/::1660834822
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Engine Effects/PNGs/::1660834822
+Nairan - Battlecruiser - Engine.png::CompressedTexture2D::7426121677062327650::1647002466::1726071537::1::::<><>::
+Nairan - Bomber - Engine.png::CompressedTexture2D::8749138519590583624::1647002484::1726071537::1::::<><>::
+Nairan - Dreadnought - Engine.png::CompressedTexture2D::8856096639720394517::1647002494::1726071537::1::::<><>::
+Nairan - Fighter - Engine.png::CompressedTexture2D::783095051014192806::1647002504::1726071537::1::::<><>::
+Nairan - Frigate - Engine.png::CompressedTexture2D::6906930280287823818::1647002510::1726071537::1::::<><>::
+Nairan - Scout - Engine.png::CompressedTexture2D::7197026079285753619::1647002446::1726071537::1::::<><>::
+Nairan - Support Ship - Engine.png::CompressedTexture2D::5445645815946613346::1647002452::1726071537::1::::<><>::
+Nairan - Torpedo Ship - Engine.png::CompressedTexture2D::2980864630289794705::1647002458::1726071537::1::::<><>::
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Shields/::1660834822
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Shields/Aseprite/::1660834822
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Shields/PNGs/::1660834822
+Nairan - Battlecruiser - Shield.png::CompressedTexture2D::8389161879961469111::1647002566::1726071537::1::::<><>::
+Nairan - Bomber - Shield.png::CompressedTexture2D::2091306853103452517::1647002574::1726071537::1::::<><>::
+Nairan - Dreadnought - Shield.png::CompressedTexture2D::2125328062934815769::1647002578::1726071537::1::::<><>::
+Nairan - Fighter - Shield.png::CompressedTexture2D::2058617754264646196::1647002538::1726071537::1::::<><>::
+Nairan - Frigate - Shield.png::CompressedTexture2D::5609040915957011479::1647002544::1726071537::1::::<><>::
+Nairan - Scout - Shield.png::CompressedTexture2D::3202136338318350845::1647002550::1726071537::1::::<><>::
+Nairan - Torpedo Ship - Shield.png::CompressedTexture2D::721825879496835179::1647002558::1726071537::1::::<><>::
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Weapon Effects - Projectiles/::1660834822
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Weapon Effects - Projectiles/Aseprite/::1660834822
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Weapon Effects - Projectiles/PNGs/::1660834822
+Nairan - Bolt.png::CompressedTexture2D::4701853367852524698::1647002600::1726071537::1::::<><>::
+Nairan - Ray.png::CompressedTexture2D::11582906880678249::1647002612::1726071537::1::::<><>::
+Nairan - Rocket.png::CompressedTexture2D::3362843414902635661::1647002616::1726071537::1::::<><>::
+Nairan - Torpedo.png::CompressedTexture2D::1168903952501435516::1647002608::1726071537::1::::<><>::
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Weapons/::1660834822
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Weapons/Aseprite/::1660834822
+::res://Assets/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Weapons/PNGs/::1660834822
+Nairan - Battlecruiser - Weapons.png::CompressedTexture2D::7383590709585259858::1647002644::1726071537::1::::<><>::
+Nairan - Dreadnought - Weapons.png::CompressedTexture2D::6518598121107525120::1647002656::1726071538::1::::<><>::
+Nairan - Fighter - Weapons.png::CompressedTexture2D::4236336482782080297::1647002666::1726071537::1::::<><>::
+Nairan - Frigate - Weapons.png::CompressedTexture2D::5369888475134663487::1647002674::1726071537::1::::<><>::
+Nairan - Scout - Weapons.png::CompressedTexture2D::6437275997432941485::1647002680::1726071537::1::::<><>::
+Nairan - Torpedo Ship - Weapons.png::CompressedTexture2D::402748909974120736::1647002692::1726071537::1::::<><>::
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/::1726071476
+Nautolan - Ships Preview.png::CompressedTexture2D::3430509264461192569::1646894544::1726071542::1::::<><>::
+Readme.txt::TextFile::-1::1660835710::0::1::::<><>::
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/_Previews/::1660834878
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/_Previews/Nautolan/::1660834874
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/_Previews/Nautolan/Bases/::1660834874
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/_Previews/Nautolan/Destruction/::1660834874
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/_Previews/Nautolan/Engines/::1660834874
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/_Previews/Nautolan/Projectiles/::1660834874
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/_Previews/Nautolan/Shields/::1660834874
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/_Previews/Nautolan/Weapons/::1660834874
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/::1726071481
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Designs - Base/::1660834864
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Designs - Base/Aseprite/::1660834864
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Designs - Base/PNGs/::1660834864
+Nautolan Ship - Battlecruiser - Base.png::CompressedTexture2D::2462153691994054621::1647002740::1726071542::1::::<><>::
+Nautolan Ship - Bomber - Base.png::CompressedTexture2D::4436334720518170732::1647002746::1726071542::1::::<><>::
+Nautolan Ship - Dreadnought - Base.png::CompressedTexture2D::4964844129526349265::1647002756::1726071542::1::::<><>::
+Nautolan Ship - Fighter - Base.png::CompressedTexture2D::7276702016040545597::1647002766::1726071542::1::::<><>::
+Nautolan Ship - Frigate - Base.png::CompressedTexture2D::5518648082511353976::1647002774::1726071542::1::::<><>::
+Nautolan Ship - Scout - Base.png::CompressedTexture2D::1881867747187190004::1647002786::1726071542::1::::<><>::
+Nautolan Ship - Support - Base.png::CompressedTexture2D::7542041062921868088::1647002794::1726071542::1::::<><>::
+Nautolan Ship - Torpedo Ship.png::CompressedTexture2D::1168245491240540326::1647002804::1726071542::1::::<><>::
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Destruction/::1726071532
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Destruction/Aseprite/::1660834864
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Destruction/PNGs/::1660834864
+Nautolan Ship - Battlecruiser.png::CompressedTexture2D::2006681979161889773::1647002834::1726071542::1::::<><>::
+Nautolan Ship - Bomber.png::CompressedTexture2D::5008388963417325347::1647002842::1726071542::1::::<><>::
+Nautolan Ship - Dreadnought.png::CompressedTexture2D::8468248207713628980::1647002850::1726071542::1::::<><>::
+Nautolan Ship - Fighter.png::CompressedTexture2D::3430387484112756897::1647002856::1726071542::1::::<><>::
+Nautolan Ship - Frigate.png::CompressedTexture2D::1279786537943990987::1647002864::1726071542::1::::<><>::
+Nautolan Ship - Scout.png::CompressedTexture2D::3517539639979468804::1647002872::1726071542::1::::<><>::
+Nautolan Ship - Support.png::CompressedTexture2D::4101882054540630916::1647002878::1726071542::1::::<><>::
+Nautolan Ship - Torpedo Ship.png::CompressedTexture2D::1612446037517226954::1647002884::1726071542::1::::<><>::
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Engine Effects/::1660834866
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Engine Effects/Aseprite/::1660834866
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Engine Effects/PNGs/::1660834866
+Nautolan Ship - Battlecruiser - Engine Effect.png::CompressedTexture2D::1375929136536537735::1647002928::1726071542::1::::<><>::
+Nautolan Ship - Bomber - Engine Effect.png::CompressedTexture2D::978168363158076637::1647002934::1726071542::1::::<><>::
+Nautolan Ship - Dreadnought - Engine Effect.png::CompressedTexture2D::5937343223815163844::1647002942::1726071542::1::::<><>::
+Nautolan Ship - Fighter - Engine Effect.png::CompressedTexture2D::969967268806474330::1647002948::1726071542::1::::<><>::
+Nautolan Ship - Frigate - Engine Effect.png::CompressedTexture2D::4459546420547581524::1647002956::1726071542::1::::<><>::
+Nautolan Ship - Scout - Engine Effect.png::CompressedTexture2D::8371791637869590390::1647002970::1726071542::1::::<><>::
+Nautolan Ship - Support - Engine Effect.png::CompressedTexture2D::6665823645928891785::1647002978::1726071542::1::::<><>::
+Nautolan Ship - Torpedo Ship - Engine Effect.png::CompressedTexture2D::319669588538939844::1647002986::1726071542::1::::<><>::
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Shields/::1726071481
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Shields/Aseprite/::1660834866
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Shields/PNGs/::1660834866
+Nautolan Ship - Battlecruiser - Shield.png::CompressedTexture2D::7316387245961692794::1647003078::1726071542::1::::<><>::
+Nautolan Ship - Bomber - Shield.png::CompressedTexture2D::3862487890932361055::1647003108::1726071542::1::::<><>::
+Nautolan Ship - Dreadnought - Shield.png::CompressedTexture2D::5325858042442016354::1647003118::1726071542::1::::<><>::
+Nautolan Ship - Fighter - Shield.png::CompressedTexture2D::8132855900111001134::1647003128::1726071542::1::::<><>::
+Nautolan Ship - Frigate - Shield.png::CompressedTexture2D::470989342256109220::1647003086::1726071542::1::::<><>::
+Nautolan Ship - Scout - Shield.png::CompressedTexture2D::5733811537333175214::1647003094::1726071542::1::::<><>::
+Nautolan Ship - Torpedo Ship - Shield.png::CompressedTexture2D::1294258947255857770::1647003100::1726071542::1::::<><>::
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Weapon Effects - Projectiles/::1660834866
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Weapon Effects - Projectiles/Aseprite/::1660834866
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Weapon Effects - Projectiles/PNGs/::1660834866
+Nautolan - Bomb.png::CompressedTexture2D::2184935109593229385::1647003172::1726071542::1::::<><>::
+Nautolan - Bullet.png::CompressedTexture2D::2910555615373811058::1647003176::1726071542::1::::<><>::
+Nautolan - Ray.png::CompressedTexture2D::5127955863585458216::1647003182::1726071542::1::::<><>::
+Nautolan - Rocket.png::CompressedTexture2D::5316829559287561278::1647003188::1726071542::1::::<><>::
+Nautolan - Spinning Bullet.png::CompressedTexture2D::1061873717449711784::1647003198::1726071542::1::::<><>::
+Nautolan - Wave.png::CompressedTexture2D::6618525663820141852::1647003204::1726071542::1::::<><>::
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Weapons/::1660834866
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Weapons/Aseprite/::1660834866
+::res://Assets/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Weapons/PNGs/::1660834866
+Nautolan Ship - Battlecruiser - Weapons.png::CompressedTexture2D::8013356652371856459::1647003242::1726071542::1::::<><>::
+Nautolan Ship - Dreadnought - Weapons.png::CompressedTexture2D::6484752214616836679::1647003248::1726071542::1::::<><>::
+Nautolan Ship - Fighter - Weapons.png::CompressedTexture2D::562105281574738278::1647003254::1726071542::1::::<><>::
+Nautolan Ship - Frigate - Weapons.png::CompressedTexture2D::7371053050574543819::1647003260::1726071542::1::::<><>::
+Nautolan Ship - Scout - Weapons.png::CompressedTexture2D::8013704328170808963::1647003266::1726071542::1::::<><>::
+Nautolan Ship - Torpedo Ship - Weapons.png::CompressedTexture2D::3905926974621691159::1647003278::1726071542::1::::<><>::
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/::1726071487
+Readme.txt::TextFile::-1::1660841636::0::1::::<><>::
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Asteroids/::1660841588
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Asteroids/Aseprite/::1660841588
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Asteroids/PNGs/::1660841588
+Asteroid 01 - Base.png::CompressedTexture2D::7038443468530205787::1645793962::1726071538::1::::<><>::
+Asteroid 01 - Explode.png::CompressedTexture2D::1520390224071633646::1645793962::1726071538::1::::<><>::
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/::1726071487
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/Aseprite/::1660841588
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/::1726071487
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/::1660841588
+Starry background  - Layer 01 - Void.png::CompressedTexture2D::6823935950635830804::1645793962::1726071538::1::::<><>::
+Starry background  - Layer 02 - Stars.png::CompressedTexture2D::1740796985338541054::1645793962::1726071538::1::::<><>::
+Starry background  - Layer 03 - Stars.png::CompressedTexture2D::3475577694799275488::1645793962::1726071539::1::::<><>::
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Split up/::1660841588
+Starry background  - Layer 01 - Solid colour.png::CompressedTexture2D::7387345183128801418::1645793962::1726071539::1::::<><>::
+Starry background  - Layer 02 - Shadows 2.png::CompressedTexture2D::2215380369690735642::1645793962::1726071539::1::::<><>::
+Starry background  - Layer 02 - Shadows.png::CompressedTexture2D::2770695258698613090::1645793962::1726071540::1::::<><>::
+Starry background  - Layer 03 - Stars 2.png::CompressedTexture2D::3683407315136346189::1645793962::1726071540::1::::<><>::
+Starry background  - Layer 03 - Stars.png::CompressedTexture2D::120667482393079690::1645793962::1726071540::1::::<><>::
+Starry background - Layer X - Big Star 2.png::CompressedTexture2D::4161209214798191262::1645793962::1726071541::1::::<><>::
+Starry background - Layer X - Big Star.png::CompressedTexture2D::3074814188708114030::1645793962::1726071541::1::::<><>::
+Starry background - Layer X -Black hole.png::CompressedTexture2D::3353988559154873186::1645793962::1726071541::1::::<><>::
+Starry background - Layer X -Rotary Star 2.png::CompressedTexture2D::4280361667126910513::1645793962::1726071541::1::::<><>::
+Starry background - Layer X -Rotary Star.png::CompressedTexture2D::2443422826543088877::1645793962::1726071541::1::::<><>::
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Effects/::1726071520
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Effects/Aseprite/::1660841588
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Effects/PNGs/::1660841588
+Asteroid - Flame.png::CompressedTexture2D::4974743348424606143::1645793962::1726071541::1::::<><>::
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Planets/::1726071514
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Planets/Aseprite/::1660841588
+::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Planets/PNGs/::1660841588
+Earth-Like planet - Without back glow.png::CompressedTexture2D::2594335118217472252::1645793962::1726071541::1::::<><>::
+Earth-Like planet.png::CompressedTexture2D::565230253277594530::1645793962::1726071541::1::::<><>::
+::res://Assets/Foozle_2DS0016_Void_PickupsPack/::1660843000
+Readme.txt::TextFile::-1::1660843006::0::1::::<><>::
+::res://Assets/Foozle_2DS0016_Void_PickupsPack/Engines/::1660842964
+::res://Assets/Foozle_2DS0016_Void_PickupsPack/Engines/Aseprite/::1660842964
+::res://Assets/Foozle_2DS0016_Void_PickupsPack/Engines/PNGs/::1660842964
+Pickup Icon - Engines - Base Engine.png::CompressedTexture2D::7940232206829070957::1645793962::1726071541::1::::<><>::
+Pickup Icon - Engines - Big Pulse Engine.png::CompressedTexture2D::5235449319082588055::1645793962::1726071541::1::::<><>::
+Pickup Icon - Engines - Burst Engine.png::CompressedTexture2D::4674408911206462661::1645793962::1726071541::1::::<><>::
+Pickup Icon - Engines - Supercharged Engine.png::CompressedTexture2D::4448447042139079891::1645793962::1726071541::1::::<><>::
+::res://Assets/Foozle_2DS0016_Void_PickupsPack/Shield Generators/::1660842964
+::res://Assets/Foozle_2DS0016_Void_PickupsPack/Shield Generators/Aseprite/::1660842964
+::res://Assets/Foozle_2DS0016_Void_PickupsPack/Shield Generators/PNGs/::1660842964
+Pickup Icon - Shield Generator - All around shield.png::CompressedTexture2D::2210813798324809937::1645793962::1726071541::1::::<><>::
+Pickup Icon - Shield Generator - Front and Side Shield.png::CompressedTexture2D::1477585728059015914::1645793962::1726071541::1::::<><>::
+Pickup Icon - Shield Generator - Front Shield.png::CompressedTexture2D::6170345449322925949::1645793962::1726071541::1::::<><>::
+Pickup Icon - Shield Generator - Invincibility Shield.png::CompressedTexture2D::5639674200741759171::1645793962::1726071541::1::::<><>::
+::res://Assets/Foozle_2DS0016_Void_PickupsPack/Weapons/::1660842964
+::res://Assets/Foozle_2DS0016_Void_PickupsPack/Weapons/Aseprite/::1660842964
+::res://Assets/Foozle_2DS0016_Void_PickupsPack/Weapons/PNGs/::1660842964
+Pickup Icon - Weapons - Auto Cannons.png::CompressedTexture2D::2933374408625296556::1645793962::1726071541::1::::<><>::
+Pickup Icon - Weapons - Big Space Gun 2000.png::CompressedTexture2D::5563838210012935903::1645793962::1726071541::1::::<><>::
+Pickup Icon - Weapons - Rocket.png::CompressedTexture2D::6913359179250238750::1645793962::1726071542::1::::<><>::
+Pickup Icon - Weapons - Zapper.png::CompressedTexture2D::2479556352389031643::1645793962::1726071542::1::::<><>::
+::res://Assets/kenney_space-shooter-redux/::1726017000
 license.txt::TextFile::-1::1391005876::0::1::::<><>::
 preview.png::CompressedTexture2D::7984017006721894260::1391006076::1725835714::1::::<><>::
 sample.png::CompressedTexture2D::473375788879038521::1391006492::1725835714::1::::<><>::
@@ -33,7 +367,7 @@ sfx_shieldDown.ogg::AudioStreamOggVorbis::130258781927599529::1391005062::172583
 sfx_shieldUp.ogg::AudioStreamOggVorbis::695682922577141764::1391005052::1725835712::1::::<><>::
 sfx_twoTone.ogg::AudioStreamOggVorbis::3148231013219255621::1391004746::1725835712::1::::<><>::
 sfx_zap.ogg::AudioStreamOggVorbis::5466669169047251333::1391004734::1725835712::1::::<><>::
-::res://Assets/kenney_space-shooter-redux/PNG/::1726006159
+::res://Assets/kenney_space-shooter-redux/PNG/::1726017000
 ::res://Assets/kenney_space-shooter-redux/PNG/Damage/::1725835712
 playerShip1_damage1.png::CompressedTexture2D::7520167586843972389::1391005554::1725835712::1::::<><>::
 playerShip1_damage2.png::CompressedTexture2D::8055168727264044557::1391005554::1725835712::1::::<><>::
@@ -343,20 +677,21 @@ sheet.png::CompressedTexture2D::3509950833257549720::1391004346::1725835714::1::
 sheet.xml::TextFile::-1::1391004304::0::1::::<><>::
 ::res://Assets/kenney_space-shooter-redux/Vector/::1725837683
 sheet.svg::CompressedTexture2D::5709819327133487701::1391004268::1725837683::1::::<><>::
-::res://Scenes/::1726007719
-Level1.tscn::PackedScene::7652173544629063248::1726007543::0::1::::<><>::uid://bxvjq0najgwcn::::res://Scenes/Player/Player.tscn<>uid://b13v4v2sx72x7::::res://Scenes/LevelHUD.tscn
-LevelHUD.tscn::PackedScene::4270461185816889866::1726007543::0::1::::<><>::uid://gcd6hpmlxsma::::res://Assets/Fonts/forgotten futurist bd.otf<>uid://b2vlq2lb60mv6::::res://Assets/Fonts/forgotten futurist bd it.otf
-::res://Scenes/Enemy/::1726007866
-Enemy.tscn::PackedScene::8102208379218480378::1726007839::0::1::::<><>::res://Scripts/Enemy/enemy.gd<>uid://fgvvcllvkc4x::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_red.png<>uid://den8lsqssejly::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_blue.png<>uid://njepx503ji5x::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png<>uid://m0vo3wlmy4pw::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed01.png
-EnemyBullet.tscn::PackedScene::9184079262420499365::1726007866::0::1::::<><>::res://Scripts/Enemy/enemyBullet.gd<>uid://wx8npg65v366::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png<>uid://bolg6qe5f3q41::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png
-::res://Scenes/Player/::1726007866
-Player.tscn::PackedScene::4044692379018977065::1726007864::0::1::::<><>::res://Scripts/player.gd<>uid://fgvvcllvkc4x::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_red.png<>uid://den8lsqssejly::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_blue.png<>uid://njepx503ji5x::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png<>uid://m0vo3wlmy4pw::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed01.png
-PlayerBullet.tscn::PackedScene::7953013734075243812::1726007866::0::1::::<><>::res://Scripts/Player/playerBullet.gd<>uid://wx8npg65v366::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png<>uid://bolg6qe5f3q41::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png
-::res://Scripts/::1726007938
-global.gd::GDScript::-1::1725928217::0::1::::<>Node<>::
+::res://Scenes/::1726067174
+Level1.tscn::PackedScene::7652173544629063248::1726067174::0::1::::<><>::res://Scripts/level_1.gd<>uid://bxvjq0najgwcn::::res://Scenes/Player/Player.tscn<>uid://b13v4v2sx72x7::::res://Scenes/LevelHUD.tscn
+LevelHUD.tscn::PackedScene::4270461185816889866::1726067174::0::1::::<><>::uid://gcd6hpmlxsma::::res://Assets/Fonts/forgotten futurist bd.otf<>uid://b2vlq2lb60mv6::::res://Assets/Fonts/forgotten futurist bd it.otf
+::res://Scenes/Enemy/::1726067174
+Enemy.tscn::PackedScene::8102208379218480378::1726067174::0::1::::<><>::res://Scripts/Enemy/enemy.gd<>uid://fgvvcllvkc4x::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_red.png<>uid://den8lsqssejly::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_blue.png<>uid://njepx503ji5x::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png<>uid://m0vo3wlmy4pw::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed01.png
+EnemyBullet.tscn::PackedScene::9184079262420499365::1726067174::0::1::::<><>::res://Scripts/Enemy/enemyBullet.gd<>uid://wx8npg65v366::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png<>uid://bolg6qe5f3q41::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png
+::res://Scenes/Player/::1726067174
+Player.tscn::PackedScene::4044692379018977065::1726067174::0::1::::<><>::res://Scripts/Player/player.gd<>uid://fgvvcllvkc4x::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_red.png<>uid://den8lsqssejly::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_blue.png<>uid://njepx503ji5x::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png<>uid://m0vo3wlmy4pw::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed01.png
+PlayerBullet.tscn::PackedScene::7953013734075243812::1726067174::0::1::::<><>::res://Scripts/Player/playerBullet.gd<>uid://wx8npg65v366::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png<>uid://bolg6qe5f3q41::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png
+::res://Scripts/::1726008033
+manager.gd::GDScript::-1::1725928217::0::1::::<>Node<>::
+level_1.gd::GDScript::-1::1726008033::0::1::::<>Node<>::
 ::res://Scripts/Enemy/::1726007839
 enemy.gd::GDScript::-1::1726007839::0::1::::<>CharacterBody2D<>::
 enemyBullet.gd::GDScript::-1::1726007799::0::1::::<>Area2D<>::
-::res://Scripts/Player/::1726007866
-player.gd::GDScript::-1::1726007687::0::1::::<>CharacterBody2D<>::
-playerBullet.gd::GDScript::-1::1726007505::0::1::::<>Area2D<>::
+::res://Scripts/Player/::1726067134
+player.gd::GDScript::-1::1726067134::0::1::::<>CharacterBody2D<>::
+playerBullet.gd::GDScript::-1::1726008003::0::1::::<>Area2D<>::

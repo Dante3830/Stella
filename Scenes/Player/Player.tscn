@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bxvjq0najgwcn"]
+[gd_scene load_steps=12 format=3 uid="uid://bxvjq0najgwcn"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_iopuc"]
 [ext_resource type="Texture2D" uid="uid://fgvvcllvkc4x" path="res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_red.png" id="1_tab8v"]
@@ -17,7 +17,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible")
+tracks/0/path = NodePath("../RedMuzzle:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -26,9 +26,37 @@ tracks/0/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_4t3h7"]
-resource_name = "muzzleflash"
+resource_name = "RedMuzzleflash"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../RedMuzzle:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_yi5e8"]
+resource_name = "BlueMuzzleflash"
 length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -45,8 +73,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t0sli"]
 _data = {
+"BlueMuzzleflash": SubResource("Animation_yi5e8"),
 "RESET": SubResource("Animation_tptno"),
-"muzzleflash": SubResource("Animation_4t3h7")
+"RedMuzzleflash": SubResource("Animation_4t3h7")
 }
 
 [node name="Player" type="CharacterBody2D"]
@@ -69,27 +98,26 @@ shape = SubResource("RectangleShape2D_k2bbs")
 position = Vector2(0, -9)
 shape = SubResource("RectangleShape2D_lgow0")
 
-[node name="Muzzle1" type="Sprite2D" parent="."]
+[node name="BlueMuzzle" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -41)
 rotation = -3.14159
-scale = Vector2(2.36, 1)
+scale = Vector2(4.84, 1)
 texture = ExtResource("4_oxqxo")
 region_enabled = true
 region_rect = Rect2(0, 0, 9, 13.6122)
 
-[node name="Muzzle2" type="Sprite2D" parent="."]
-visible = false
+[node name="RedMuzzle" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -41)
 rotation = -3.14159
-scale = Vector2(2.36, 1)
+scale = Vector2(4.88, 1)
 texture = ExtResource("5_28dk1")
 region_enabled = true
 region_rect = Rect2(0, 0, 9, 13.6122)
 
 [node name="MuzzleFlash" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Muzzle1")
+root_node = NodePath("../BlueMuzzle")
 libraries = {
 "": SubResource("AnimationLibrary_t0sli")
 }

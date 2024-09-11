@@ -13,6 +13,7 @@ var playerBullet = preload("res://Scenes/Player/PlayerBullet.tscn")
 var can_fire = true
 
 @onready var spawnPos = $SpawnPos
+
 @onready var muzzleFlash = $MuzzleFlash
 
 func _ready():
@@ -58,7 +59,11 @@ func shoot():
 	bullet.position = spawnPos.global_position
 	get_tree().current_scene.add_child(bullet)
 	
-	muzzleFlash.play("muzzleflash")
+	if Manager.is_red:
+		muzzleFlash.play("RedMuzzleflash")
+	else:
+		muzzleFlash.play("BlueMuzzleflash")
+	
 	$FireSpeed.start()
 	can_fire = false
 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d333pc343h7pp"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy/enemyBullet.gd" id="1_f4x42"]
+[ext_resource type="Texture2D" uid="uid://wx8npg65v366" path="res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png" id="2_7tjij"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbib5"]
+size = Vector2(20, 62)
+
+[node name="BlueEnemyBullet" type="Area2D"]
+script = ExtResource("1_f4x42")
+
+[node name="BlueSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_7tjij")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cbib5")

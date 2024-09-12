@@ -12,3 +12,8 @@ res://Scripts/Enemy/enemy.gd
 res://Scenes/Enemy/EnemyBullet.tscn
 res://Scripts/Player/player.gd
 res://Scripts/Player/playerBullet.gd
+res://Scenes/Enemy/BlueEnemyBullet.tscn
+res://Scripts/Enemy/enemyBullet.gd
+res://Scenes/Enemy/RedEnemyBullet.tscn
+res://Scripts/level_1.gd
+res://Scripts/manager.gd

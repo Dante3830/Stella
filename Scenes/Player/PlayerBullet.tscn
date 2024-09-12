@@ -23,3 +23,8 @@ texture = ExtResource("3_btag8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cbib5")
+
+[node name="DestroyTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="DestroyTimer" to="." method="_on_destroy_timer_timeout"]

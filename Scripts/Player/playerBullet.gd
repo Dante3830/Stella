@@ -14,3 +14,6 @@ func _physics_process(delta):
 func update_bullet_color():
 	blue_sprite.visible = not Manager.is_red
 	red_sprite.visible = Manager.is_red
+
+func _on_destroy_timer_timeout() -> void:
+	queue_free()

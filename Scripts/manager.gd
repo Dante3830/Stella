@@ -1,14 +1,17 @@
 extends Node
 
-var health = 1
+var health = 100
+var lives = 5
+var score = 0
+var power = 0
+
+var enemies_down = 0
+var time = 0
 
 var is_red = true
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _ready():
 	pass
+
+func _process(delta):
+	time += 1 * delta

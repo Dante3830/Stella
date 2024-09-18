@@ -1,7 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://b13v4v2sx72x7"]
+[gd_scene load_steps=8 format=3 uid="uid://b13v4v2sx72x7"]
 
 [ext_resource type="FontFile" uid="uid://gcd6hpmlxsma" path="res://Assets/Fonts/forgotten futurist bd.otf" id="1_40bx3"]
 [ext_resource type="FontFile" uid="uid://b2vlq2lb60mv6" path="res://Assets/Fonts/forgotten futurist bd it.otf" id="1_486pe"]
+[ext_resource type="Script" path="res://Scripts/level_hud.gd" id="1_menj6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iouf4"]
+bg_color = Color(0.877346, 4.06705e-06, 1.92523e-07, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tb67"]
+bg_color = Color(1, 0.85098, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wecoh"]
+bg_color = Color(0, 0.259119, 0.501813, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7gjw"]
+bg_color = Color(0.301961, 0.858824, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
 
 [node name="LevelHUD" type="Control"]
 layout_mode = 3
@@ -10,13 +43,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_menj6")
 
-[node name="LivesDP" type="Control" parent="."]
+[node name="LIVES" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Lives" type="Label" parent="LivesDP"]
+[node name="Lives" type="Label" parent="LIVES"]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 16.0
@@ -26,7 +60,7 @@ theme_override_fonts/font = ExtResource("1_40bx3")
 theme_override_font_sizes/font_size = 71
 text = "LIVES"
 
-[node name="Lives2" type="Label" parent="LivesDP"]
+[node name="LivesDP" type="Label" parent="LIVES"]
 layout_mode = 0
 offset_left = 12.0
 offset_top = 81.0
@@ -36,14 +70,14 @@ theme_override_fonts/font = ExtResource("1_486pe")
 theme_override_font_sizes/font_size = 71
 text = "5"
 
-[node name="Score" type="Control" parent="."]
+[node name="SCORE" type="Control" parent="."]
 anchors_preset = 0
 offset_left = 863.0
 offset_top = 3.0
 offset_right = 903.0
 offset_bottom = 43.0
 
-[node name="Score" type="Label" parent="Score"]
+[node name="Score" type="Label" parent="SCORE"]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 15.0
@@ -53,7 +87,7 @@ theme_override_fonts/font = ExtResource("1_40bx3")
 theme_override_font_sizes/font_size = 71
 text = "SCORE"
 
-[node name="Score2" type="Label" parent="Score"]
+[node name="ScoreDP" type="Label" parent="SCORE"]
 layout_mode = 0
 offset_left = -218.0
 offset_top = 80.0
@@ -71,10 +105,42 @@ offset_top = 1248.0
 offset_right = 50.0
 offset_bottom = 1288.0
 
-[node name="ProgressBar" type="ProgressBar" parent="Power"]
+[node name="HealthBar" type="ProgressBar" parent="Power"]
 layout_mode = 0
 offset_left = 35.0
-offset_right = 1035.0
-offset_bottom = 100.0
+offset_top = -26.0
+offset_right = 759.0
+offset_bottom = 24.0
+theme_override_styles/background = SubResource("StyleBoxFlat_iouf4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5tb67")
 value = 20.99
 show_percentage = false
+
+[node name="PowerBar" type="ProgressBar" parent="Power"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 47.0
+offset_right = 760.0
+offset_bottom = 97.0
+theme_override_styles/background = SubResource("StyleBoxFlat_wecoh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_v7gjw")
+value = 20.99
+show_percentage = false
+
+[node name="Health" type="Label" parent="Power"]
+offset_left = 786.0
+offset_top = -44.0
+offset_right = 996.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("1_40bx3")
+theme_override_font_sizes/font_size = 71
+text = "HEALTH"
+
+[node name="Power" type="Label" parent="Power"]
+offset_left = 786.0
+offset_top = 30.0
+offset_right = 996.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("1_40bx3")
+theme_override_font_sizes/font_size = 71
+text = "POWER"

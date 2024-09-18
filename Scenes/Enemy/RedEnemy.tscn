@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=3 uid="uid://dno1gnvkkkf1c"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy/redEnemy.gd" id="1_plxwy"]
+[ext_resource type="Texture2D" uid="uid://b2ijrer4lrrpt" path="res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip3_red.png" id="2_pdql4"]
+[ext_resource type="Texture2D" uid="uid://m0vo3wlmy4pw" path="res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed01.png" id="5_uoeu8"]
+
+[sub_resource type="Animation" id="Animation_m6ave"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Muzzle1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ji6yd"]
+resource_name = "muzzleflash"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Muzzle1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gsbsh"]
+_data = {
+"RESET": SubResource("Animation_m6ave"),
+"muzzleflash": SubResource("Animation_ji6yd")
+}
+
+[node name="RedEnemy" type="CharacterBody2D" groups=["Enemy"]]
+motion_mode = 1
+script = ExtResource("1_plxwy")
+
+[node name="RedSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 3.14159
+texture = ExtResource("2_pdql4")
+
+[node name="Muzzle1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 44)
+scale = Vector2(2.36, 1)
+texture = ExtResource("5_uoeu8")
+region_enabled = true
+region_rect = Rect2(0, 0, 9, 13.6122)
+
+[node name="MuzzleFlash" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gsbsh")
+}
+
+[node name="SpawnPos" type="Marker2D" parent="."]
+position = Vector2(0, -37)
+
+[node name="FireSpeed" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-9, 0)
+rotation = -3.14159
+polygon = PackedVector2Array(37, 26, -9.00001, -36, -56, 27)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-1.99999, -2.14645)
+scale = Vector2(9, 7.18536)
+rect = Rect2(-10, -10, 20, 21.85)
+
+[connection signal="timeout" from="FireSpeed" to="." method="_on_fire_speed_timeout"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]

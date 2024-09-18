@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://dha1gen4k81gu"]
+
+[ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_jisms"]
+[ext_resource type="PackedScene" uid="uid://bxvjq0najgwcn" path="res://Scenes/Player/Player.tscn" id="1_wmtdt"]
+[ext_resource type="PackedScene" uid="uid://b13v4v2sx72x7" path="res://Scenes/LevelHUD.tscn" id="2_x6shp"]
+[ext_resource type="PackedScene" uid="uid://dno1gnvkkkf1c" path="res://Scenes/Enemy/RedEnemy.tscn" id="3_5uoti"]
+[ext_resource type="PackedScene" uid="uid://b03fjsr5evycm" path="res://Scenes/Enemy/BlueEnemy.tscn" id="4_jao2o"]
+[ext_resource type="Texture2D" uid="uid://bmom80b35jxmm" path="res://Assets/Sprites/GameOver.jpg" id="6_d8xbp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_taqpl"]
+
+[node name="Level1" type="Node"]
+script = ExtResource("1_jisms")
+
+[node name="Player" parent="." instance=ExtResource("1_wmtdt")]
+position = Vector2(535, 1097)
+
+[node name="RedEnemy" parent="." instance=ExtResource("3_5uoti")]
+position = Vector2(1026, -56)
+
+[node name="BlueEnemy" parent="." instance=ExtResource("4_jao2o")]
+position = Vector2(707, 194)
+
+[node name="LevelHUD" parent="." instance=ExtResource("2_x6shp")]
+
+[node name="Comentarios" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Comentario1" type="Label" parent="Comentarios"]
+layout_mode = 0
+offset_left = 1228.0
+offset_top = 432.0
+offset_right = 1455.0
+offset_bottom = 481.0
+theme_override_font_sizes/font_size = 81
+text = "FLECHAS o WASD = MOVERSE
+ESPACIO o N = DISPARAR
+SHIFT o M = CAMBIAR COLOR"
+
+[node name="SpawnTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="GameOverSprite" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_taqpl")
+texture = ExtResource("6_d8xbp")
+centered = false
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

@@ -15,5 +15,11 @@ func update_bullet_color():
 	blue_sprite.visible = not Manager.is_red
 	red_sprite.visible = Manager.is_red
 
-func _on_destroy_timer_timeout() -> void:
+func _on_destroy_timer_timeout():
 	queue_free()
+
+func _on_body_entered(body):
+	if body.is_in_group("Enemy"):
+		body.queue_free()
+		Manager.score += 100
+		queue_free()

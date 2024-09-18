@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Stella"
-run/main_scene="res://Scenes/Level1.tscn"
+run/main_scene="res://Scenes/Levels/Level1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -24,6 +24,11 @@ Manager="*res://Scripts/manager.gd"
 window/size/viewport_width=1080
 window/size/viewport_height=1380
 window/size/resizable=false
+
+[global_group]
+
+Enemy="Referencia a los enemigos del juego, ya sea azules o rojos"
+Bullet="Balas de enemigos azules o rojos"
 
 [input]
 

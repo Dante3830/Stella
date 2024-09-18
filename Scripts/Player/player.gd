@@ -5,22 +5,31 @@ extends CharacterBody2D
 @export var friction = 1200
 
 @onready var axis = Vector2.ZERO
-
 @onready var blue_sprite = $BlueSprite
 @onready var red_sprite = $RedSprite
+@onready var spawnPos = $SpawnPos
+@onready var muzzleFlash = $MuzzleFlash
 
 var playerBullet = preload("res://Scenes/Player/PlayerBullet.tscn")
 var can_fire = true
 
-@onready var spawnPos = $SpawnPos
-
-@onready var muzzleFlash = $MuzzleFlash
+# Nuevas variables para los límites de la pantalla
+var screen_size
+var half_width
+var half_height
 
 func _ready():
 	update_sprite_visibility()
+	# Obtener el tamaño de la pantalla y calcular los límites
+	screen_size = get_viewport_rect().size
+	half_width = blue_sprite.texture.get_width() / 2
+	half_height = blue_sprite.texture.get_height() / 2
 
 func _physics_process(delta):
 	move(delta)
+	
+	if Manager.health <= 0:
+		queue_free()
 
 func get_input_axis():
 	axis.x = int(Input.is_action_pressed("Right")) - int(Input.is_action_pressed("Left"))
@@ -36,6 +45,10 @@ func move(delta):
 		apply_movement(axis * acceleration * delta)
 	
 	move_and_slide()
+	
+	# Limitar la posición del jugador dentro de la pantalla
+	global_position.x = clamp(global_position.x, half_width, screen_size.x - half_width)
+	global_position.y = clamp(global_position.y, half_height, screen_size.y - half_height)
 
 func apply_friction(amount):
 	if velocity.length() > amount:
@@ -74,12 +87,6 @@ func change_color():
 func update_sprite_visibility():
 	blue_sprite.visible = not Manager.is_red
 	red_sprite.visible = Manager.is_red
-
-func player_hit():
-	Manager.health -= 1
-	if Manager.health <= 0:
-		queue_free()
-		print("MORISTE")
 
 func _on_fire_speed_timeout():
 	can_fire = true

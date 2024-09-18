@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddg5hwu5xl3fk"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_qc2t6"]
+[ext_resource type="FontFile" uid="uid://dk6ts2l4bajko" path="res://Assets/Fonts/TERMINAT.TTF" id="2_4ehou"]
+[ext_resource type="Texture2D" uid="uid://8y4mwrqgyn1v" path="res://Assets/Sprites/Title.jpg" id="2_jj6it"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l665r"]
+bg_color = Color(0, 0, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nln3k"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xkl38"]
+bg_color = Color(0.0274754, 0, 1, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qc2t6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jj6it")
+centered = false
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = -31.5
+offset_right = 142.0
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="PlayButton" type="Button" parent="BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("2_4ehou")
+theme_override_font_sizes/font_size = 51
+theme_override_styles/hover = SubResource("StyleBoxFlat_l665r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nln3k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xkl38")
+text = " PLAY "
+
+[node name="OptButton" type="Button" parent="BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("2_4ehou")
+theme_override_font_sizes/font_size = 51
+theme_override_styles/hover = SubResource("StyleBoxFlat_l665r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nln3k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xkl38")
+text = " OPTIONS "
+
+[node name="HTPButton" type="Button" parent="BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("2_4ehou")
+theme_override_font_sizes/font_size = 51
+theme_override_styles/hover = SubResource("StyleBoxFlat_l665r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nln3k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xkl38")
+text = " HOW TO PLAY "
+
+[connection signal="pressed" from="BoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="BoxContainer/VBoxContainer/OptButton" to="." method="_on_opt_button_pressed"]
+[connection signal="pressed" from="BoxContainer/VBoxContainer/HTPButton" to="." method="_on_htp_button_pressed"]

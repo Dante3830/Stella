@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b03fjsr5evycm"]
 
-[ext_resource type="Script" path="res://Scripts/Enemy/blueEnemy.gd" id="1_ccy4d"]
+[ext_resource type="Script" path="res://Scripts/Enemy/Enemy A/blueEnemyA.gd" id="1_ccy4d"]
 [ext_resource type="Texture2D" uid="uid://3046jo7ott8l" path="res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip3_blue.png" id="2_1ieay"]
 [ext_resource type="Texture2D" uid="uid://njepx503ji5x" path="res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png" id="4_ni2l0"]
 
@@ -41,7 +41,9 @@ _data = {
 "muzzleflash": SubResource("Animation_4t3h7")
 }
 
-[node name="BlueEnemy" type="CharacterBody2D" groups=["Enemy"]]
+[node name="BlueEnemyA" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 4
+collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_ccy4d")
 
@@ -49,6 +51,11 @@ script = ExtResource("1_ccy4d")
 texture_filter = 1
 rotation = 3.14159
 texture = ExtResource("2_1ieay")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-9, 0)
+rotation = -3.14159
+polygon = PackedVector2Array(37, 26, -9.00001, -36, -56, 27)
 
 [node name="Muzzle1" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -71,15 +78,18 @@ position = Vector2(0, -37)
 wait_time = 0.8
 one_shot = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-9, 0)
-rotation = -3.14159
-polygon = PackedVector2Array(37, 26, -9.00001, -36, -56, 27)
-
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(1, -11)
 scale = Vector2(8, 6.57499)
 rect = Rect2(-10, -10, 20, 21.85)
 
+[node name="Collision" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision"]
+position = Vector2(-9, 0)
+rotation = -3.14159
+polygon = PackedVector2Array(37, 26, -9.00001, -36, -56, 27)
+
 [connection signal="timeout" from="FireSpeed" to="." method="_on_fire_speed_timeout"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

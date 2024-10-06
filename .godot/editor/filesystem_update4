@@ -1,23 +1,2 @@
-res://Scenes/LevelHUD.tscn
-res://Scripts/level_hud.gd
-res://Scenes/Level1.tscn
-res://Scenes/Player/Player.tscn
-res://Scenes/Enemy/RedEnemy.tscn
-res://Scenes/Enemy/BlueEnemy.tscn
-res://Scripts/manager.gd
-res://Scripts/Enemy/blueEnemy.gd
-res://Scripts/Enemy/redEnemy.gd
-res://Scenes/Enemy/BlueEnemyBullet.tscn
-res://Scenes/Enemy/RedEnemyBullet.tscn
-res://Scripts/Player/player.gd
-res://Scripts/Enemy/blueEnemyBullet.gd
-res://Scripts/Enemy/redEnemyBullet.gd
-res://Scripts/Player/playerBullet.gd
-res://Scripts/level_1.gd
-res://BulletUpHell-Demo-V4.4/addons/BulletUpHell/ExampleScenes/Example0_Readme.tscn
-res://BulletUpHell-Demo-V4.4/addons/BulletUpHell/ExampleScenes/Example1_Pattern_Types.tscn
-res://Scenes/MainMenu.tscn
-res://Shaders/TitleShader.gdshader
-res://Scripts/main_menu.gd
-res://Scripts/results.gd
-res://Scenes/Results.tscn
+res://Scenes/Enemy/Enemy C/BlueEnemyC.tscn
+res://Shaders/BlueEnemyC.gdshader

@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7mpidworr61"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy/Enemy C/redEnemyC.gd" id="1_400n8"]
+[ext_resource type="Texture2D" uid="uid://dilw66shgjd7c" path="res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Fighter - Base.png" id="2_8db0d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgko6"]
+size = Vector2(67, 20)
+
+[node name="RedEnemyC" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 4
+collision_mask = 2
+motion_mode = 1
+script = ExtResource("1_400n8")
+
+[node name="RedSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 3.14159
+scale = Vector2(3, 3)
+texture = ExtResource("2_8db0d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_sgko6")
+
+[node name="Collision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_sgko6")
+
+[node name="SpawnPos" type="Marker2D" parent="."]
+
+[node name="FireSpeed" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rotation = -3.14159
+scale = Vector2(8, 6.57499)
+rect = Rect2(-10, -10, 20, 21.85)
+
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
+[connection signal="timeout" from="FireSpeed" to="." method="_on_fire_speed_timeout"]

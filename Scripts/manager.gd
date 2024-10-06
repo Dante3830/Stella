@@ -10,8 +10,13 @@ var time = 0
 
 var is_red = true
 
+var camera = null
+
 func _ready():
 	pass
 
 func _process(delta):
 	time += 1 * delta
+	
+	if power >= 100:
+		power = 100

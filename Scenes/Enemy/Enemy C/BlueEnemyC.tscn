@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqig583yk6i6c"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy/Enemy C/blueEnemyC.gd" id="1_472c7"]
+[ext_resource type="Texture2D" uid="uid://dilw66shgjd7c" path="res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Fighter - Base.png" id="2_kmtns"]
+[ext_resource type="Shader" path="res://Shaders/BlueEnemyC.gdshader" id="2_rkrg6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cklo8"]
+shader = ExtResource("2_rkrg6")
+shader_parameter/original_color_1 = Color(0.431373, 0.152941, 0.152941, 1)
+shader_parameter/original_color_2 = Color(0.701961, 0.219608, 0.192157, 1)
+shader_parameter/original_color_3 = Color(0.917647, 0.309804, 0.211765, 1)
+shader_parameter/original_color_4 = Color(0.278431, 0.0901961, 0.0941176, 1)
+shader_parameter/new_color_1 = Color(0, 0, 0.803922, 1)
+shader_parameter/new_color_2 = Color(0.257789, 0.257789, 0.900531, 1)
+shader_parameter/new_color_3 = Color(0.521479, 0.521479, 0.978601, 1)
+shader_parameter/new_color_4 = Color(0, 0, 0.415686, 1)
+shader_parameter/tolerance = 0.1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2fbd"]
+size = Vector2(67, 20)
+
+[node name="BlueEnemyC" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 4
+collision_mask = 2
+motion_mode = 1
+script = ExtResource("1_472c7")
+
+[node name="BlueSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_cklo8")
+rotation = 3.14159
+scale = Vector2(3, 3)
+texture = ExtResource("2_kmtns")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_b2fbd")
+
+[node name="Collision" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_b2fbd")
+
+[node name="SpawnPos" type="Marker2D" parent="."]
+
+[node name="FireSpeed" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+visible = false
+position = Vector2(1, -11)
+scale = Vector2(8, 6.57499)
+rect = Rect2(-10, -10, 20, 21.85)
+
+[connection signal="timeout" from="FireSpeed" to="." method="_on_fire_speed_timeout"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]

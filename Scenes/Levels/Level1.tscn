@@ -1,27 +1,81 @@
-[gd_scene load_steps=8 format=3 uid="uid://dha1gen4k81gu"]
+[gd_scene load_steps=12 format=3 uid="uid://dha1gen4k81gu"]
 
-[ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_jisms"]
-[ext_resource type="PackedScene" uid="uid://bxvjq0najgwcn" path="res://Scenes/Player/Player.tscn" id="1_wmtdt"]
-[ext_resource type="PackedScene" uid="uid://b13v4v2sx72x7" path="res://Scenes/LevelHUD.tscn" id="2_x6shp"]
-[ext_resource type="PackedScene" uid="uid://dno1gnvkkkf1c" path="res://Scenes/Enemy/RedEnemy.tscn" id="3_5uoti"]
-[ext_resource type="PackedScene" uid="uid://b03fjsr5evycm" path="res://Scenes/Enemy/BlueEnemy.tscn" id="4_jao2o"]
-[ext_resource type="Texture2D" uid="uid://bmom80b35jxmm" path="res://Assets/Sprites/GameOver.jpg" id="6_d8xbp"]
+[ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_vm71l"]
+[ext_resource type="Texture2D" uid="uid://b064hrwm2665m" path="res://Assets/kenney_space-shooter-redux/Backgrounds/black.png" id="2_ueotx"]
+[ext_resource type="Script" path="res://Scripts/background.gd" id="3_gy1c7"]
+[ext_resource type="Texture2D" uid="uid://c4hth0x6tf4iy" path="res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 01 - Void.png" id="3_usxtf"]
+[ext_resource type="Texture2D" uid="uid://y2iw334ycefu" path="res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 02 - Stars.png" id="4_qafcv"]
+[ext_resource type="PackedScene" uid="uid://b13v4v2sx72x7" path="res://Scenes/LevelHUD.tscn" id="5_6kg7p"]
+[ext_resource type="PackedScene" uid="uid://c5rstnfoa1yfx" path="res://Scenes/Enemy/Enemy B/BlueEnemyB.tscn" id="6_e0dna"]
+[ext_resource type="Texture2D" uid="uid://bmom80b35jxmm" path="res://Assets/Sprites/GameOver.jpg" id="6_m0k6b"]
+[ext_resource type="PackedScene" uid="uid://rr8mb8xx4lu6" path="res://Scenes/Enemy/Enemy B/RedEnemyB.tscn" id="7_0rig3"]
+[ext_resource type="Script" path="res://Scripts/camera.gd" id="7_3b6ff"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_taqpl"]
 
 [node name="Level1" type="Node"]
-script = ExtResource("1_jisms")
+script = ExtResource("1_vm71l")
 
-[node name="Player" parent="." instance=ExtResource("1_wmtdt")]
-position = Vector2(535, 1097)
+[node name="BG" type="Node2D" parent="."]
+script = ExtResource("3_gy1c7")
 
-[node name="RedEnemy" parent="." instance=ExtResource("3_5uoti")]
-position = Vector2(1026, -56)
+[node name="Sprite2D" type="Sprite2D" parent="BG"]
+texture_filter = 1
+position = Vector2(1087, 1391)
+rotation = 3.14159
+scale = Vector2(4.28, 5.48)
+texture = ExtResource("2_ueotx")
+centered = false
 
-[node name="BlueEnemy" parent="." instance=ExtResource("4_jao2o")]
-position = Vector2(707, 194)
+[node name="Sprite2D2" type="Sprite2D" parent="BG"]
+modulate = Color(1, 1, 1, 0.368627)
+texture_filter = 1
+position = Vector2(-15, 1425)
+rotation = 4.71239
+scale = Vector2(0.925524, 3.09595)
+texture = ExtResource("3_usxtf")
+centered = false
+flip_v = true
 
-[node name="LevelHUD" parent="." instance=ExtResource("2_x6shp")]
+[node name="Sprite2D3" type="Sprite2D" parent="BG"]
+modulate = Color(1, 1, 1, 0.368627)
+texture_filter = 1
+position = Vector2(-8, 1403)
+rotation = 4.71239
+scale = Vector2(2.04552, 3.09595)
+texture = ExtResource("4_qafcv")
+centered = false
+flip_v = true
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="BlueEnemyB" parent="Characters" instance=ExtResource("6_e0dna")]
+position = Vector2(321, 282)
+
+[node name="RedEnemyB" parent="Characters" instance=ExtResource("7_0rig3")]
+position = Vector2(751, 279)
+
+[node name="LevelHUD" parent="." instance=ExtResource("5_6kg7p")]
+
+[node name="GameOverSprite" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_taqpl")
+texture = ExtResource("6_m0k6b")
+centered = false
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(540, 690)
+script = ExtResource("7_3b6ff")
+
+[node name="ShakeTime" type="Timer" parent="Camera"]
+autostart = true
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="PlayerRespawn" type="Timer" parent="."]
+wait_time = 3.0
 
 [node name="Comentarios" type="Control" parent="."]
 layout_mode = 3
@@ -38,15 +92,9 @@ offset_bottom = 481.0
 theme_override_font_sizes/font_size = 81
 text = "FLECHAS o WASD = MOVERSE
 ESPACIO o N = DISPARAR
-SHIFT o M = CAMBIAR COLOR"
+SHIFT o M = CAMBIAR COLOR
+TAB o B = SUPERDISPARO"
 
-[node name="SpawnTimer" type="Timer" parent="."]
-autostart = true
-
-[node name="GameOverSprite" type="Sprite2D" parent="."]
-visible = false
-material = SubResource("ShaderMaterial_taqpl")
-texture = ExtResource("6_d8xbp")
-centered = false
-
+[connection signal="timeout" from="Camera/ShakeTime" to="Camera" method="_on_shake_time_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="PlayerRespawn" to="." method="_on_player_respawn_timeout"]

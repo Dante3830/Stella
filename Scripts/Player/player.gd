@@ -10,8 +10,11 @@ extends CharacterBody2D
 @onready var spawnPos = $SpawnPos
 @onready var muzzleFlash = $MuzzleFlash
 
-var playerBullet = preload("res://Scenes/Player/PlayerBullet.tscn")
+var PlayerBullet = preload("res://Scenes/Player/PlayerBullet.tscn")
+var Explosion = preload("res://Scenes/Explosion.tscn")
+
 var can_fire = true
+var can_change = true
 
 # Nuevas variables para los límites de la pantalla
 var screen_size
@@ -29,6 +32,10 @@ func _physics_process(delta):
 	move(delta)
 	
 	if Manager.health <= 0:
+		var explosion = Explosion.instantiate()
+		explosion.global_position = global_position
+		get_tree().current_scene.add_child(explosion)
+		Manager.camera.screen_shake(5.0, 0.1, 0.5)
 		queue_free()
 
 func get_input_axis():
@@ -61,14 +68,20 @@ func apply_movement(accel):
 	velocity = velocity.limit_length(speed)
 
 func _process(_delta):
+	# Disparo normal
 	if Input.is_action_pressed("Fire") and can_fire:
 		shoot()
 	
-	if Input.is_action_just_pressed("Change"):
+	# Super disparo
+	if Input.is_action_pressed("SuperFire") and Manager.power == 100 and can_fire:
+		supershoot()
+	
+	# Cambiar color
+	if Input.is_action_just_pressed("Change") and can_change:
 		change_color()
 
 func shoot():
-	var bullet = playerBullet.instantiate()
+	var bullet = PlayerBullet.instantiate()
 	bullet.position = spawnPos.global_position
 	get_tree().current_scene.add_child(bullet)
 	
@@ -80,6 +93,20 @@ func shoot():
 	$FireSpeed.start()
 	can_fire = false
 
+func supershoot():
+	Manager.power = 0
+	can_change = false
+	$SuperFire.visible = true
+	$SuperFire/CollisionPolygon2D.disabled = false
+	$SuperFire/SuperFireTime.start()
+	
+	if Manager.is_red:
+		$SuperFire/SuperRed.visible = true
+		$SuperFire/SuperBlue.visible = false
+	elif !Manager.is_red:
+		$SuperFire/SuperRed.visible = false
+		$SuperFire/SuperBlue.visible = true
+
 func change_color():
 	Manager.is_red = not Manager.is_red
 	update_sprite_visibility()
@@ -90,3 +117,16 @@ func update_sprite_visibility():
 
 func _on_fire_speed_timeout():
 	can_fire = true
+
+func _on_super_fire_body_entered(body):
+	if body.is_in_group("Enemy"):
+		body.enemy_hit()
+		Manager.score += 100
+	elif body.is_in_group("Boss"):
+		body.take_damage()
+		Manager.score += 100
+
+func _on_super_fire_time_timeout():
+	$SuperFire.visible = false
+	$SuperFire/CollisionPolygon2D.disabled = true
+	can_change = true

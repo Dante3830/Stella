@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dno1gnvkkkf1c"]
 
-[ext_resource type="Script" path="res://Scripts/Enemy/redEnemy.gd" id="1_plxwy"]
+[ext_resource type="Script" path="res://Scripts/Enemy/Enemy A/redEnemyA.gd" id="1_plxwy"]
 [ext_resource type="Texture2D" uid="uid://b2ijrer4lrrpt" path="res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip3_red.png" id="2_pdql4"]
 [ext_resource type="Texture2D" uid="uid://m0vo3wlmy4pw" path="res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed01.png" id="5_uoeu8"]
 
@@ -41,9 +41,18 @@ _data = {
 "muzzleflash": SubResource("Animation_ji6yd")
 }
 
-[node name="RedEnemy" type="CharacterBody2D" groups=["Enemy"]]
+[node name="RedEnemyA" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 4
+collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_plxwy")
+
+[node name="Collision" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision"]
+position = Vector2(-9, 0)
+rotation = -3.14159
+polygon = PackedVector2Array(37, 26, -9.00001, -36, -56, 27)
 
 [node name="RedSprite" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -76,9 +85,9 @@ rotation = -3.14159
 polygon = PackedVector2Array(37, 26, -9.00001, -36, -56, 27)
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-1.99999, -2.14645)
-scale = Vector2(9, 7.18536)
+rotation = -3.14159
+scale = Vector2(8, 6.57499)
 rect = Rect2(-10, -10, 20, 21.85)
 
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
 [connection signal="timeout" from="FireSpeed" to="." method="_on_fire_speed_timeout"]
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]

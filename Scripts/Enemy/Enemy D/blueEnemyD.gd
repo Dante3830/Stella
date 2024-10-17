@@ -1,34 +1,31 @@
-# ROJO (redEnemyC.gd)
+# AZUL (blueEnemyD.gd)
 extends CharacterBody2D
 
 @export var speed = 200
 @export var health = 1
 @onready var spawnPos = $SpawnPos
 
-var Bullet = preload("res://Scenes/Enemy/RedEnemyBullet.tscn")
+var Bullet = preload("res://Scenes/Enemy/BlueEnemyBullet.tscn")
 var Explosion = preload("res://Scenes/Explosion.tscn")
 
 var can_fire = true
 var directions = [Vector2.UP, Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT]
 
-var player = null
-
 func _ready():
 	$FireSpeed.start()
 
 func _physics_process(delta):
-	var movement = Vector2(0, speed)
-	
-	if player:
-		movement = position.direction_to(player.position) * speed
+	var movement = Vector2(0, 0)
 	move_and_collide(movement * delta)
 
 func shoot():
 	if can_fire:
-		var bullet = Bullet.instantiate()
-		bullet.position = spawnPos.global_position
-		bullet.init(Vector2.DOWN)
-		get_tree().current_scene.add_child(bullet)
+		# Disparar en las cuatro direcciones
+		for direction in directions:
+			var bullet = Bullet.instantiate()
+			bullet.position = spawnPos.global_position
+			bullet.init(direction)  # Establecer la dirección de la bala
+			get_tree().current_scene.add_child(bullet)
 		
 		can_fire = false
 		$FireSpeed.start()
@@ -55,8 +52,3 @@ func enemy_hit():
 		explosion.global_position = global_position
 		get_tree().current_scene.add_child(explosion)
 		queue_free()
-
-
-func _on_detection_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
-		body = player

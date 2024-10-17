@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cdcbdirvlkxbp"]
 
 [ext_resource type="Texture2D" uid="uid://dvhckykka20la" path="res://Assets/Sprites/pixelCircle.png" id="1_ttaaw"]
-[ext_resource type="Script" path="res://Scripts/explosion.gd" id="2_8ivxm"]
+[ext_resource type="Script" path="res://Scripts/Visuals/explosion.gd" id="2_8ivxm"]
 
 [sub_resource type="Curve" id="Curve_86t3s"]
 max_value = 0.5

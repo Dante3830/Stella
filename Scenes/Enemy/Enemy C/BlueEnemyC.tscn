@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqig583yk6i6c"]
+[gd_scene load_steps=7 format=3 uid="uid://bqig583yk6i6c"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy/Enemy C/blueEnemyC.gd" id="1_472c7"]
 [ext_resource type="Texture2D" uid="uid://dilw66shgjd7c" path="res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Fighter - Base.png" id="2_kmtns"]
@@ -19,6 +19,9 @@ shader_parameter/tolerance = 0.1
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2fbd"]
 size = Vector2(67, 20)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5n3wc"]
+radius = 1375.88
+
 [node name="BlueEnemyC" type="CharacterBody2D" groups=["Enemy"]]
 collision_layer = 4
 collision_mask = 2
@@ -33,16 +36,20 @@ scale = Vector2(3, 3)
 texture = ExtResource("2_kmtns")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_b2fbd")
 
 [node name="Collision" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
 position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_b2fbd")
+
+[node name="Detection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+position = Vector2(1.5, 0)
+shape = SubResource("CircleShape2D_5n3wc")
 
 [node name="SpawnPos" type="Marker2D" parent="."]
 
@@ -56,5 +63,6 @@ position = Vector2(1, -11)
 scale = Vector2(8, 6.57499)
 rect = Rect2(-10, -10, 20, 21.85)
 
+[connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
 [connection signal="timeout" from="FireSpeed" to="." method="_on_fire_speed_timeout"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]

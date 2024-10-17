@@ -3,19 +3,26 @@ extends Node
 var BlueEnemyA = preload("res://Scenes/Enemy/Enemy A/BlueEnemyA.tscn")
 var RedEnemyA = preload("res://Scenes/Enemy/Enemy A/RedEnemyA.tscn")
 
+var BlueEnemyB = preload("res://Scenes/Enemy/Enemy B/BlueEnemyB.tscn")
+var RedEnemyB = preload("res://Scenes/Enemy/Enemy B/RedEnemyB.tscn")
+
+var current_wave = 0
+
 var Player = preload("res://Scenes/Player/Player.tscn")
-var player = null  # Inicializamos como null
+var player = null
 
 func _ready():
 	$Comentarios.visible = false
 	spawn_player()
+	#if level_data:
+		#start_waves()
 
 func _physics_process(_delta):
-	if player == null and $PlayerRespawn.is_stopped():  # Cambiada la condición
+	if player == null and $PlayerRespawn.is_stopped():
 		$PlayerRespawn.start()
 
 func spawn_player():
-	player = Player.instantiate()  # Creamos nueva instancia
+	player = Player.instantiate()
 	player.position = Vector2(535, 1097)
 	get_node("Characters").add_child(player)
 

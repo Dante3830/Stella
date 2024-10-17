@@ -1,20 +1,24 @@
 [gd_scene load_steps=12 format=3 uid="uid://dha1gen4k81gu"]
 
-[ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_vm71l"]
+[ext_resource type="Script" path="res://Scripts/Levels/Main Levels/level_1.gd" id="1_vm71l"]
+[ext_resource type="Script" path="res://Scripts/Enemy/Waves System/waveManager.gd" id="2_58al6"]
 [ext_resource type="Texture2D" uid="uid://b064hrwm2665m" path="res://Assets/kenney_space-shooter-redux/Backgrounds/black.png" id="2_ueotx"]
-[ext_resource type="Script" path="res://Scripts/background.gd" id="3_gy1c7"]
+[ext_resource type="Script" path="res://Scripts/Enemy/Waves System/wave.gd" id="3_65bxa"]
+[ext_resource type="Script" path="res://Scripts/Visuals/background.gd" id="3_gy1c7"]
 [ext_resource type="Texture2D" uid="uid://c4hth0x6tf4iy" path="res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 01 - Void.png" id="3_usxtf"]
 [ext_resource type="Texture2D" uid="uid://y2iw334ycefu" path="res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 02 - Stars.png" id="4_qafcv"]
 [ext_resource type="PackedScene" uid="uid://b13v4v2sx72x7" path="res://Scenes/LevelHUD.tscn" id="5_6kg7p"]
-[ext_resource type="PackedScene" uid="uid://c5rstnfoa1yfx" path="res://Scenes/Enemy/Enemy B/BlueEnemyB.tscn" id="6_e0dna"]
 [ext_resource type="Texture2D" uid="uid://bmom80b35jxmm" path="res://Assets/Sprites/GameOver.jpg" id="6_m0k6b"]
-[ext_resource type="PackedScene" uid="uid://rr8mb8xx4lu6" path="res://Scenes/Enemy/Enemy B/RedEnemyB.tscn" id="7_0rig3"]
-[ext_resource type="Script" path="res://Scripts/camera.gd" id="7_3b6ff"]
+[ext_resource type="Script" path="res://Scripts/Visuals/camera.gd" id="7_3b6ff"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_taqpl"]
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_vm71l")
+
+[node name="WaveManager" type="Node" parent="."]
+script = ExtResource("2_58al6")
+waves = Array[ExtResource("3_65bxa")]([null])
 
 [node name="BG" type="Node2D" parent="."]
 script = ExtResource("3_gy1c7")
@@ -48,12 +52,6 @@ centered = false
 flip_v = true
 
 [node name="Characters" type="Node2D" parent="."]
-
-[node name="BlueEnemyB" parent="Characters" instance=ExtResource("6_e0dna")]
-position = Vector2(321, 282)
-
-[node name="RedEnemyB" parent="Characters" instance=ExtResource("7_0rig3")]
-position = Vector2(751, 279)
 
 [node name="LevelHUD" parent="." instance=ExtResource("5_6kg7p")]
 

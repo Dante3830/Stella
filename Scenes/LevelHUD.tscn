@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://gcd6hpmlxsma" path="res://Assets/Fonts/forgotten futurist bd.otf" id="1_40bx3"]
 [ext_resource type="FontFile" uid="uid://b2vlq2lb60mv6" path="res://Assets/Fonts/forgotten futurist bd it.otf" id="1_486pe"]
-[ext_resource type="Script" path="res://Scripts/level_hud.gd" id="1_menj6"]
+[ext_resource type="Script" path="res://Scripts/Visuals/level_hud.gd" id="1_menj6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iouf4"]
 bg_color = Color(0.877346, 4.06705e-06, 1.92523e-07, 1)

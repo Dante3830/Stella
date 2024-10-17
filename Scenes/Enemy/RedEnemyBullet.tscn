@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://trf37p1vnwmx"]
 
-[ext_resource type="Script" path="res://Scripts/Enemy/redEnemyBullet.gd" id="1_r5yv7"]
+[ext_resource type="Script" path="res://Scripts/Enemy/Bullets/redEnemyBullet.gd" id="1_r5yv7"]
 [ext_resource type="Texture2D" uid="uid://bolg6qe5f3q41" path="res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png" id="3_rqxy2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbib5"]

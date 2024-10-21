@@ -18,3 +18,5 @@ res://Scripts/Levels/waveData.gd
 res://Scripts/Enemy/Waves System/waveEnemy.gd
 res://Scripts/Enemy/Waves System/wave.gd
 res://Scripts/Enemy/Waves System/waveManager.gd
+res://Scenes/Enemy/Bosses/Athalaiah(B1).tscn
+res://Scripts/Enemy/Bosses/athalaiah(b1).gd

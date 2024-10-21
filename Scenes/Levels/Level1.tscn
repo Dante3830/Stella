@@ -3,22 +3,22 @@
 [ext_resource type="Script" path="res://Scripts/Levels/Main Levels/level_1.gd" id="1_vm71l"]
 [ext_resource type="Script" path="res://Scripts/Enemy/Waves System/waveManager.gd" id="2_58al6"]
 [ext_resource type="Texture2D" uid="uid://b064hrwm2665m" path="res://Assets/kenney_space-shooter-redux/Backgrounds/black.png" id="2_ueotx"]
-[ext_resource type="Script" path="res://Scripts/Enemy/Waves System/wave.gd" id="3_65bxa"]
 [ext_resource type="Script" path="res://Scripts/Visuals/background.gd" id="3_gy1c7"]
 [ext_resource type="Texture2D" uid="uid://c4hth0x6tf4iy" path="res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 01 - Void.png" id="3_usxtf"]
 [ext_resource type="Texture2D" uid="uid://y2iw334ycefu" path="res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 02 - Stars.png" id="4_qafcv"]
 [ext_resource type="PackedScene" uid="uid://b13v4v2sx72x7" path="res://Scenes/LevelHUD.tscn" id="5_6kg7p"]
 [ext_resource type="Texture2D" uid="uid://bmom80b35jxmm" path="res://Assets/Sprites/GameOver.jpg" id="6_m0k6b"]
 [ext_resource type="Script" path="res://Scripts/Visuals/camera.gd" id="7_3b6ff"]
+[ext_resource type="PackedScene" uid="uid://dqp64s53en3xx" path="res://Scenes/Enemy/Bosses/Athalaiah(B1).tscn" id="7_sl1bp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_taqpl"]
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_vm71l")
+spawn_enemies = false
 
 [node name="WaveManager" type="Node" parent="."]
 script = ExtResource("2_58al6")
-waves = Array[ExtResource("3_65bxa")]([null])
 
 [node name="BG" type="Node2D" parent="."]
 script = ExtResource("3_gy1c7")
@@ -52,6 +52,9 @@ centered = false
 flip_v = true
 
 [node name="Characters" type="Node2D" parent="."]
+
+[node name="Athalaiah (Boss 1)" parent="Characters" instance=ExtResource("7_sl1bp")]
+position = Vector2(539, -420)
 
 [node name="LevelHUD" parent="." instance=ExtResource("5_6kg7p")]
 

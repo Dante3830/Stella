@@ -703,14 +703,14 @@ RedEnemyC.tscn::PackedScene::207193592067939940::1728179831::0::1::::<><>::res:/
 ::res://Scenes/Enemy/Enemy D/::1728347040
 BlueEnemyD.tscn::PackedScene::5169557550110705429::1728347040::0::1::::<><>::res://Scripts/Enemy/Enemy D/blueEnemyD.gd<>uid://c3jqmso310l14::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip2_blue.png
 RedEnemyD.tscn::PackedScene::5259708473291015338::1728347040::0::1::::<><>::res://Scripts/Enemy/Enemy D/redEnemyD.gd<>uid://7qjiqvfxlknr::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip2_red.png
-::res://Scenes/Levels/::1728399188
-Level1.tscn::PackedScene::7652173544629063248::1729034914::0::1::::<><>::res://Scripts/Levels/Main Levels/level_1.gd<>uid://b064hrwm2665m::::res://Assets/kenney_space-shooter-redux/Backgrounds/black.png<>res://Scripts/Visuals/background.gd<>uid://c4hth0x6tf4iy::::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 01 - Void.png<>uid://y2iw334ycefu::::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 02 - Stars.png<>uid://b13v4v2sx72x7::::res://Scenes/LevelHUD.tscn<>uid://bmom80b35jxmm::::res://Assets/Sprites/GameOver.jpg<>res://Scripts/Visuals/camera.gd
+::res://Scenes/Levels/::1729050701
+Level1.tscn::PackedScene::7652173544629063248::1729050701::0::1::::<><>::res://Scripts/Levels/Main Levels/level_1.gd<>res://Scripts/Enemy/Waves System/waveManager.gd<>uid://b064hrwm2665m::::res://Assets/kenney_space-shooter-redux/Backgrounds/black.png<>res://Scripts/Enemy/Waves System/wave.gd<>res://Scripts/Visuals/background.gd<>uid://c4hth0x6tf4iy::::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 01 - Void.png<>uid://y2iw334ycefu::::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 02 - Stars.png<>uid://b13v4v2sx72x7::::res://Scenes/LevelHUD.tscn<>uid://bmom80b35jxmm::::res://Assets/Sprites/GameOver.jpg<>res://Scripts/Visuals/camera.gd
 ::res://Scenes/Player/::1728348643
 Player.tscn::PackedScene::4044692379018977065::1728348643::0::1::::<><>::res://Scripts/Player/player.gd<>uid://fgvvcllvkc4x::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_red.png<>uid://den8lsqssejly::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_blue.png<>uid://njepx503ji5x::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png<>uid://m0vo3wlmy4pw::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed01.png<>uid://wx8npg65v366::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png<>uid://bolg6qe5f3q41::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png
 PlayerBullet.tscn::PackedScene::7953013734075243812::1727039291::0::1::::<><>::res://Scripts/Player/playerBullet.gd<>uid://wx8npg65v366::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png<>uid://bolg6qe5f3q41::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png
 ::res://Scripts/::1728349072
 manager.gd::GDScript::-1::1727131635::0::1::::<>Node<>::
-::res://Scripts/Enemy/::1728349111
+::res://Scripts/Enemy/::1729034941
 ::res://Scripts/Enemy/Bullets/::1728349098
 blueEnemyBullet.gd::GDScript::-1::1728051503::0::1::::<>Area2D<>::
 redEnemyBullet.gd::GDScript::-1::1728051595::0::1::::<>Area2D<>::
@@ -726,9 +726,13 @@ redEnemyC.gd::GDScript::-1::1728347039::0::1::::<>CharacterBody2D<>::
 ::res://Scripts/Enemy/Enemy D/::1728346979
 blueEnemyD.gd::GDScript::-1::1728346817::0::1::::<>CharacterBody2D<>::
 redEnemyD.gd::GDScript::-1::1728346979::0::1::::<>CharacterBody2D<>::
-::res://Scripts/Levels/::1728349425
-::res://Scripts/Levels/Main Levels/::1728399188
-level_1.gd::GDScript::-1::1729034914::0::1::::<>Node<>::
+::res://Scripts/Enemy/Waves System/::1729036791
+waveManager.gd::GDScript::-1::1729036791::0::1::::WaveManager<>Node<>::
+waveEnemy.gd::GDScript::-1::1729036350::0::1::::WaveEnemy<>Resource<>::
+wave.gd::GDScript::-1::1729036361::0::1::::Wave<>Resource<>::
+::res://Scripts/Levels/::1729034841
+::res://Scripts/Levels/Main Levels/::1729036134
+level_1.gd::GDScript::-1::1729036134::0::1::::<>Node<>::
 ::res://Scripts/Player/::1728067511
 player.gd::GDScript::-1::1728067511::0::1::::<>CharacterBody2D<>::
 playerBullet.gd::GDScript::-1::1727137706::0::1::::<>Area2D<>::
@@ -740,5 +744,5 @@ background.gd::GDScript::-1::1727038875::0::1::::<>Node2D<>::
 camera.gd::GDScript::-1::1727279672::0::1::::<>Camera2D<>::
 explosion.gd::GDScript::-1::1727139243::0::1::::<>CPUParticles2D<>::
 level_hud.gd::GDScript::-1::1726449049::0::1::::<>Control<>::
-::res://Shaders/::1728399188
-BlueEnemyC.gdshader::Shader::-1::1729034914::0::1::::<><>::
+::res://Shaders/::1729050701
+BlueEnemyC.gdshader::Shader::-1::1729050701::0::1::::<><>::

@@ -1,0 +1,101 @@
+[gd_scene load_steps=8 format=3 uid="uid://dqp64s53en3xx"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy/Bosses/athalaiah(b1).gd" id="1_gqa4u"]
+[ext_resource type="Texture2D" uid="uid://c8i2gnmhr3yxc" path="res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Battlecruiser - Base.png" id="1_menr5"]
+[ext_resource type="Texture2D" uid="uid://doxmmxqgnhfh5" path="res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Torpedo Ship - Base.png" id="2_vbo2n"]
+[ext_resource type="FontFile" uid="uid://dk6ts2l4bajko" path="res://Assets/Fonts/TERMINAT.TTF" id="4_dpp40"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8y53y"]
+size = Vector2(126, 649)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p81sa"]
+size = Vector2(146, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqd0w"]
+size = Vector2(146, 53)
+
+[node name="Athalaiah (Boss 1)" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_gqa4u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 3.14159
+scale = Vector2(8, 8)
+texture = ExtResource("1_menr5")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-391, -76)
+scale = Vector2(8, 8)
+texture = ExtResource("2_vbo2n")
+region_enabled = true
+region_rect = Rect2(0, 19.2146, 27.7868, 27.933)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(391, -76)
+scale = Vector2(8, 8)
+texture = ExtResource("2_vbo2n")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 19.2146, 27.7868, 27.933)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 64.5)
+shape = SubResource("RectangleShape2D_8y53y")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-362, -84.5)
+shape = SubResource("RectangleShape2D_p81sa")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(362, -83.5)
+shape = SubResource("RectangleShape2D_tqd0w")
+
+[node name="WARNING" type="CanvasLayer" parent="."]
+
+[node name="Warning" type="Label" parent="WARNING"]
+offset_left = 160.0
+offset_top = 521.0
+offset_right = 945.0
+offset_bottom = 640.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("4_dpp40")
+theme_override_font_sizes/font_size = 111
+text = "WARNING"
+
+[node name="Mothership" type="Label" parent="WARNING"]
+offset_left = 166.0
+offset_top = 623.0
+offset_right = 1002.0
+offset_bottom = 742.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_dpp40")
+theme_override_font_sizes/font_size = 38
+text = "MOTHERSHIP DETECTED"
+
+[node name="Name" type="Label" parent="WARNING"]
+offset_left = 166.0
+offset_top = 660.0
+offset_right = 1002.0
+offset_bottom = 779.0
+theme_override_colors/font_color = Color(1, 0.333333, 0, 1)
+theme_override_fonts/font = ExtResource("4_dpp40")
+theme_override_font_sizes/font_size = 54
+text = "NAME: ATHALAIAH"
+
+[node name="NoRefuge" type="Label" parent="WARNING"]
+offset_left = 166.0
+offset_top = 709.0
+offset_right = 1002.0
+offset_bottom = 828.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("4_dpp40")
+theme_override_font_sizes/font_size = 80
+text = "NO REFUGE"
+
+[node name="VisibleTimer" type="Timer" parent="WARNING"]
+wait_time = 0.5
+
+[connection signal="timeout" from="WARNING/VisibleTimer" to="." method="_on_visible_timer_timeout"]

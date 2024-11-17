@@ -56,3 +56,7 @@ func _on_player_respawn_timeout():
 
 func _on_player_died():
 	player = null
+
+
+func _on_wave_timer_timeout() -> void:
+	pass # Replace with function body.

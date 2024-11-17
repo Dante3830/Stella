@@ -17,7 +17,7 @@ uniform float tolerance : hint_range(0.0, 1.0) = 0.1;
 
 void fragment() {
     vec4 current_color = texture(TEXTURE, UV);
-    
+
     // Chequear los colores originales para reemplazarlos
     if (length(current_color - original_color_1) < tolerance) {
         COLOR = new_color_1;

@@ -21,7 +21,9 @@ func _on_destroy_timer_timeout():
 func _on_body_entered(body):
 	if body.is_in_group("Enemy"):
 		body.enemy_hit()
+		Manager.score += 100
 		queue_free()
 	elif body.is_in_group("Boss"):
-		body.take_damage()
+		body.enemy_hit()
 		Manager.score += 100
+		queue_free()

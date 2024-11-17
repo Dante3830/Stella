@@ -32,11 +32,7 @@ func _physics_process(delta):
 	move(delta)
 	
 	if Manager.health <= 0:
-		var explosion = Explosion.instantiate()
-		explosion.global_position = global_position
-		get_tree().current_scene.add_child(explosion)
-		Manager.camera.screen_shake(5.0, 0.1, 0.5)
-		queue_free()
+		death()
 
 func get_input_axis():
 	axis.x = int(Input.is_action_pressed("Right")) - int(Input.is_action_pressed("Left"))
@@ -130,3 +126,10 @@ func _on_super_fire_time_timeout():
 	$SuperFire.visible = false
 	$SuperFire/CollisionPolygon2D.disabled = true
 	can_change = true
+
+func death():
+	var explosion = Explosion.instantiate()
+	explosion.global_position = global_position
+	get_tree().current_scene.add_child(explosion)
+	Manager.camera.screen_shake(5.0, 0.1, 0.5)
+	queue_free()

@@ -11,13 +11,13 @@ var enemies_spawned: int = 0
 var wave_in_progress: bool = false
 
 # Referencias a nodos
-@onready var spawn_timer: Timer = $SpawnTimer
-@onready var wave_timer: Timer = $WaveTimer
+@onready var spawn_timer: Timer = $"../SpawnTimer"
+@onready var wave_timer: Timer = $"../WaveTimer"
 
 # Señales
-signal wave_started(wave_number: int)
-signal wave_completed_(wave_number: int)
-signal all_waves_completed
+#signal wave_started(wave_number: int)
+#signal wave_completed_(wave_number: int)
+#signal all_waves_completed
 
 func _ready():
 	spawn_timer = Timer.new()

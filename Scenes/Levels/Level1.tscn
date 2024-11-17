@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dha1gen4k81gu"]
+[gd_scene load_steps=13 format=3 uid="uid://dha1gen4k81gu"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Main Levels/level_1.gd" id="1_vm71l"]
 [ext_resource type="Script" path="res://Scripts/Enemy/Waves System/waveManager.gd" id="2_58al6"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bmom80b35jxmm" path="res://Assets/Sprites/GameOver.jpg" id="6_m0k6b"]
 [ext_resource type="Script" path="res://Scripts/Visuals/camera.gd" id="7_3b6ff"]
 [ext_resource type="PackedScene" uid="uid://dqp64s53en3xx" path="res://Scenes/Enemy/Bosses/Athalaiah(B1).tscn" id="7_sl1bp"]
+[ext_resource type="PackedScene" uid="uid://82awlca2q8xw" path="res://Scenes/PauseMenu.tscn" id="11_qnghh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_taqpl"]
 
@@ -56,8 +57,6 @@ flip_v = true
 [node name="Athalaiah (Boss 1)" parent="Characters" instance=ExtResource("7_sl1bp")]
 position = Vector2(539, -420)
 
-[node name="LevelHUD" parent="." instance=ExtResource("5_6kg7p")]
-
 [node name="GameOverSprite" type="Sprite2D" parent="."]
 visible = false
 material = SubResource("ShaderMaterial_taqpl")
@@ -72,6 +71,10 @@ script = ExtResource("7_3b6ff")
 autostart = true
 
 [node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="WaveTimer" type="Timer" parent="."]
 wait_time = 10.0
 autostart = true
 
@@ -96,6 +99,14 @@ ESPACIO o N = DISPARAR
 SHIFT o M = CAMBIAR COLOR
 TAB o B = SUPERDISPARO"
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelHUD" parent="CanvasLayer" instance=ExtResource("5_6kg7p")]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("11_qnghh")]
+
 [connection signal="timeout" from="Camera/ShakeTime" to="Camera" method="_on_shake_time_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="WaveTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="WaveTimer" to="." method="_on_wave_timer_timeout"]
 [connection signal="timeout" from="PlayerRespawn" to="." method="_on_player_respawn_timeout"]

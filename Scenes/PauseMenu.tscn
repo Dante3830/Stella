@@ -1,0 +1,203 @@
+[gd_scene load_steps=11 format=3 uid="uid://82awlca2q8xw"]
+
+[ext_resource type="FontFile" uid="uid://dk6ts2l4bajko" path="res://Assets/Fonts/TERMINAT.TTF" id="1_cm7uo"]
+[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_pwev5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qm7qi"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0riaa"]
+bg_color = Color(0, 0, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjof5"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xh7m2"]
+bg_color = Color(0.0274754, 0, 1, 1)
+
+[sub_resource type="Animation" id="Animation_8pagv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(540, 690)]
+}
+
+[sub_resource type="Animation" id="Animation_6wptv"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(540, 690), Vector2(272, 478)]
+}
+
+[sub_resource type="Animation" id="Animation_oprh5"]
+resource_name = "close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(272, 478), Vector2(540, 690)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w5p0s"]
+_data = {
+"RESET": SubResource("Animation_8pagv"),
+"close": SubResource("Animation_oprh5"),
+"open": SubResource("Animation_6wptv")
+}
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pwev5")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -540.0
+offset_top = -690.0
+offset_right = 3.0
+offset_bottom = -297.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1e-05, 1e-05)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qm7qi")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = -118.0
+offset_right = 228.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 71
+text = "PAUSE"
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_0riaa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qjof5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xh7m2")
+text = " RESUME "
+
+[node name="OptionsButton" type="Button" parent="BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_0riaa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qjof5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xh7m2")
+text = " OPTIONS "
+
+[node name="MenuButton" type="Button" parent="BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_0riaa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qjof5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xh7m2")
+text = " BACK TO MENU "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_w5p0s")
+}
+
+[connection signal="pressed" from="BoxContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="BoxContainer/VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

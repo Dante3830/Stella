@@ -80,9 +80,9 @@ _data = {
 "RedMuzzleflash": SubResource("Animation_4t3h7")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
-collision_mask = 4
+collision_mask = 24
 motion_mode = 1
 script = ExtResource("1_iopuc")
 

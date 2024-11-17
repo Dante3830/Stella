@@ -1,22 +1,16 @@
-res://Scenes/Enemy/Enemy C/BlueEnemyC.tscn
-res://Shaders/BlueEnemyC.gdshader
-res://Scripts/Enemy/Enemy A/blueEnemyA.gd
-res://Scripts/Enemy/Enemy C/blueEnemyC.gd
-res://Scripts/Enemy/Enemy C/redEnemyC.gd
-res://Scenes/Enemy/Enemy C/RedEnemyC.tscn
-res://Scenes/Levels/Level1.tscn
-res://Scenes/Enemy/Enemy D/BlueEnemyD.tscn
-res://Scenes/Enemy/Enemy D/RedEnemyD.tscn
-res://Scripts/Enemy/Enemy D/blueEnemyD.gd
-res://Scripts/Enemy/Enemy D/redEnemyD.gd
-res://Scenes/Player/Player.tscn
-res://Scripts/level_1.gd
-res://Scripts/Levels/enemySpawnData.gd
-res://Scripts/Levels/levelData.gd
-res://Scripts/Levels/Main Levels/level_1.gd
-res://Scripts/Levels/waveData.gd
-res://Scripts/Enemy/Waves System/waveEnemy.gd
-res://Scripts/Enemy/Waves System/wave.gd
-res://Scripts/Enemy/Waves System/waveManager.gd
 res://Scenes/Enemy/Bosses/Athalaiah(B1).tscn
+res://Shaders/BlueEnemyC.gdshader
 res://Scripts/Enemy/Bosses/athalaiah(b1).gd
+res://Scenes/Levels/Level1.tscn
+res://Scripts/Levels/Main Levels/level_1.gd
+res://Scripts/Enemy/Waves System/waveManager.gd
+res://Scenes/PauseMenu.tscn
+res://Scenes/pauseMenu.gd
+res://Scenes/MainMenu.tscn
+res://Scripts/pause_menu.gd
+res://Scenes/Player/PlayerBullet.tscn
+res://Scripts/Player/playerBullet.gd
+res://Scripts/Player/player.gd
+res://Scenes/Player/Player.tscn
+res://Scenes/Enemy/BlueEnemyBullet.tscn
+res://Scenes/Enemy/RedEnemyBullet.tscn

@@ -1,5 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1728349289
+::res://::1731459565
+export_presets.cfg::TextFile::-1::1729127120::0::1::::<><>::
 icon.svg::CompressedTexture2D::4937016793600591067::1720913996::1720915726::1::::<><>::
 README.md::TextFile::-1::1720382064::0::1::::<><>::
 ::res://Addons/::1726528477
@@ -679,18 +680,23 @@ sheet.png::CompressedTexture2D::3509950833257549720::1391004346::1725835714::1::
 sheet.xml::TextFile::-1::1391004304::0::1::::<><>::
 ::res://Assets/kenney_space-shooter-redux/Vector/::1725837683
 sheet.svg::CompressedTexture2D::5709819327133487701::1391004268::1725837683::1::::<><>::
-::res://Assets/Sprites/::1727137886
+::res://Assets/Sprites/::1730070470
+BlueBullet.png::CompressedTexture2D::8966919494201968738::1728346285::1730070470::1::::<><>::
 GameOver.jpg::CompressedTexture2D::3258376946959606376::1726615141::1726615218::1::::<><>::
 pixelCircle.png::CompressedTexture2D::8647818980144875890::1712934931::1727137886::1::::<><>::
+RedBullet.png::CompressedTexture2D::2301826885926355151::1728346259::1730070470::1::::<><>::
 Title.jpg::CompressedTexture2D::2367560310980911773::1726615141::1726615218::1::::<><>::
-::res://Scenes/::1728349069
+::res://Scenes/::1731524504
 Explosion.tscn::PackedScene::4987603175600639469::1728349015::0::1::::<><>::uid://dvhckykka20la::::res://Assets/Sprites/pixelCircle.png<>res://Scripts/Visuals/explosion.gd
 LevelHUD.tscn::PackedScene::4270461185816889866::1728349005::0::1::::<><>::uid://gcd6hpmlxsma::::res://Assets/Fonts/forgotten futurist bd.otf<>uid://b2vlq2lb60mv6::::res://Assets/Fonts/forgotten futurist bd it.otf<>res://Scripts/Visuals/level_hud.gd
-MainMenu.tscn::PackedScene::7384050046662141996::1728349069::0::1::::<><>::res://Scripts/Screens/main_menu.gd<>uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF<>uid://8y4mwrqgyn1v::::res://Assets/Sprites/Title.jpg
+MainMenu.tscn::PackedScene::7384050046662141996::1731465329::0::1::::<><>::res://Scripts/Screens/main_menu.gd<>uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF<>uid://8y4mwrqgyn1v::::res://Assets/Sprites/Title.jpg
+PauseMenu.tscn::PackedScene::2372009907763799640::1731524504::0::1::::<><>::uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF
 Results.tscn::PackedScene::2684699933212424713::1728349069::0::1::::<><>::res://Scripts/Screens/results.gd<>uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF
-::res://Scenes/Enemy/::1728349111
+::res://Scenes/Enemy/::1729123975
 BlueEnemyBullet.tscn::PackedScene::9184079262420499365::1728349111::0::1::::<><>::res://Scripts/Enemy/Bullets/blueEnemyBullet.gd<>uid://wx8npg65v366::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png
 RedEnemyBullet.tscn::PackedScene::1369037743263992639::1728349111::0::1::::<><>::res://Scripts/Enemy/Bullets/redEnemyBullet.gd<>uid://bolg6qe5f3q41::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png
+::res://Scenes/Enemy/Bosses/::1731465329
+Athalaiah(B1).tscn::PackedScene::8315184223440236733::1731465329::0::1::::<><>::res://Scripts/Enemy/Bosses/athalaiah(b1).gd<>uid://c8i2gnmhr3yxc::::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Battlecruiser - Base.png<>uid://doxmmxqgnhfh5::::res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Torpedo Ship - Base.png<>uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF
 ::res://Scenes/Enemy/Enemy A/::1728066194
 BlueEnemyA.tscn::PackedScene::4199264981917799704::1728066194::0::1::::<><>::res://Scripts/Enemy/Enemy A/blueEnemyA.gd<>uid://3046jo7ott8l::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip3_blue.png<>uid://njepx503ji5x::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png
 RedEnemyA.tscn::PackedScene::8102208379218480378::1728066194::0::1::::<><>::res://Scripts/Enemy/Enemy A/redEnemyA.gd<>uid://b2ijrer4lrrpt::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip3_red.png<>uid://m0vo3wlmy4pw::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed01.png
@@ -703,14 +709,17 @@ RedEnemyC.tscn::PackedScene::207193592067939940::1728179831::0::1::::<><>::res:/
 ::res://Scenes/Enemy/Enemy D/::1728347040
 BlueEnemyD.tscn::PackedScene::5169557550110705429::1728347040::0::1::::<><>::res://Scripts/Enemy/Enemy D/blueEnemyD.gd<>uid://c3jqmso310l14::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip2_blue.png
 RedEnemyD.tscn::PackedScene::5259708473291015338::1728347040::0::1::::<><>::res://Scripts/Enemy/Enemy D/redEnemyD.gd<>uid://7qjiqvfxlknr::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip2_red.png
-::res://Scenes/Levels/::1729050701
-Level1.tscn::PackedScene::7652173544629063248::1729050701::0::1::::<><>::res://Scripts/Levels/Main Levels/level_1.gd<>res://Scripts/Enemy/Waves System/waveManager.gd<>uid://b064hrwm2665m::::res://Assets/kenney_space-shooter-redux/Backgrounds/black.png<>res://Scripts/Enemy/Waves System/wave.gd<>res://Scripts/Visuals/background.gd<>uid://c4hth0x6tf4iy::::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 01 - Void.png<>uid://y2iw334ycefu::::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 02 - Stars.png<>uid://b13v4v2sx72x7::::res://Scenes/LevelHUD.tscn<>uid://bmom80b35jxmm::::res://Assets/Sprites/GameOver.jpg<>res://Scripts/Visuals/camera.gd
+::res://Scenes/Levels/::1731465329
+Level1.tscn::PackedScene::7652173544629063248::1731465329::0::1::::<><>::res://Scripts/Levels/Main Levels/level_1.gd<>res://Scripts/Enemy/Waves System/waveManager.gd<>uid://b064hrwm2665m::::res://Assets/kenney_space-shooter-redux/Backgrounds/black.png<>res://Scripts/Visuals/background.gd<>uid://c4hth0x6tf4iy::::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 01 - Void.png<>uid://y2iw334ycefu::::res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 02 - Stars.png<>uid://b13v4v2sx72x7::::res://Scenes/LevelHUD.tscn<>uid://bmom80b35jxmm::::res://Assets/Sprites/GameOver.jpg<>res://Scripts/Visuals/camera.gd<>uid://dqp64s53en3xx::::res://Scenes/Enemy/Bosses/Athalaiah(B1).tscn<>uid://ok76rws5esax::::res://Scenes/PauseMenu.tscn
 ::res://Scenes/Player/::1728348643
 Player.tscn::PackedScene::4044692379018977065::1728348643::0::1::::<><>::res://Scripts/Player/player.gd<>uid://fgvvcllvkc4x::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_red.png<>uid://den8lsqssejly::::res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip1_blue.png<>uid://njepx503ji5x::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png<>uid://m0vo3wlmy4pw::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed01.png<>uid://wx8npg65v366::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png<>uid://bolg6qe5f3q41::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png
 PlayerBullet.tscn::PackedScene::7953013734075243812::1727039291::0::1::::<><>::res://Scripts/Player/playerBullet.gd<>uid://wx8npg65v366::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png<>uid://bolg6qe5f3q41::::res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png
-::res://Scripts/::1728349072
+::res://Scripts/::1731524657
 manager.gd::GDScript::-1::1727131635::0::1::::<>Node<>::
-::res://Scripts/Enemy/::1729034941
+pauseMenu.gd::GDScript::-1::1731524657::0::1::::<>Control<>::
+::res://Scripts/Enemy/::1729126197
+::res://Scripts/Enemy/Bosses/::1730936360
+athalaiah(b1).gd::GDScript::-1::1730936360::0::1::::<>CharacterBody2D<>::
 ::res://Scripts/Enemy/Bullets/::1728349098
 blueEnemyBullet.gd::GDScript::-1::1728051503::0::1::::<>Area2D<>::
 redEnemyBullet.gd::GDScript::-1::1728051595::0::1::::<>Area2D<>::
@@ -726,13 +735,13 @@ redEnemyC.gd::GDScript::-1::1728347039::0::1::::<>CharacterBody2D<>::
 ::res://Scripts/Enemy/Enemy D/::1728346979
 blueEnemyD.gd::GDScript::-1::1728346817::0::1::::<>CharacterBody2D<>::
 redEnemyD.gd::GDScript::-1::1728346979::0::1::::<>CharacterBody2D<>::
-::res://Scripts/Enemy/Waves System/::1729036791
-waveManager.gd::GDScript::-1::1729036791::0::1::::WaveManager<>Node<>::
-waveEnemy.gd::GDScript::-1::1729036350::0::1::::WaveEnemy<>Resource<>::
+::res://Scripts/Enemy/Waves System/::1730936442
 wave.gd::GDScript::-1::1729036361::0::1::::Wave<>Resource<>::
+waveEnemy.gd::GDScript::-1::1729036350::0::1::::WaveEnemy<>Resource<>::
+waveManager.gd::GDScript::-1::1730936442::0::1::::WaveManager<>Node<>::
 ::res://Scripts/Levels/::1729034841
-::res://Scripts/Levels/Main Levels/::1729036134
-level_1.gd::GDScript::-1::1729036134::0::1::::<>Node<>::
+::res://Scripts/Levels/Main Levels/::1730936407
+level_1.gd::GDScript::-1::1730936407::0::1::::<>Node<>::
 ::res://Scripts/Player/::1728067511
 player.gd::GDScript::-1::1728067511::0::1::::<>CharacterBody2D<>::
 playerBullet.gd::GDScript::-1::1727137706::0::1::::<>Area2D<>::
@@ -744,5 +753,5 @@ background.gd::GDScript::-1::1727038875::0::1::::<>Node2D<>::
 camera.gd::GDScript::-1::1727279672::0::1::::<>Camera2D<>::
 explosion.gd::GDScript::-1::1727139243::0::1::::<>CPUParticles2D<>::
 level_hud.gd::GDScript::-1::1726449049::0::1::::<>Control<>::
-::res://Shaders/::1729050701
-BlueEnemyC.gdshader::Shader::-1::1729050701::0::1::::<><>::
+::res://Shaders/::1731524505
+BlueEnemyC.gdshader::Shader::-1::1731524505::0::1::::<><>::

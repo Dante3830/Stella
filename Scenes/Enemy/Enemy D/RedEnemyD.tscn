@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://7qjiqvfxlknr" path="res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip2_red.png" id="2_18wn3"]
 
 [node name="RedEnemyD" type="CharacterBody2D" groups=["Enemy"]]
-collision_layer = 4
+collision_layer = 16
 collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_6urqu")

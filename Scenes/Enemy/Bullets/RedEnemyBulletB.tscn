@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct6jk8rox6rde"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy/Bullets/redEnemyBullet.gd" id="1_kfsju"]
+[ext_resource type="Texture2D" uid="uid://72a0t5wlap2n" path="res://Assets/Sprites/RedBullet.png" id="2_g4l76"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nrdjq"]
+radius = 19.2354
+
+[node name="RedEnemyBullet" type="Area2D" groups=["Bullet"]]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_kfsju")
+
+[node name="RedSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-0.999996, 4.76837e-07)
+scale = Vector2(0.0212402, 0.0209961)
+texture = ExtResource("2_g4l76")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nrdjq")
+
+[node name="DestroyTimer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="DestroyTimer" to="." method="_on_destroy_timer_timeout"]

@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var health = 1
 @onready var spawnPos = $SpawnPos
 
-var Bullet = preload("res://Scenes/Enemy/BlueEnemyBullet.tscn")
+var Bullet = preload("res://Scenes/Enemy/Bullets/BlueEnemyBulletA.tscn")
 var Explosion = preload("res://Scenes/Explosion.tscn")
 
 var can_fire = true

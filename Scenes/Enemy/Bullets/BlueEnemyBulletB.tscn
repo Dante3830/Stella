@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn15wvbqwv4wh"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy/Bullets/blueEnemyBullet.gd" id="1_8l2uk"]
+[ext_resource type="Texture2D" uid="uid://d00v4bhcp3w3c" path="res://Assets/Sprites/BlueBullet.png" id="2_hbpjh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f0y3s"]
+radius = 19.2354
+
+[node name="BlueEnemyBullet" type="Area2D" groups=["Bullet"]]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_8l2uk")
+
+[node name="BlueSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-0.999996, 4.76837e-07)
+scale = Vector2(0.0212402, 0.0209961)
+texture = ExtResource("2_hbpjh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_f0y3s")
+
+[node name="DestroyTimer" type="Timer" parent="." groups=["Bullet"]]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="DestroyTimer" to="." method="_on_destroy_timer_timeout"]

@@ -22,6 +22,8 @@ var half_width
 var half_height
 
 func _ready():
+	$BlueMuzzle.visible = false
+	$RedMuzzle.visible = false
 	update_sprite_visibility()
 	# Obtener el tamaño de la pantalla y calcular los límites
 	screen_size = get_viewport_rect().size
@@ -70,7 +72,7 @@ func _process(_delta):
 	
 	# Super disparo
 	if Input.is_action_pressed("SuperFire") and Manager.power == 100 and can_fire:
-		supershoot()
+		superfire()
 	
 	# Cambiar color
 	if Input.is_action_just_pressed("Change") and can_change:
@@ -89,7 +91,7 @@ func shoot():
 	$FireSpeed.start()
 	can_fire = false
 
-func supershoot():
+func superfire():
 	Manager.power = 0
 	can_change = false
 	$SuperFire.visible = true
@@ -119,7 +121,7 @@ func _on_super_fire_body_entered(body):
 		body.enemy_hit()
 		Manager.score += 100
 	elif body.is_in_group("Boss"):
-		body.take_damage()
+		body.enemy_hit()
 		Manager.score += 100
 
 func _on_super_fire_time_timeout():

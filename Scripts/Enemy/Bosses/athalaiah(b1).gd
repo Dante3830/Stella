@@ -2,17 +2,17 @@ extends CharacterBody2D
 
 var descent_speed = 50.0
 var phase = 1
-var target_y_position = 100
+var target_y_position = 200
 
 @onready var explosion = preload("res://Scenes/Explosion.tscn")
 
-@onready var red_bullet = preload("res://Scenes/Enemy/RedEnemyBullet.tscn")
-@onready var blue_bullet = preload("res://Scenes/Enemy/BlueEnemyBullet.tscn")
+@onready var red_bullet = preload("res://Scenes/Enemy/Bullets/RedEnemyBulletA.tscn")
+@onready var blue_bullet = preload("res://Scenes/Enemy/Bullets/BlueEnemyBulletA.tscn")
 
-@onready var warning = $WARNING/Warning
-@onready var mothership = $WARNING/Mothership
-@onready var shipName = $WARNING/Name
-@onready var noRefuge = $WARNING/NoRefuge
+@onready var warning = $CanvasLayer/WARNING/Warning
+@onready var mothership = $CanvasLayer/WARNING/Mothership
+@onready var shipName = $CanvasLayer/WARNING/Name
+@onready var noRefuge = $CanvasLayer/WARNING/NoRefuge
 
 @onready var left_wing = $"LEFT WING"
 @onready var right_wing = $"RIGHT WING"
@@ -30,6 +30,7 @@ var has_reached_position = false
 @export var phase2_health = 100
 @export var phase3_health = 50
 var current_phase_health = 0
+var current_phase_max_health = 0
 
 var travel = false
 var startPos = 0
@@ -52,6 +53,8 @@ var center_x = 539
 
 var use_blue_bullet = true
 
+@onready var healthBar = $"CanvasLayer/Boss Health/HealthBar"
+
 func _ready():
 	position = Vector2(539, -420)
 	startPos = position.x
@@ -62,6 +65,7 @@ func _ready():
 	noRefuge.visible_ratio = 0
 	
 	current_phase_health = phase1_health
+	current_phase_max_health = phase1_health 
 	
 	leftWingCollisionShape.disabled = true
 	rightWingCollisionShape.disabled = true
@@ -92,19 +96,22 @@ func _process(delta):
 		
 		if warning.visible_ratio >= 1 and mothership.visible_ratio >= 1 and shipName.visible_ratio >= 1 and noRefuge.visible_ratio >= 1:
 			all_text_visible = true
-			$WARNING/VisibleTimer.start()
+			$CanvasLayer/WARNING/VisibleTimer.start()
+	
+	healthBar.max_value = current_phase_max_health
+	healthBar.value = current_phase_health
 
 func _on_visible_timer_timeout():
-	if $WARNING.visible == true:
-		$WARNING.visible = false
+	if $CanvasLayer/WARNING.visible == true:
+		$CanvasLayer/WARNING.visible = false
 	else:
-		$WARNING.visible = true
+		$CanvasLayer/WARNING.visible = true
 	
 	times += 1
 	
 	if times >= 10:
-		$WARNING.visible = false
-		$WARNING/VisibleTimer.stop()
+		$CanvasLayer/WARNING.visible = false
+		$CanvasLayer/WARNING/VisibleTimer.stop()
 
 func _on_fire_speed_timeout():
 	can_fire = true
@@ -112,6 +119,7 @@ func _on_fire_speed_timeout():
 func handle_phase_behavior():
 	match phase:
 		1:
+			$"CanvasLayer/Boss Health".visible = true
 			leftWingCollisionShape.disabled = false
 			if position.x < startPos + distance:
 				right()
@@ -166,10 +174,12 @@ func transition_to_next_phase():
 		2:
 			left_wing.queue_free()
 			current_phase_health = phase2_health
+			current_phase_max_health = phase2_health
 			play_explosion_effect(left_wing.global_position)
 		3:
 			right_wing.queue_free()
 			current_phase_health = phase3_health
+			current_phase_max_health = phase3_health
 			play_explosion_effect(right_wing.global_position)
 
 func play_explosion_effect(pos):
@@ -178,18 +188,20 @@ func play_explosion_effect(pos):
 	get_parent().add_child(Explosion)
 
 func enemy_hit():
-	print("Golpe")
 	var damage = 1
 	
 	# Aplicar daño según el color y la fase
 	match phase:
 		1:  # Ala izquierda (azul)
+			print("Golpe izquierda")
 			if Manager.is_red:
 				damage = 2  # Más daño si el color coincide
 		2:  # Ala derecha (roja)
+			print("Golpe derecha")
 			if not Manager.is_red:
 				damage = 2  # Más daño si el color coincide
 		3:  # Base (alterna entre rojo y azul)
+			print("Golpe base")
 			damage = 1  # Daño normal en fase final
 	
 	current_phase_health -= damage
@@ -199,24 +211,68 @@ func enemy_hit():
 		if phase < 3:
 			transition_to_next_phase()
 		else:
+			can_fire = false
+			$FireSpeed.stop()
 			Manager.score += 10000
-			play_explosion_effect(global_position)
-			get_tree().change_scene_to_file("res://Scenes/Victory.tscn")
+			spawn_multiple_explosions()
 
 func _on_left_wing_body_entered(body):
-	if body.is_in_group("PlayerBullet"):
-		enemy_hit()
-	elif body.is_in_group("Player"):
+	if body.is_in_group("Player"):
 		body.death()
+	
+	while body.is_in_group("SuperFire"):
+		current_phase_health -= 10
 
 func _on_right_wing_body_entered(body):
-	if body.is_in_group("PlayerBullet"):
-		enemy_hit()
-	elif body.is_in_group("Player"):
+	if body.is_in_group("Player"):
 		body.death()
 
 func _on_base_body_entered(body):
-	if body.is_in_group("PlayerBullet"):
-		enemy_hit()
-	elif body.is_in_group("Player"):
+	if body.is_in_group("Player"):
 		body.death()
+
+func _on_base_area_entered(area: Area2D):
+	if area.is_in_group("PlayerBullet"):
+		enemy_hit()
+		area.queue_free()
+
+func _on_left_wing_area_entered(area: Area2D):
+	if area.is_in_group("PlayerBullet"):
+		enemy_hit()
+		area.queue_free()
+
+func _on_right_wing_area_entered(area: Area2D):
+	if area.is_in_group("PlayerBullet"):
+		enemy_hit()
+		area.queue_free()
+
+func spawn_multiple_explosions():
+	var explosion_count = 5
+	var explosion_duration = 3.0  # seconds
+	var timer = Timer.new()
+	timer.wait_time = explosion_duration
+	timer.one_shot = true
+	add_child(timer)
+	
+	for i in range(explosion_count):
+		var Explosion = explosion.instantiate()
+		Explosion.global_position = global_position + Vector2(
+			randf_range(-50, 50), 
+			randf_range(-50, 50)
+		)
+		get_parent().add_child(Explosion)
+		
+		# Crear un tween para mover la explosión
+		var tween = create_tween()
+		tween.tween_property(Explosion, "global_position", 
+			global_position + Vector2(
+				randf_range(-100, 100), 
+				randf_range(-100, 100)
+			), 
+			explosion_duration
+		)
+	
+	timer.timeout.connect(func(): 
+		queue_free()
+	)
+	timer.start()

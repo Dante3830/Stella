@@ -1,14 +1,14 @@
+Label
+ProgressBar
+Control
 CanvasLayer
 AnimationPlayer
 VBoxContainer
 BoxContainer
 Button
-Label
 OptionButton
 Panel
 CollisionShape2D
 Area2D
 Timer
 Node2D
-Marker2D
-Control

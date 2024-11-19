@@ -16,7 +16,7 @@ size = Vector2(20, 38)
 
 [sub_resource type="Animation" id="Animation_yi5e8"]
 resource_name = "BlueMuzzleflash"
-length = 0.1
+length = 0.15
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -24,10 +24,10 @@ tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [true, false]
+"values": [false, true, false]
 }
 
 [sub_resource type="Animation" id="Animation_tptno"]
@@ -59,7 +59,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_4t3h7"]
 resource_name = "RedMuzzleflash"
-length = 0.1
+length = 0.15
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -67,10 +67,10 @@ tracks/0/path = NodePath("../RedMuzzle:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [true, false]
+"values": [false, true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t0sli"]
@@ -135,6 +135,8 @@ one_shot = true
 
 [node name="SuperFire" type="Area2D" parent="."]
 visible = false
+collision_layer = 8
+collision_mask = 48
 
 [node name="SuperBlue" type="Sprite2D" parent="SuperFire"]
 visible = false

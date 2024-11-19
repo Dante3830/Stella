@@ -56,6 +56,8 @@ flip_v = true
 
 [node name="Athalaiah (Boss 1)" parent="Characters" instance=ExtResource("7_sl1bp")]
 position = Vector2(539, -420)
+phase2_health = 50
+phase3_health = 50
 
 [node name="GameOverSprite" type="Sprite2D" parent="."]
 visible = false
@@ -107,6 +109,6 @@ TAB o B = SUPERDISPARO"
 
 [connection signal="timeout" from="Camera/ShakeTime" to="Camera" method="_on_shake_time_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
-[connection signal="timeout" from="WaveTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="WaveTimer" to="." method="_on_wave_timer_timeout"]
+[connection signal="timeout" from="WaveTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="PlayerRespawn" to="." method="_on_player_respawn_timeout"]

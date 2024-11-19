@@ -23,7 +23,7 @@ func _on_body_entered(body):
 		body.enemy_hit()
 		Manager.score += 100
 		queue_free()
-	elif body.is_in_group("Boss"):
-		body.enemy_hit()
-		Manager.score += 100
-		queue_free()
+	#elif body.is_in_group("Boss"):
+		#body.enemy_hit()
+		#Manager.score += 100
+		#queue_free()

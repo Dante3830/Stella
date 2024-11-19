@@ -47,13 +47,6 @@ collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_plxwy")
 
-[node name="Collision" type="Area2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision"]
-position = Vector2(-9, 0)
-rotation = -3.14159
-polygon = PackedVector2Array(37, 26, -9.00001, -36, -56, 27)
-
 [node name="RedSprite" type="Sprite2D" parent="."]
 texture_filter = 1
 rotation = 3.14159
@@ -89,5 +82,12 @@ rotation = -3.14159
 scale = Vector2(8, 6.57499)
 rect = Rect2(-10, -10, 20, 21.85)
 
-[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
+[node name="Collision" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision"]
+position = Vector2(-9, 0)
+rotation = -3.14159
+polygon = PackedVector2Array(37, 26, -9.00001, -36, -56, 27)
+
 [connection signal="timeout" from="FireSpeed" to="." method="_on_fire_speed_timeout"]
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

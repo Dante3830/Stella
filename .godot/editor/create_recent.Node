@@ -1,3 +1,4 @@
+Timer
 Label
 ProgressBar
 Control
@@ -10,5 +11,4 @@ OptionButton
 Panel
 CollisionShape2D
 Area2D
-Timer
 Node2D

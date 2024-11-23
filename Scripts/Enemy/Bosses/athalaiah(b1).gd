@@ -26,9 +26,9 @@ var player = null
 var has_reached_position = false
 
 # Salud para cada fase
-@export var phase1_health = 150
-@export var phase2_health = 100
-@export var phase3_health = 50
+@export var phase1_health = 50
+@export var phase2_health = 75
+@export var phase3_health = 150
 var current_phase_health = 0
 var current_phase_max_health = 0
 
@@ -54,6 +54,9 @@ var center_x = 539
 var use_blue_bullet = true
 
 @onready var healthBar = $"CanvasLayer/Boss Health/HealthBar"
+
+var explosions_remaining = 30
+@onready var explosions_timer = $ExplosionsTimer
 
 func _ready():
 	position = Vector2(539, -420)
@@ -94,7 +97,8 @@ func _process(delta):
 		shipName.visible_ratio += delta
 		noRefuge.visible_ratio += delta
 		
-		if warning.visible_ratio >= 1 and mothership.visible_ratio >= 1 and shipName.visible_ratio >= 1 and noRefuge.visible_ratio >= 1:
+		if (warning.visible_ratio >= 1 and mothership.visible_ratio >= 1 
+			and shipName.visible_ratio >= 1 and noRefuge.visible_ratio >= 1):
 			all_text_visible = true
 			$CanvasLayer/WARNING/VisibleTimer.start()
 	
@@ -139,10 +143,12 @@ func shoot():
 	match phase:
 		1:
 			if left_wing:
-				spawn_wing_bullets(leftWingSpawnPos1, leftWingSpawnPos2, leftWingSpawnPos3, blue_bullet)
+				spawn_wing_bullets(leftWingSpawnPos1, leftWingSpawnPos2, 
+									leftWingSpawnPos3, blue_bullet)
 		2:
 			if right_wing:
-				spawn_wing_bullets(rightWingSpawnPos1, rightWingSpawnPos2, rightWingSpawnPos3, red_bullet)
+				spawn_wing_bullets(rightWingSpawnPos1, rightWingSpawnPos2, 
+									rightWingSpawnPos3, red_bullet)
 		3:
 			spawn_center_bullet(baseSpawnPos, blue_bullet if use_blue_bullet else red_bullet)
 			use_blue_bullet = !use_blue_bullet
@@ -187,35 +193,6 @@ func play_explosion_effect(pos):
 	Explosion.global_position = pos
 	get_parent().add_child(Explosion)
 
-func enemy_hit():
-	var damage = 1
-	
-	# Aplicar daño según el color y la fase
-	match phase:
-		1:  # Ala izquierda (azul)
-			print("Golpe izquierda")
-			if Manager.is_red:
-				damage = 2  # Más daño si el color coincide
-		2:  # Ala derecha (roja)
-			print("Golpe derecha")
-			if not Manager.is_red:
-				damage = 2  # Más daño si el color coincide
-		3:  # Base (alterna entre rojo y azul)
-			print("Golpe base")
-			damage = 1  # Daño normal en fase final
-	
-	current_phase_health -= damage
-	
-	# Comprobar si pasamos a la siguiente fase o terminamos
-	if current_phase_health <= 0:
-		if phase < 3:
-			transition_to_next_phase()
-		else:
-			can_fire = false
-			$FireSpeed.stop()
-			Manager.score += 10000
-			spawn_multiple_explosions()
-
 func _on_left_wing_body_entered(body):
 	if body.is_in_group("Player"):
 		body.death()
@@ -248,7 +225,7 @@ func _on_right_wing_area_entered(area: Area2D):
 
 func spawn_multiple_explosions():
 	var explosion_count = 5
-	var explosion_duration = 3.0  # seconds
+	var explosion_duration = 3.0
 	var timer = Timer.new()
 	timer.wait_time = explosion_duration
 	timer.one_shot = true
@@ -265,14 +242,68 @@ func spawn_multiple_explosions():
 		# Crear un tween para mover la explosión
 		var tween = create_tween()
 		tween.tween_property(Explosion, "global_position", 
-			global_position + Vector2(
-				randf_range(-100, 100), 
-				randf_range(-100, 100)
+			global_position + Vector2( randf_range(-100, 100), randf_range(-100, 100)
 			), 
 			explosion_duration
 		)
 	
-	timer.timeout.connect(func(): 
-		queue_free()
-	)
+	timer.timeout.connect(func():queue_free())
 	timer.start()
+
+func enemy_hit():
+	var damage = 1
+	
+	match phase:
+		1:  # Ala izquierda (azul)
+			print("Golpe izquierda")
+			if Manager.is_red:
+				damage = 2
+		2:  # Ala derecha (roja)
+			print("Golpe derecha")
+			if not Manager.is_red:
+				damage = 2
+		3:  # Base (alterna entre rojo y azul)
+			print("Golpe base")
+			damage = 1
+	
+	current_phase_health -= damage
+	
+	if current_phase_health <= 0:
+		if phase < 3:
+			transition_to_next_phase()
+		else:
+			start_death_sequence()
+
+func start_death_sequence():
+	Manager.score += 10000
+	baseCollisionShape.queue_free()
+	can_fire = false
+	$FireSpeed.stop()
+	
+	# Crear y configurar el timer
+	explosions_timer.start()
+	
+	$DestroyTimer.start()
+
+func _on_explosions_timer_timeout():
+	if explosions_remaining > 0:
+		create_random_explosion()
+		explosions_remaining -= 1
+	else:
+		cleanup_and_die()
+
+func create_random_explosion():
+	var Explosion = explosion.instantiate()
+	var random_x = randf_range(-500, 100)
+	var random_y = randf_range(-300, 425)
+	Explosion.global_position = global_position + Vector2(random_x, random_y)
+	get_parent().add_child(Explosion)
+
+func cleanup_and_die():
+	if explosions_timer:
+		explosions_timer.stop()
+	queue_free()
+
+func force_death():
+	print("Boss force death triggered")
+	cleanup_and_die()

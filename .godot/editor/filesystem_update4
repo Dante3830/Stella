@@ -23,3 +23,5 @@ res://Scripts/Enemy/Enemy A/redEnemyA.gd
 res://Scripts/Enemy/Enemy B/redEnemyB.gd
 res://Scripts/Enemy/Enemy C/redEnemyC.gd
 res://Scripts/Enemy/Enemy D/redEnemyD.gd
+res://Scenes/Enemy/Bosses/Athalaiah(B1).tscn
+res://Scenes/LevelHUD.tscn

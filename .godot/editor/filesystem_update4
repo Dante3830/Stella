@@ -1,0 +1,8 @@
+res://Scenes/PauseMenu.tscn
+res://Shaders/Defeat.gdshader
+res://Shaders/BlueEnemyC.gdshader
+res://Shaders/brightness.gdshader
+res://Scripts/pause_menu.gd
+res://Scenes/Levels/Level1.tscn
+res://Scenes/Enemy/Bosses/Athalaiah(B1).tscn
+res://Scenes/LevelHUD.tscn

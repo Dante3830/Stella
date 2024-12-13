@@ -1,5 +1,6 @@
-OptionButton
 Panel
+HSlider
+OptionButton
 Timer
 Label
 ProgressBar
@@ -11,4 +12,3 @@ BoxContainer
 Button
 CollisionShape2D
 Area2D
-Node2D

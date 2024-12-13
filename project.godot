@@ -13,17 +13,19 @@ config_version=5
 config/name="Stella"
 run/main_scene="res://Scenes/Levels/Level1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/bg_color=Color(0.126624, 0.126624, 0.126624, 1)
+boot_splash/image="res://Assets/Sprites/icon-dark.png"
 config/icon="res://Assets/Sprites/Icon.png"
 
 [autoload]
 
 Manager="*res://Scripts/manager.gd"
+SettingsManager="*res://Scripts/settingsManager.gd"
 
 [display]
 
 window/size/viewport_width=1080
 window/size/viewport_height=1380
-window/size/resizable=false
 
 [global_group]
 

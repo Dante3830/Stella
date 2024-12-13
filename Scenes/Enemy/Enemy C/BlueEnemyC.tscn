@@ -9,11 +9,9 @@ shader = ExtResource("2_rkrg6")
 shader_parameter/original_color_1 = Color(0.431373, 0.152941, 0.152941, 1)
 shader_parameter/original_color_2 = Color(0.701961, 0.219608, 0.192157, 1)
 shader_parameter/original_color_3 = Color(0.917647, 0.309804, 0.211765, 1)
-shader_parameter/original_color_4 = Color(0.278431, 0.0901961, 0.0941176, 1)
 shader_parameter/new_color_1 = Color(0, 0, 0.803922, 1)
 shader_parameter/new_color_2 = Color(0.257789, 0.257789, 0.900531, 1)
 shader_parameter/new_color_3 = Color(0.521479, 0.521479, 0.978601, 1)
-shader_parameter/new_color_4 = Color(0, 0, 0.415686, 1)
 shader_parameter/tolerance = 0.1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2fbd"]

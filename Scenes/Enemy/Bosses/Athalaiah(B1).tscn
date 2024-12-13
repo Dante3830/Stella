@@ -1,9 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://dqp64s53en3xx"]
+[gd_scene load_steps=12 format=3 uid="uid://dqp64s53en3xx"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy/Bosses/athalaiah(b1).gd" id="1_gqa4u"]
 [ext_resource type="Texture2D" uid="uid://c8i2gnmhr3yxc" path="res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Battlecruiser - Base.png" id="1_menr5"]
+[ext_resource type="Shader" path="res://Shaders/Defeat.gdshader" id="2_je6ad"]
 [ext_resource type="Texture2D" uid="uid://doxmmxqgnhfh5" path="res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Torpedo Ship - Base.png" id="2_vbo2n"]
 [ext_resource type="FontFile" uid="uid://dk6ts2l4bajko" path="res://Assets/Fonts/TERMINAT.TTF" id="4_dpp40"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7afes"]
+shader = ExtResource("2_je6ad")
+shader_parameter/flicker_speed = 10.0
+shader_parameter/flicker_intensity = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8y53y"]
 size = Vector2(126, 649)
@@ -42,6 +48,7 @@ collision_mask = 6
 
 [node name="Base" type="Sprite2D" parent="BASE"]
 texture_filter = 1
+material = SubResource("ShaderMaterial_7afes")
 rotation = 3.14159
 scale = Vector2(8, 8)
 texture = ExtResource("1_menr5")
@@ -107,6 +114,7 @@ position = Vector2(455, -12)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="WARNING" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

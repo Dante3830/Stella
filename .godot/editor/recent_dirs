@@ -1,11 +1,11 @@
 res://Assets/Sprites
 res://Scripts
+res://Shaders
 res://Scenes
 res://Scripts/Enemy/Bosses
 res://Scenes/Enemy/Bosses
 res://Scripts/Enemy/Waves System
 res://Scripts/Enemy/Enemy D
-res://Shaders
 res://Scripts/Enemy/Enemy C
 res://Scripts/Enemy/Enemy B
 res://Scripts/Enemy

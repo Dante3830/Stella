@@ -56,8 +56,9 @@ flip_v = true
 
 [node name="Athalaiah (Boss 1)" parent="Characters" instance=ExtResource("7_sl1bp")]
 position = Vector2(539, -420)
-phase2_health = 50
-phase3_health = 50
+phase1_health = 10
+phase2_health = 10
+phase3_health = 10
 
 [node name="GameOverSprite" type="Sprite2D" parent="."]
 visible = false

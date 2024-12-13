@@ -59,6 +59,8 @@ var explosions_remaining = 30
 @onready var explosions_timer = $ExplosionsTimer
 
 func _ready():
+	$CanvasLayer/WARNING.visible = true
+	
 	position = Vector2(539, -420)
 	startPos = position.x
 	
@@ -271,12 +273,22 @@ func enemy_hit():
 	if current_phase_health <= 0:
 		if phase < 3:
 			transition_to_next_phase()
-		else:
+		elif phase == 3:
 			start_death_sequence()
 
 func start_death_sequence():
+	var shader_material = $BASE/Base.material as ShaderMaterial
+	if shader_material:
+		shader_material.set_shader_parameter("flicker_intensity", 1.0)
+	
 	Manager.score += 10000
-	baseCollisionShape.queue_free()
+	
+	# En lugar de queue_free(), intentamos desactivarlo
+	if is_instance_valid(baseCollisionShape):
+		baseCollisionShape.set_deferred("disabled", true)
+	else:
+		print("baseCollisionShape no es válido")
+	
 	can_fire = false
 	$FireSpeed.stop()
 	

@@ -1,3 +1,5 @@
+OptionButton
+Panel
 Timer
 Label
 ProgressBar
@@ -7,8 +9,6 @@ AnimationPlayer
 VBoxContainer
 BoxContainer
 Button
-OptionButton
-Panel
 CollisionShape2D
 Area2D
 Node2D

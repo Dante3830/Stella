@@ -59,6 +59,11 @@ func _on_sound_opt_back_button_pressed():
 	$BoxContainer/GameOptContainer.visible = true
 
 # GRAPHICS
-
+func _on_graphics_opt_back_button_pressed():
+	$BoxContainer/GraphicsOptContainer.visible = false
+	$BoxContainer/GameOptContainer.visible = true
 
 # CONTROLS
+func _on_controls_opt_back_button_pressed():
+	$BoxContainer/ControlsOptContainer.visible = false
+	$BoxContainer/GameOptContainer.visible = true

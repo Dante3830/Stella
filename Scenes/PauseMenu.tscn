@@ -1,7 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://82awlca2q8xw"]
+[gd_scene load_steps=19 format=3 uid="uid://82awlca2q8xw"]
 
 [ext_resource type="FontFile" uid="uid://dk6ts2l4bajko" path="res://Assets/Fonts/TERMINAT.TTF" id="1_cm7uo"]
 [ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_pwev5"]
+[ext_resource type="Texture2D" uid="uid://m32ijjurw5wo" path="res://Assets/Sprites/positive.jpg" id="3_y7b0v"]
+[ext_resource type="Texture2D" uid="uid://bfhk66ajxqi0d" path="res://Assets/Sprites/negative.jpg" id="4_5ocsh"]
+[ext_resource type="FontFile" uid="uid://ccfu6pha6fqye" path="res://Assets/Fonts/Arrows.ttf" id="5_v7udh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qm7qi"]
 bg_color = Color(0, 0, 0, 1)
@@ -168,16 +171,31 @@ offset_right = 260.0
 offset_bottom = 78.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
 
 [node name="MainContainer" type="VBoxContainer" parent="BoxContainer"]
-visible = false
 layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label5" type="Label" parent="BoxContainer/MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="BoxContainer/MainContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_cm7uo")
 theme_override_font_sizes/font_size = 71
 text = "PAUSE"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="BoxContainer/MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 
 [node name="ResumeButton" type="Button" parent="BoxContainer/MainContainer"]
@@ -191,6 +209,13 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_qjof5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xh7m2")
 text = " RESUME "
 
+[node name="Label2" type="Label" parent="BoxContainer/MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
 [node name="OptionsButton" type="Button" parent="BoxContainer/MainContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
@@ -201,6 +226,13 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_0riaa")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_qjof5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xh7m2")
 text = " OPTIONS "
+
+[node name="Label3" type="Label" parent="BoxContainer/MainContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
 
 [node name="MenuButton" type="Button" parent="BoxContainer/MainContainer"]
 layout_mode = 2
@@ -216,6 +248,13 @@ text = " BACK TO MENU "
 [node name="OptionsContainer" type="VBoxContainer" parent="BoxContainer"]
 visible = false
 layout_mode = 2
+
+[node name="Label3" type="Label" parent="BoxContainer/OptionsContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="BoxContainer/OptionsContainer"]
 layout_mode = 2
@@ -269,6 +308,13 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_qjof5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xh7m2")
 text = " CONTROLS "
 
+[node name="Label2" type="Label" parent="BoxContainer/OptionsContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
 [node name="BackButton" type="Button" parent="BoxContainer/OptionsContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
@@ -280,13 +326,27 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_qjof5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xh7m2")
 text = "BACK"
 
+[node name="Label4" type="Label" parent="BoxContainer/OptionsContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
 [node name="GameOptContainer" type="VBoxContainer" parent="BoxContainer"]
 visible = false
 layout_mode = 2
 
+[node name="Label4" type="Label" parent="BoxContainer/GameOptContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
 [node name="Label" type="Label" parent="BoxContainer/GameOptContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.0908728, 0, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_cm7uo")
 theme_override_font_sizes/font_size = 71
 text = "GAME"
@@ -303,6 +363,13 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_qjof5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xh7m2")
 text = " HUD "
 
+[node name="Label3" type="Label" parent="BoxContainer/GameOptContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
 [node name="Language" type="Label" parent="BoxContainer/GameOptContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -311,7 +378,7 @@ theme_override_font_sizes/font_size = 30
 text = "LANGUAGE"
 horizontal_alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="BoxContainer/GameOptContainer"]
+[node name="LangOption" type="OptionButton" parent="BoxContainer/GameOptContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_pressed_color = Color(0, 0.0567973, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
@@ -328,6 +395,13 @@ popup/item_0/text = "ENGLISH"
 popup/item_1/text = "ESPANOL"
 popup/item_1/id = 1
 
+[node name="Label2" type="Label" parent="BoxContainer/GameOptContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
 [node name="BackButton" type="Button" parent="BoxContainer/GameOptContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
@@ -340,11 +414,12 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_xh7m2")
 text = "BACK"
 
 [node name="SoundOptContainer" type="VBoxContainer" parent="BoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="BoxContainer/SoundOptContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.0908728, 0, 1, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_cm7uo")
 theme_override_font_sizes/font_size = 71
 text = "SOUND"
@@ -364,6 +439,13 @@ theme_override_styles/slider = SubResource("StyleBoxFlat_qum24")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_r8xgl")
 value = 50.0
 
+[node name="Label2" type="Label" parent="BoxContainer/SoundOptContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
 [node name="SFX" type="Label" parent="BoxContainer/SoundOptContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -378,7 +460,219 @@ theme_override_styles/slider = SubResource("StyleBoxFlat_qum24")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_r8xgl")
 value = 50.0
 
+[node name="Label3" type="Label" parent="BoxContainer/SoundOptContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
 [node name="BackButton" type="Button" parent="BoxContainer/SoundOptContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_0riaa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qjof5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xh7m2")
+text = "BACK"
+
+[node name="GraphicsOptContainer" type="VBoxContainer" parent="BoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BoxContainer/GraphicsOptContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 60
+text = "GRAPHICS"
+horizontal_alignment = 1
+
+[node name="Birghtness" type="Label" parent="BoxContainer/GraphicsOptContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+text = "BRIGHTNESS"
+horizontal_alignment = 1
+
+[node name="BrightSlider" type="HSlider" parent="BoxContainer/GraphicsOptContainer"]
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_qum24")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_r8xgl")
+value = 50.0
+
+[node name="Contrast" type="Label" parent="BoxContainer/GraphicsOptContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+text = "CONTRAST"
+horizontal_alignment = 1
+
+[node name="ContrastSlider" type="HSlider" parent="BoxContainer/GraphicsOptContainer"]
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_qum24")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_r8xgl")
+value = 50.0
+
+[node name="Label2" type="Label" parent="BoxContainer/GraphicsOptContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="FSContainer" type="HBoxContainer" parent="BoxContainer/GraphicsOptContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BoxContainer/GraphicsOptContainer/FSContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+text = "    FULL SCREEN"
+
+[node name="FullscreenCheck" type="CheckBox" parent="BoxContainer/GraphicsOptContainer/FSContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 31
+theme_override_icons/checked = ExtResource("3_y7b0v")
+theme_override_icons/unchecked = ExtResource("4_5ocsh")
+alignment = 2
+text_overrun_behavior = 4
+
+[node name="BackButton" type="Button" parent="BoxContainer/GraphicsOptContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_0riaa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qjof5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xh7m2")
+text = "BACK"
+
+[node name="ControlsOptContainer" type="VBoxContainer" parent="BoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BoxContainer/ControlsOptContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 56
+text = "CONTROLS"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="BoxContainer/ControlsOptContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="Move" type="HBoxContainer" parent="BoxContainer/ControlsOptContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="BoxContainer/ControlsOptContainer/Move"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 21
+text = "MOVE"
+
+[node name="Label2" type="Label" parent="BoxContainer/ControlsOptContainer/Move"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 21
+text = "WASD/"
+
+[node name="Label3" type="Label" parent="BoxContainer/ControlsOptContainer/Move"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_v7udh")
+theme_override_font_sizes/font_size = 21
+text = "CBDA"
+
+[node name="Fire" type="HBoxContainer" parent="BoxContainer/ControlsOptContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="BoxContainer/ControlsOptContainer/Fire"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 21
+text = "FIRE"
+
+[node name="Label2" type="Label" parent="BoxContainer/ControlsOptContainer/Fire"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 21
+text = "              SPACE/N"
+
+[node name="Change" type="HBoxContainer" parent="BoxContainer/ControlsOptContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="BoxContainer/ControlsOptContainer/Change"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 21
+text = "CHANGE"
+
+[node name="Label2" type="Label" parent="BoxContainer/ControlsOptContainer/Change"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 21
+text = "              SHIFT/M"
+
+[node name="SuperFire" type="HBoxContainer" parent="BoxContainer/ControlsOptContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="BoxContainer/ControlsOptContainer/SuperFire"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 21
+text = "SUPERFIRE"
+
+[node name="Label2" type="Label" parent="BoxContainer/ControlsOptContainer/SuperFire"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 21
+text = "              TAB/B"
+
+[node name="Pause" type="HBoxContainer" parent="BoxContainer/ControlsOptContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="BoxContainer/ControlsOptContainer/Pause"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 21
+text = "PAUSE"
+
+[node name="Label2" type="Label" parent="BoxContainer/ControlsOptContainer/Pause"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 21
+text = "              ENTER"
+
+[node name="Label3" type="Label" parent="BoxContainer/ControlsOptContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cm7uo")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="BoxContainer/ControlsOptContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
@@ -402,4 +696,6 @@ libraries = {
 [connection signal="pressed" from="BoxContainer/OptionsContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="BoxContainer/GameOptContainer/BackButton" to="." method="_on_game_opt_back_button_pressed"]
 [connection signal="pressed" from="BoxContainer/SoundOptContainer/BackButton" to="." method="_on_sound_opt_back_button_pressed"]
+[connection signal="pressed" from="BoxContainer/GraphicsOptContainer/BackButton" to="." method="_on_graphics_opt_back_button_pressed"]
+[connection signal="pressed" from="BoxContainer/ControlsOptContainer/BackButton" to="." method="_on_controls_opt_back_button_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

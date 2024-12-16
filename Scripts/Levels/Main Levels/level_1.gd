@@ -13,6 +13,7 @@ var Player = preload("res://Scenes/Player/Player.tscn")
 var player = null
 
 func _ready():
+	Manager.init_data()
 	$Comentarios.visible = false
 	spawn_player()
 

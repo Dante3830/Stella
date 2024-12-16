@@ -6,3 +6,16 @@ res://Scripts/pause_menu.gd
 res://Scenes/Levels/Level1.tscn
 res://Scenes/Enemy/Bosses/Athalaiah(B1).tscn
 res://Scenes/LevelHUD.tscn
+res://Scenes/Screens/Results.tscn
+res://Scripts/Screens/results.gd
+res://Scripts/manager.gd
+res://Scripts/Enemy/Enemy A/blueEnemyA.gd
+res://Scripts/Enemy/Enemy B/blueEnemyB.gd
+res://Scripts/Enemy/Enemy C/blueEnemyC.gd
+res://Scripts/Enemy/Enemy D/blueEnemyD.gd
+res://Scripts/Enemy/Enemy A/redEnemyA.gd
+res://Scripts/Enemy/Enemy B/redEnemyB.gd
+res://Scripts/Enemy/Enemy C/redEnemyC.gd
+res://Scripts/Enemy/Enemy D/redEnemyD.gd
+res://Scripts/Player/playerBullet.gd
+res://Scripts/Levels/Main Levels/level_1.gd

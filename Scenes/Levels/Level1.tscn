@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dha1gen4k81gu"]
+[gd_scene load_steps=14 format=3 uid="uid://dha1gen4k81gu"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Main Levels/level_1.gd" id="1_vm71l"]
 [ext_resource type="Script" path="res://Scripts/Enemy/Waves System/waveManager.gd" id="2_58al6"]
@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://82awlca2q8xw" path="res://Scenes/PauseMenu.tscn" id="11_qnghh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_taqpl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xn02b"]
+bg_color = Color(0, 0, 0, 0)
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_vm71l")
@@ -107,6 +110,14 @@ TAB o B = SUPERDISPARO"
 [node name="LevelHUD" parent="CanvasLayer" instance=ExtResource("5_6kg7p")]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("11_qnghh")]
+
+[node name="END" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xn02b")
 
 [connection signal="timeout" from="Camera/ShakeTime" to="Camera" method="_on_shake_time_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

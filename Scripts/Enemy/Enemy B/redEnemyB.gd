@@ -47,7 +47,6 @@ func enemy_hit():
 	health -= 1
 	if health <= 0:
 		Manager.camera.screen_shake(20.0, 0.3, 1.0)
-		Manager.score += 100
 		var explosion = Explosion.instantiate()
 		explosion.global_position = global_position
 		get_tree().current_scene.add_child(explosion)

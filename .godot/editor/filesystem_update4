@@ -19,3 +19,4 @@ res://Scripts/Enemy/Enemy C/redEnemyC.gd
 res://Scripts/Enemy/Enemy D/redEnemyD.gd
 res://Scripts/Player/playerBullet.gd
 res://Scripts/Levels/Main Levels/level_1.gd
+res://Scenes/Screens/MainMenu.tscn

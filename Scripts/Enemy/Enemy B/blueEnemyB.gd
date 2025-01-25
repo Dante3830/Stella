@@ -1,30 +1,39 @@
-# AZUL (blueEnemyB.gd)
 extends CharacterBody2D
 
-@export var speed = 200
+var Bullet = preload("res://Scenes/Enemy/Bullets/BlueEnemyBulletB.tscn")
+
+@export var speed = 100  # Velocidad reducida para movimiento más controlado
 @export var health = 1
 @onready var spawnPos = $SpawnPos
+@onready var player = get_tree().get_first_node_in_group("Player")
 
-var Bullet = preload("res://Scenes/Enemy/Bullets/BlueEnemyBulletA.tscn")
 var Explosion = preload("res://Scenes/Explosion.tscn")
 
 var can_fire = true
-var directions = [Vector2.UP, Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT]
 
 func _ready():
 	$FireSpeed.start()
 
 func _physics_process(delta):
-	var movement = Vector2(0, 0)
-	move_and_collide(movement * delta)
+	if player:
+		# Calcular dirección hacia el jugador
+		var direction_to_player = (player.global_position - global_position).normalized()
+		
+		# Mover suavemente hacia el jugador
+		move_and_collide(direction_to_player * speed * delta)
 
 func shoot():
-	if can_fire:
-		# Disparar en las cuatro direcciones
-		for direction in directions:
+	if can_fire and player:
+		# Calcular ángulo hacia el jugador
+		var angle_to_player = (player.global_position - global_position).angle()
+		
+		# Disparar balas con ángulos variables
+		var spread_angles = [-0.5, 0, 0.5]
+		for spread in spread_angles:
+			var bullet_direction = Vector2.RIGHT.rotated(angle_to_player + spread)
 			var bullet = Bullet.instantiate()
 			bullet.position = spawnPos.global_position
-			bullet.init(direction)  # Establecer la dirección de la bala
+			bullet.init(bullet_direction)
 			get_tree().current_scene.add_child(bullet)
 		
 		can_fire = false
@@ -35,7 +44,6 @@ func _on_fire_speed_timeout():
 	shoot()
 
 func _on_screen_exited():
-	print("Enemigo fuera")
 	queue_free()
 
 func _on_collision_body_entered(body):
@@ -51,3 +59,6 @@ func enemy_hit():
 		explosion.global_position = global_position
 		get_tree().current_scene.add_child(explosion)
 		queue_free()
+
+func reset():
+	health = 1

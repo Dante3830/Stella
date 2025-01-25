@@ -1,16 +1,20 @@
 extends CharacterBody2D
 
+# Balas rojas
+var Bullet = preload("res://Scenes/Enemy/Bullets/RedEnemyBulletA.tscn")
+
 @export var speed = 200
 @export var health = 1
 @onready var spawnPos = $SpawnPos
 
-var Bullet = preload("res://Scenes/Enemy/Bullets/RedEnemyBulletA.tscn")
 var Explosion = preload("res://Scenes/Explosion.tscn")
 
 var can_fire = true
 
+signal defeated
+
+# Iniciar el temporizador de disparo cuando el enemigo se crea
 func _ready():
-	# Iniciar el temporizador de disparo cuando el enemigo se crea
 	$FireSpeed.start()
 
 func _physics_process(delta):
@@ -19,10 +23,17 @@ func _physics_process(delta):
 
 func shoot():
 	if can_fire:
-		var bullet = Bullet.instantiate()
-		bullet.position = spawnPos.global_position
-		bullet.init(Vector2.DOWN)
-		get_tree().current_scene.add_child(bullet)
+		var directions = [
+			Vector2(-0.5, 1).normalized(),  # Diagonal izquierda
+			Vector2.DOWN,                   # Recto
+			Vector2(0.5, 1).normalized()    # Diagonal derecha
+		]
+		
+		for dir in directions:
+			var bullet = Bullet.instantiate()
+			bullet.position = spawnPos.global_position
+			bullet.init(dir)
+			get_tree().current_scene.add_child(bullet)
 		
 		can_fire = false
 		$FireSpeed.start()
@@ -43,8 +54,13 @@ func _on_collision_body_entered(body):
 func enemy_hit():
 	health -= 1
 	if health <= 0:
+		emit_signal("defeated")
 		Manager.camera.screen_shake(20.0, 0.3, 1.0)
 		var explosion = Explosion.instantiate()
 		explosion.global_position = global_position
 		get_tree().current_scene.add_child(explosion)
 		queue_free()
+
+# Llama a esto cuando recuperes el enemigo de la pool
+func reset():
+	health = 1

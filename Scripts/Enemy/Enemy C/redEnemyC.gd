@@ -1,33 +1,40 @@
-# ROJO (redEnemyC.gd)
 extends CharacterBody2D
+
+var Bullet = preload("res://Scenes/Enemy/Bullets/RedEnemyBulletA.tscn")
 
 @export var speed = 200
 @export var health = 1
+@export var target_position = Vector2.ZERO  # Posición objetivo antes de detenerse
 @onready var spawnPos = $SpawnPos
 
-var Bullet = preload("res://Scenes/Enemy/Bullets/RedEnemyBulletA.tscn")
 var Explosion = preload("res://Scenes/Explosion.tscn")
 
 var can_fire = true
-var directions = [Vector2.UP, Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT]
-
 var player = null
+var is_positioned = false
 
 func _ready():
 	$FireSpeed.start()
 
 func _physics_process(delta):
-	var movement = Vector2(0, speed)
+	if not is_positioned:
+		# Moverse a la posición objetivo
+		var movement = position.direction_to(target_position) * speed
+		if position.distance_to(target_position) > 10:
+			move_and_collide(movement * delta)
+		else:
+			is_positioned = true
 	
-	if player:
-		movement = position.direction_to(player.position) * speed
-	move_and_collide(movement * delta)
+	if is_positioned and player:
+		# Disparar apuntando al jugador
+		shoot_at_player()
 
-func shoot():
+func shoot_at_player():
 	if can_fire:
+		var direction_to_player = (player.position - position).normalized()
 		var bullet = Bullet.instantiate()
 		bullet.position = spawnPos.global_position
-		bullet.init(Vector2.DOWN)
+		bullet.init(direction_to_player)
 		get_tree().current_scene.add_child(bullet)
 		
 		can_fire = false
@@ -35,7 +42,7 @@ func shoot():
 
 func _on_fire_speed_timeout():
 	can_fire = true
-	shoot()
+	shoot_at_player() if is_positioned and player else null
 
 func _on_screen_exited():
 	print("Enemigo fuera")
@@ -55,6 +62,6 @@ func enemy_hit():
 		get_tree().current_scene.add_child(explosion)
 		queue_free()
 
-func _on_detection_body_entered(body: Node2D) -> void:
+func _on_detection_body_entered(body):
 	if body.name == "Player":
-		body = player
+		player = body

@@ -90,4 +90,5 @@ rotation = -3.14159
 polygon = PackedVector2Array(37, 26, -9.00001, -36, -56, 27)
 
 [connection signal="timeout" from="FireSpeed" to="." method="_on_fire_speed_timeout"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

@@ -38,3 +38,4 @@ rect = Rect2(-10, -10, 20, 21.85)
 
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
 [connection signal="timeout" from="FireSpeed" to="." method="_on_fire_speed_timeout"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]

@@ -1,10 +1,10 @@
+Label
+Panel
 Control
 AnimationPlayer
-Panel
 Button
 VBoxContainer
 HBoxContainer
-Label
 Sprite2D
 CheckBox
 CheckButton

@@ -18,7 +18,6 @@ var camera = null
 var level = 1
 
 func _process(delta):
-	
 	time += delta
 	minutes = int(time / 60)
 	seconds = fmod(time, 60.0)

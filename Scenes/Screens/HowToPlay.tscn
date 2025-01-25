@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://gakjy1aymvl1"]
+
+[ext_resource type="Script" path="res://Scripts/Screens/how_to_play.gd" id="1_62f0x"]
+[ext_resource type="FontFile" uid="uid://dk6ts2l4bajko" path="res://Assets/Fonts/TERMINAT.TTF" id="3_rk558"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yk1cr"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e46w8"]
+bg_color = Color(0, 0, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3ork"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_381uc"]
+bg_color = Color(0.0274754, 0, 1, 1)
+
+[node name="HowToPlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_62f0x")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yk1cr")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 105.0
+offset_right = 1007.0
+offset_bottom = 191.0
+theme_override_fonts/font = ExtResource("3_rk558")
+theme_override_font_sizes/font_size = 80
+text = "HOW TO PLAY"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -143.0
+offset_top = -177.0
+offset_right = 143.0
+offset_bottom = -122.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("3_rk558")
+theme_override_font_sizes/font_size = 51
+theme_override_styles/hover = SubResource("StyleBoxFlat_e46w8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x3ork")
+theme_override_styles/normal = SubResource("StyleBoxFlat_381uc")
+text = " BACK TO MENU "
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

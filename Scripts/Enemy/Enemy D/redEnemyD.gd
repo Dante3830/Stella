@@ -1,30 +1,38 @@
-# ROJO (redEnemyD.gd)
 extends CharacterBody2D
 
-@export var speed = 200
+var Bullet = preload("res://Scenes/Enemy/Bullets/RedEnemyBulletA.tscn")
+
+@export var speed = 100  # Velocidad de movimiento lateral
 @export var health = 1
 @onready var spawnPos = $SpawnPos
 
-var Bullet = preload("res://Scenes/Enemy/Bullets/RedEnemyBulletA.tscn")
 var Explosion = preload("res://Scenes/Explosion.tscn")
 
 var can_fire = true
-var directions = [Vector2.DOWN, Vector2(-1, 1), Vector2(1, 1)]
+var move_direction = 1  # 1 para derecha, -1 para izquierda
+var screen_edge_reached = false
 
 func _ready():
 	$FireSpeed.start()
 
 func _physics_process(delta):
-	var movement = Vector2(0, 0)
+	# Movimiento lateral estilo Space Invaders
+	var movement = Vector2(speed * move_direction, 0)
 	move_and_collide(movement * delta)
+	
+	# Cambiar dirección al tocar el borde
+	if screen_edge_reached:
+		position.y += 50  # Bajar una fila
+		move_direction *= -1
+		screen_edge_reached = false
 
 func shoot():
 	if can_fire:
-		# Disparar en las cuatro direcciones
+		var directions = [Vector2.DOWN, Vector2(-1, 1), Vector2(1, 1)]
 		for direction in directions:
 			var bullet = Bullet.instantiate()
 			bullet.position = spawnPos.global_position
-			bullet.init(direction)  # Establecer la dirección de la bala
+			bullet.init(direction)
 			get_tree().current_scene.add_child(bullet)
 		
 		can_fire = false
@@ -51,3 +59,6 @@ func enemy_hit():
 		explosion.global_position = global_position
 		get_tree().current_scene.add_child(explosion)
 		queue_free()
+
+func _on_screen_edge_detected():
+	screen_edge_reached = true

@@ -1,22 +1,19 @@
-res://Scenes/PauseMenu.tscn
-res://Shaders/Defeat.gdshader
+res://Scenes/Enemy/Enemy A/BlueEnemyA.tscn
 res://Shaders/BlueEnemyC.gdshader
+res://Shaders/Defeat.gdshader
 res://Shaders/brightness.gdshader
-res://Scripts/pause_menu.gd
-res://Scenes/Levels/Level1.tscn
-res://Scenes/Enemy/Bosses/Athalaiah(B1).tscn
-res://Scenes/LevelHUD.tscn
-res://Scenes/Screens/Results.tscn
-res://Scripts/Screens/results.gd
-res://Scripts/manager.gd
 res://Scripts/Enemy/Enemy A/blueEnemyA.gd
-res://Scripts/Enemy/Enemy B/blueEnemyB.gd
-res://Scripts/Enemy/Enemy C/blueEnemyC.gd
-res://Scripts/Enemy/Enemy D/blueEnemyD.gd
 res://Scripts/Enemy/Enemy A/redEnemyA.gd
+res://Scenes/Enemy/Enemy A/RedEnemyA.tscn
+res://Scenes/Enemy/Enemy B/RedEnemyB.tscn
+res://Scripts/Enemy/Enemy B/blueEnemyB.gd
 res://Scripts/Enemy/Enemy B/redEnemyB.gd
+res://Scenes/Levels/Level1.tscn
+res://Scenes/Enemy/Enemy B/BlueEnemyB.tscn
+res://Scenes/Enemy/Enemy C/BlueEnemyC.tscn
+res://Scripts/Enemy/Enemy C/blueEnemyC.gd
 res://Scripts/Enemy/Enemy C/redEnemyC.gd
+res://Scenes/Enemy/Enemy D/RedEnemyD.tscn
+res://Scripts/Enemy/Enemy D/blueEnemyD.gd
 res://Scripts/Enemy/Enemy D/redEnemyD.gd
-res://Scripts/Player/playerBullet.gd
-res://Scripts/Levels/Main Levels/level_1.gd
-res://Scenes/Screens/MainMenu.tscn
+res://Scenes/Enemy/Enemy D/BlueEnemyD.tscn

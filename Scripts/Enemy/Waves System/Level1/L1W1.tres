@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="WaveData" load_steps=2 format=3 uid="uid://cj3o0du5yj3tm"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy/Waves System/waveData.gd" id="1_3jqdl"]
+
+[resource]
+script = ExtResource("1_3jqdl")
+blue_a_enemy_count = 2
+red_a_enemy_count = 2
+blue_b_enemy_count = 2
+red_b_enemy_count = 2
+blue_c_enemy_count = 0
+red_c_enemy_count = 0
+blue_d_enemy_count = 0
+red_d_enemy_count = 0
+blue_e_enemy_count = 0
+red_e_enemy_count = 0

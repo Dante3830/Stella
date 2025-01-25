@@ -1,15 +1,21 @@
-[gd_scene load_steps=14 format=3 uid="uid://dha1gen4k81gu"]
+[gd_scene load_steps=20 format=3 uid="uid://dha1gen4k81gu"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Main Levels/level_1.gd" id="1_vm71l"]
-[ext_resource type="Script" path="res://Scripts/Enemy/Waves System/waveManager.gd" id="2_58al6"]
+[ext_resource type="Script" path="res://Scripts/Enemy/Waves System/enemy_pool.gd" id="2_5vlpc"]
 [ext_resource type="Texture2D" uid="uid://b064hrwm2665m" path="res://Assets/kenney_space-shooter-redux/Backgrounds/black.png" id="2_ueotx"]
 [ext_resource type="Script" path="res://Scripts/Visuals/background.gd" id="3_gy1c7"]
+[ext_resource type="PackedScene" uid="uid://b03fjsr5evycm" path="res://Scenes/Enemy/Enemy A/BlueEnemyA.tscn" id="3_st7iu"]
 [ext_resource type="Texture2D" uid="uid://c4hth0x6tf4iy" path="res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 01 - Void.png" id="3_usxtf"]
+[ext_resource type="PackedScene" uid="uid://dno1gnvkkkf1c" path="res://Scenes/Enemy/Enemy A/RedEnemyA.tscn" id="4_kf1ay"]
 [ext_resource type="Texture2D" uid="uid://y2iw334ycefu" path="res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 02 - Stars.png" id="4_qafcv"]
 [ext_resource type="PackedScene" uid="uid://b13v4v2sx72x7" path="res://Scenes/LevelHUD.tscn" id="5_6kg7p"]
+[ext_resource type="PackedScene" uid="uid://c5rstnfoa1yfx" path="res://Scenes/Enemy/Enemy B/BlueEnemyB.tscn" id="5_p4v5o"]
 [ext_resource type="Texture2D" uid="uid://bmom80b35jxmm" path="res://Assets/Sprites/GameOver.jpg" id="6_m0k6b"]
+[ext_resource type="PackedScene" uid="uid://rr8mb8xx4lu6" path="res://Scenes/Enemy/Enemy B/RedEnemyB.tscn" id="6_ttn3u"]
 [ext_resource type="Script" path="res://Scripts/Visuals/camera.gd" id="7_3b6ff"]
-[ext_resource type="PackedScene" uid="uid://dqp64s53en3xx" path="res://Scenes/Enemy/Bosses/Athalaiah(B1).tscn" id="7_sl1bp"]
+[ext_resource type="Script" path="res://Scripts/Enemy/Waves System/waveData.gd" id="7_bm6e7"]
+[ext_resource type="Resource" uid="uid://cj3o0du5yj3tm" path="res://Scripts/Enemy/Waves System/Level1/L1W1.tres" id="8_vcmuy"]
+[ext_resource type="Resource" uid="uid://i0wuas2jfv5u" path="res://Scripts/Enemy/Waves System/Level1/L1W2.tres" id="9_d7m1r"]
 [ext_resource type="PackedScene" uid="uid://82awlca2q8xw" path="res://Scenes/PauseMenu.tscn" id="11_qnghh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_taqpl"]
@@ -19,10 +25,12 @@ bg_color = Color(0, 0, 0, 0)
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_vm71l")
-spawn_enemies = false
 
-[node name="WaveManager" type="Node" parent="."]
-script = ExtResource("2_58al6")
+[node name="EnemyPool" type="Node" parent="."]
+script = ExtResource("2_5vlpc")
+enemy_scenes = Array[PackedScene]([ExtResource("3_st7iu"), ExtResource("4_kf1ay"), ExtResource("5_p4v5o"), ExtResource("6_ttn3u")])
+enemy_names = Array[String](["BlueA", "RedA", "BlueB", "RedB", "BlueC", "RedC", "BlueD", "RedD"])
+waves = Array[ExtResource("7_bm6e7")]([ExtResource("8_vcmuy"), ExtResource("9_d7m1r")])
 
 [node name="BG" type="Node2D" parent="."]
 script = ExtResource("3_gy1c7")
@@ -56,12 +64,6 @@ centered = false
 flip_v = true
 
 [node name="Characters" type="Node2D" parent="."]
-
-[node name="Athalaiah (Boss 1)" parent="Characters" instance=ExtResource("7_sl1bp")]
-position = Vector2(539, -420)
-phase1_health = 10
-phase2_health = 10
-phase3_health = 10
 
 [node name="GameOverSprite" type="Sprite2D" parent="."]
 visible = false
@@ -121,6 +123,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_xn02b")
 
 [connection signal="timeout" from="Camera/ShakeTime" to="Camera" method="_on_shake_time_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
-[connection signal="timeout" from="WaveTimer" to="." method="_on_wave_timer_timeout"]
 [connection signal="timeout" from="WaveTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="WaveTimer" to="." method="_on_wave_timer_timeout"]
 [connection signal="timeout" from="PlayerRespawn" to="." method="_on_player_respawn_timeout"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cfwf4fl4w80dd"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy/Enemy D/blueEnemyD.gd" id="1_kdema"]
-[ext_resource type="Texture2D" uid="uid://c3jqmso310l14" path="res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip2_blue.png" id="2_ydcgk"]
+[ext_resource type="Texture2D" uid="uid://c3jqmso310l14" path="res://Assets/Sprites/kenney_space-shooter-redux/PNG/Ships/playerShip2_blue.png" id="2_ydcgk"]
 
 [node name="BlueEnemyD" type="CharacterBody2D" groups=["Enemy"]]
 collision_layer = 16

@@ -1,19 +1,14 @@
-res://Scenes/Enemy/Enemy A/BlueEnemyA.tscn
-res://Shaders/BlueEnemyC.gdshader
+res://Scenes/Enemy/Bosses/Tsubasahr(B2).tscn
 res://Shaders/Defeat.gdshader
+res://Shaders/Tsubasahr(B2F3).gdshader
+res://Shaders/BlueEnemyC.gdshader
 res://Shaders/brightness.gdshader
-res://Scripts/Enemy/Enemy A/blueEnemyA.gd
-res://Scripts/Enemy/Enemy A/redEnemyA.gd
-res://Scenes/Enemy/Enemy A/RedEnemyA.tscn
-res://Scenes/Enemy/Enemy B/RedEnemyB.tscn
-res://Scripts/Enemy/Enemy B/blueEnemyB.gd
-res://Scripts/Enemy/Enemy B/redEnemyB.gd
+res://Scripts/Enemy/Bosses/tsubasahr(b2).gd
 res://Scenes/Levels/Level1.tscn
-res://Scenes/Enemy/Enemy B/BlueEnemyB.tscn
-res://Scenes/Enemy/Enemy C/BlueEnemyC.tscn
-res://Scripts/Enemy/Enemy C/blueEnemyC.gd
-res://Scripts/Enemy/Enemy C/redEnemyC.gd
-res://Scenes/Enemy/Enemy D/RedEnemyD.tscn
-res://Scripts/Enemy/Enemy D/blueEnemyD.gd
-res://Scripts/Enemy/Enemy D/redEnemyD.gd
-res://Scenes/Enemy/Enemy D/BlueEnemyD.tscn
+res://Scenes/Enemy/Bullets/RedEnemyBulletB.tscn
+res://Scenes/Enemy/Bosses/Athalaiah(B1).tscn
+res://Scripts/Enemy/Bosses/athalaiah(b1).gd
+res://Scripts/Levels/Main Levels/level_1.gd
+res://Scripts/Player/player.gd
+res://Scenes/Screens/MainMenu.tscn
+res://Scripts/manager.gd

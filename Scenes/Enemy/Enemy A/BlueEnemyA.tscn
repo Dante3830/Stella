@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://b03fjsr5evycm"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy/Enemy A/blueEnemyA.gd" id="1_ccy4d"]
-[ext_resource type="Texture2D" uid="uid://3046jo7ott8l" path="res://Assets/kenney_space-shooter-redux/PNG/Ships/playerShip3_blue.png" id="2_1ieay"]
-[ext_resource type="Texture2D" uid="uid://njepx503ji5x" path="res://Assets/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png" id="4_ni2l0"]
+[ext_resource type="Texture2D" uid="uid://3046jo7ott8l" path="res://Assets/Sprites/kenney_space-shooter-redux/PNG/Ships/playerShip3_blue.png" id="2_1ieay"]
+[ext_resource type="Texture2D" uid="uid://njepx503ji5x" path="res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png" id="4_ni2l0"]
 
 [sub_resource type="Animation" id="Animation_tptno"]
 length = 0.001

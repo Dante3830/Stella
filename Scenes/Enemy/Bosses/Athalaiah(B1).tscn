@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://dqp64s53en3xx"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy/Bosses/athalaiah(b1).gd" id="1_gqa4u"]
-[ext_resource type="Texture2D" uid="uid://c8i2gnmhr3yxc" path="res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Battlecruiser - Base.png" id="1_menr5"]
+[ext_resource type="Texture2D" uid="uid://c8i2gnmhr3yxc" path="res://Assets/Sprites/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Battlecruiser - Base.png" id="1_menr5"]
 [ext_resource type="Shader" path="res://Shaders/Defeat.gdshader" id="2_je6ad"]
-[ext_resource type="Texture2D" uid="uid://doxmmxqgnhfh5" path="res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Torpedo Ship - Base.png" id="2_vbo2n"]
+[ext_resource type="Texture2D" uid="uid://doxmmxqgnhfh5" path="res://Assets/Sprites/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Torpedo Ship - Base.png" id="2_vbo2n"]
 [ext_resource type="FontFile" uid="uid://dk6ts2l4bajko" path="res://Assets/Fonts/TERMINAT.TTF" id="4_dpp40"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7afes"]
@@ -201,6 +201,7 @@ wait_time = 0.5
 autostart = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
 rotation = 3.14159
 scale = Vector2(8, 8)
 polygon = PackedVector2Array(-3, -51, -3, -50, -8, -50, -8, -48, -9, -48, -9, -41, -10, -41, -10, -34, -12, -34, -12, -33, -16, -33, -16, -40, -18, -40, -18, -39, -20, -39, -20, -38, -22, -38, -22, -22, -20, -22, -20, -21, -18, -21, -18, -20, -16, -20, -16, -26, -12, -26, -12, -25, -11, -25, -11, -13, -12, -13, -12, -12, -13, -12, -13, -9, -14, -9, -14, -1, -15, -1, -15, 4, -16, 4, -16, 5, -18, 5, -18, 6, -23, 6, -23, 5, -25, 5, -25, -11, -27, -11, -27, -10, -29, -10, -29, -9, -31, -9, -31, -8, -33, -8, -33, -7, -34, -7, -34, 4, -35, 4, -35, 18, -36, 18, -36, 30, -33, 30, -33, 31, -31, 31, -31, 32, -29, 32, -29, 33, -27, 33, -27, 34, -24, 34, -24, 18, -25, 18, -25, 17, -23, 17, -23, 16, -18, 16, -18, 17, -16, 17, -16, 27, -15, 27, -15, 33, -14, 33, -14, 34, -13, 34, -13, 35, -12, 35, -12, 36, -3, 36, -3, 37, 3, 37, 3, 36, 12, 36, 12, 35, 13, 35, 13, 34, 14, 34, 14, 33, 15, 33, 15, 27, 16, 27, 16, 17, 18, 17, 18, 16, 23, 16, 23, 17, 25, 17, 25, 18, 24, 18, 24, 34, 27, 34, 27, 33, 29, 33, 29, 32, 31, 32, 31, 31, 33, 31, 33, 30, 36, 30, 36, 18, 35, 18, 35, 4, 34, 4, 34, -7, 33, -7, 33, -8, 31, -8, 31, -9, 29, -9, 29, -10, 27, -10, 27, -11, 25, -11, 25, 5, 23, 5, 23, 6, 18, 6, 18, 5, 16, 5, 16, 4, 15, 4, 15, -1, 14, -1, 14, -9, 13, -9, 13, -12, 12, -12, 12, -13, 11, -13, 11, -25, 12, -25, 12, -26, 16, -26, 16, -20, 18, -20, 18, -21, 20, -21, 20, -22, 22, -22, 22, -38, 20, -38, 20, -39, 18, -39, 18, -40, 16, -40, 16, -33, 12, -33, 12, -34, 10, -34, 10, -41, 9, -41, 9, -48, 8, -48, 8, -50, 3, -50, 3, -51)

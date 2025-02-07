@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bqig583yk6i6c"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy/Enemy C/blueEnemyC.gd" id="1_472c7"]
-[ext_resource type="Texture2D" uid="uid://dilw66shgjd7c" path="res://Assets/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Fighter - Base.png" id="2_kmtns"]
+[ext_resource type="Texture2D" uid="uid://dilw66shgjd7c" path="res://Assets/Sprites/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Fighter - Base.png" id="2_kmtns"]
 [ext_resource type="Shader" path="res://Shaders/BlueEnemyC.gdshader" id="2_rkrg6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cklo8"]

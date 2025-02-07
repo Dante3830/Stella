@@ -27,6 +27,14 @@ SettingsManager="*res://Scripts/settingsManager.gd"
 window/size/viewport_width=1080
 window/size/viewport_height=1380
 
+[dotnet]
+
+project/assembly_name="Stella"
+
+[editor_plugins]
+
+enabled=PackedStringArray()
+
 [global_group]
 
 Enemy="Referencia a los enemigos del juego, ya sea azules o rojos"

@@ -1,7 +1,7 @@
 extends Node
 
 var health = 100
-var lives = 5
+var lives = 4
 var score = 0
 var power = 0
 
@@ -28,12 +28,10 @@ func _process(delta):
 func init_data():
 	time = 0
 	enemies_down = 0
-	lives = 5
+	lives = 4
 	power = 0
 	health = 100
 	score = 0
 
-# Función auxiliar para formatear el tiempo (opcional, pero útil)
 func format_time() -> String:
-	# Usa "%.2d" para asegurar dos dígitos para minutos y segundos
 	return "%02d:%05.2f" % [minutes, seconds]

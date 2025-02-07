@@ -1,13 +1,14 @@
-[gd_scene load_steps=20 format=3 uid="uid://dha1gen4k81gu"]
+[gd_scene load_steps=23 format=3 uid="uid://dha1gen4k81gu"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Main Levels/level_1.gd" id="1_vm71l"]
 [ext_resource type="Script" path="res://Scripts/Enemy/Waves System/enemy_pool.gd" id="2_5vlpc"]
-[ext_resource type="Texture2D" uid="uid://b064hrwm2665m" path="res://Assets/kenney_space-shooter-redux/Backgrounds/black.png" id="2_ueotx"]
+[ext_resource type="Texture2D" uid="uid://b064hrwm2665m" path="res://Assets/Sprites/kenney_space-shooter-redux/Backgrounds/black.png" id="2_ueotx"]
+[ext_resource type="PackedScene" uid="uid://ctl21565djtmg" path="res://Scenes/Enemy/Bosses/Tsubasahr(B2).tscn" id="2_wr2dk"]
 [ext_resource type="Script" path="res://Scripts/Visuals/background.gd" id="3_gy1c7"]
 [ext_resource type="PackedScene" uid="uid://b03fjsr5evycm" path="res://Scenes/Enemy/Enemy A/BlueEnemyA.tscn" id="3_st7iu"]
-[ext_resource type="Texture2D" uid="uid://c4hth0x6tf4iy" path="res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 01 - Void.png" id="3_usxtf"]
+[ext_resource type="Texture2D" uid="uid://c4hth0x6tf4iy" path="res://Assets/Sprites/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 01 - Void.png" id="3_usxtf"]
 [ext_resource type="PackedScene" uid="uid://dno1gnvkkkf1c" path="res://Scenes/Enemy/Enemy A/RedEnemyA.tscn" id="4_kf1ay"]
-[ext_resource type="Texture2D" uid="uid://y2iw334ycefu" path="res://Assets/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 02 - Stars.png" id="4_qafcv"]
+[ext_resource type="Texture2D" uid="uid://y2iw334ycefu" path="res://Assets/Sprites/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 02 - Stars.png" id="4_qafcv"]
 [ext_resource type="PackedScene" uid="uid://b13v4v2sx72x7" path="res://Scenes/LevelHUD.tscn" id="5_6kg7p"]
 [ext_resource type="PackedScene" uid="uid://c5rstnfoa1yfx" path="res://Scenes/Enemy/Enemy B/BlueEnemyB.tscn" id="5_p4v5o"]
 [ext_resource type="Texture2D" uid="uid://bmom80b35jxmm" path="res://Assets/Sprites/GameOver.jpg" id="6_m0k6b"]
@@ -20,11 +21,48 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_taqpl"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xn02b"]
-bg_color = Color(0, 0, 0, 0)
+[sub_resource type="Animation" id="Animation_4jdtd"]
+resource_name = "GameOver"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/GameOverSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xaqa0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/GameOverSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bx5ux"]
+_data = {
+"GameOver": SubResource("Animation_4jdtd"),
+"RESET": SubResource("Animation_xaqa0")
+}
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_vm71l")
+level_boss = ExtResource("2_wr2dk")
+spawn_position_x = 541
+spawn_position_y = -434
 
 [node name="EnemyPool" type="Node" parent="."]
 script = ExtResource("2_5vlpc")
@@ -64,12 +102,6 @@ centered = false
 flip_v = true
 
 [node name="Characters" type="Node2D" parent="."]
-
-[node name="GameOverSprite" type="Sprite2D" parent="."]
-visible = false
-material = SubResource("ShaderMaterial_taqpl")
-texture = ExtResource("6_m0k6b")
-centered = false
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(540, 690)
@@ -113,16 +145,19 @@ TAB o B = SUPERDISPARO"
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("11_qnghh")]
 
-[node name="END" type="Panel" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xn02b")
+[node name="GameOverSprite" type="Sprite2D" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_taqpl")
+texture = ExtResource("6_m0k6b")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bx5ux")
+}
 
 [connection signal="timeout" from="Camera/ShakeTime" to="Camera" method="_on_shake_time_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
-[connection signal="timeout" from="WaveTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="WaveTimer" to="." method="_on_wave_timer_timeout"]
+[connection signal="timeout" from="WaveTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="PlayerRespawn" to="." method="_on_player_respawn_timeout"]

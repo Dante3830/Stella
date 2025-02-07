@@ -1,7 +1,10 @@
+AnimationPlayer
+Timer
+AudioStreamPlayer2D
+CollisionShape2D
 Label
 Panel
 Control
-AnimationPlayer
 Button
 VBoxContainer
 HBoxContainer
@@ -9,6 +12,3 @@ Sprite2D
 CheckBox
 CheckButton
 HSlider
-OptionButton
-Timer
-ProgressBar

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var descent_speed = 50.0
+@onready var descent_speed = 50.0
 var phase = 1
 var target_y_position = 200
 
@@ -13,10 +13,6 @@ var target_y_position = 200
 @onready var mothership = $CanvasLayer/WARNING/Mothership
 @onready var shipName = $CanvasLayer/WARNING/Name
 @onready var noRefuge = $CanvasLayer/WARNING/NoRefuge
-
-@onready var left_wing = $"LEFT WING"
-@onready var right_wing = $"RIGHT WING"
-@onready var main_ship = $BASE
 
 var times = 0
 var all_text_visible = false
@@ -37,10 +33,12 @@ var startPos = 0
 var distance = 300
 var center_x = 539
 
+@onready var left_wing = $"LEFT WING"
 @onready var leftWingSpawnPos1 = $"LEFT WING/SpawnPoint1"
 @onready var leftWingSpawnPos2 = $"LEFT WING/SpawnPoint2"
 @onready var leftWingSpawnPos3 = $"LEFT WING/SpawnPoint3"
 
+@onready var right_wing = $"RIGHT WING"
 @onready var rightWingSpawnPos1 = $"RIGHT WING/SpawnPoint4"
 @onready var rightWingSpawnPos2 = $"RIGHT WING/SpawnPoint5"
 @onready var rightWingSpawnPos3 = $"RIGHT WING/SpawnPoint6"

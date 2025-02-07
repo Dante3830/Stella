@@ -9,6 +9,7 @@ extends CharacterBody2D
 @onready var red_sprite = $RedSprite
 @onready var spawnPos = $SpawnPos
 @onready var muzzleFlash = $MuzzleFlash
+@onready var shotSFX = $ShotSFX
 
 var PlayerBullet = preload("res://Scenes/Player/PlayerBullet.tscn")
 var Explosion = preload("res://Scenes/Explosion.tscn")
@@ -20,6 +21,8 @@ var can_change = true
 var screen_size
 var half_width
 var half_height
+
+signal player_died
 
 func _ready():
 	$BlueMuzzle.visible = false
@@ -79,6 +82,7 @@ func _process(_delta):
 		change_color()
 
 func shoot():
+	shotSFX.play()
 	var bullet = PlayerBullet.instantiate()
 	bullet.position = spawnPos.global_position
 	get_tree().current_scene.add_child(bullet)
@@ -130,6 +134,7 @@ func _on_super_fire_time_timeout():
 	can_change = true
 
 func death():
+	emit_signal("player_died")
 	var explosion = Explosion.instantiate()
 	explosion.global_position = global_position
 	get_tree().current_scene.add_child(explosion)

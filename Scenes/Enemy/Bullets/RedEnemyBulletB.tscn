@@ -1,14 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://ct6jk8rox6rde"]
 
-[ext_resource type="Script" path="res://Scripts/Enemy/Bullets/redEnemyBullet.gd" id="1_kfsju"]
+[ext_resource type="Script" uid="uid://dnrqy26r2sk3h" path="res://Scripts/Enemy/Bullets/redEnemyBullet.gd" id="1_kfsju"]
 [ext_resource type="Texture2D" uid="uid://72a0t5wlap2n" path="res://Assets/Sprites/RedBullet.png" id="2_g4l76"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nrdjq"]
 radius = 19.2354
 
 [node name="RedEnemyBullet" type="Area2D" groups=["Bullet"]]
-collision_layer = 16
+collision_layer = 0
 collision_mask = 2
+monitorable = false
 script = ExtResource("1_kfsju")
 
 [node name="RedSprite" type="Sprite2D" parent="."]

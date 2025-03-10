@@ -34,20 +34,23 @@ var distance = 300
 var center_x = 539
 
 @onready var left_wing = $"LEFT WING"
-@onready var leftWingSpawnPos1 = $"LEFT WING/SpawnPoint1"
-@onready var leftWingSpawnPos2 = $"LEFT WING/SpawnPoint2"
-@onready var leftWingSpawnPos3 = $"LEFT WING/SpawnPoint3"
-
 @onready var right_wing = $"RIGHT WING"
-@onready var rightWingSpawnPos1 = $"RIGHT WING/SpawnPoint4"
-@onready var rightWingSpawnPos2 = $"RIGHT WING/SpawnPoint5"
-@onready var rightWingSpawnPos3 = $"RIGHT WING/SpawnPoint6"
 
 @onready var baseSpawnPos = $"BASE/SpawnPoint7"
 
 @onready var leftWingCollisionShape = $"LEFT WING/LeftCollisionShape"
 @onready var rightWingCollisionShape = $"RIGHT WING/RightCollisionShape"
 @onready var baseCollisionShape = $BASE/BaseCollisionShape
+
+@onready var left_spawn_points = [$"LEFT WING/SpawnPoint1", $"LEFT WING/SpawnPoint2",
+$"LEFT WING/SpawnPoint3", $"LEFT WING/SpawnPoint4", $"LEFT WING/SpawnPoint5", $"LEFT WING/SpawnPoint6", 
+$"LEFT WING/SpawnPoint7", $"LEFT WING/SpawnPoint8", $"LEFT WING/SpawnPoint9", $"LEFT WING/SpawnPoint10",
+$"LEFT WING/SpawnPoint11", $"LEFT WING/SpawnPoint12"]
+
+@onready var right_spawn_points = [$"RIGHT WING/SpawnPoint1", $"RIGHT WING/SpawnPoint2",
+$"RIGHT WING/SpawnPoint3", $"RIGHT WING/SpawnPoint4", $"RIGHT WING/SpawnPoint5", $"RIGHT WING/SpawnPoint6", 
+$"RIGHT WING/SpawnPoint7", $"RIGHT WING/SpawnPoint8", $"RIGHT WING/SpawnPoint9", $"RIGHT WING/SpawnPoint10",
+$"RIGHT WING/SpawnPoint11", $"RIGHT WING/SpawnPoint12"]
 
 var use_blue_bullet = true
 
@@ -139,29 +142,26 @@ func handle_phase_behavior():
 			elif position.x > target_x + 5:
 				left()
 
+func shoot_wing_bullets(bullet_type, spawn_points):
+	for spawn_point in spawn_points:
+		var bullet = bullet_type.instantiate()
+		bullet.position = spawn_point.global_position
+		get_parent().add_child(bullet)
+
 func shoot():
 	match phase:
 		1:
 			if left_wing:
-				spawn_wing_bullets(leftWingSpawnPos1, leftWingSpawnPos2, 
-									leftWingSpawnPos3, blue_bullet)
+				shoot_wing_bullets(blue_bullet, left_spawn_points)
 		2:
 			if right_wing:
-				spawn_wing_bullets(rightWingSpawnPos1, rightWingSpawnPos2, 
-									rightWingSpawnPos3, red_bullet)
+				shoot_wing_bullets(red_bullet, right_spawn_points)
 		3:
 			spawn_center_bullet(baseSpawnPos, blue_bullet if use_blue_bullet else red_bullet)
 			use_blue_bullet = !use_blue_bullet
 	
 	$FireSpeed.start()
 	can_fire = false
-
-func spawn_wing_bullets(pos1, pos2, pos3, bullet_type):
-	var positions = [pos1, pos2, pos3]
-	for spawn_pos in positions:
-		var bullet = bullet_type.instantiate()
-		bullet.position = spawn_pos.global_position
-		get_parent().add_child(bullet)
 
 func spawn_center_bullet(pos, bullet_type):
 	var bullet = bullet_type.instantiate()

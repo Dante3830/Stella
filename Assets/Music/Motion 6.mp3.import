@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://crisqcymexkgd"
+path="res://.godot/imported/Motion 6.mp3-a86b52c618824e59ad080fb8c0328425.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Motion 6.mp3"
+dest_files=["res://.godot/imported/Motion 6.mp3-a86b52c618824e59ad080fb8c0328425.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://dqp64s53en3xx"]
 
-[ext_resource type="Script" path="res://Scripts/Enemy/Bosses/athalaiah(b1).gd" id="1_gqa4u"]
+[ext_resource type="Script" uid="uid://hqbhfpmlmtvg" path="res://Scripts/Enemy/Bosses/athalaiah(b1).gd" id="1_gqa4u"]
 [ext_resource type="Texture2D" uid="uid://c8i2gnmhr3yxc" path="res://Assets/Sprites/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Battlecruiser - Base.png" id="1_menr5"]
-[ext_resource type="Shader" path="res://Shaders/Defeat.gdshader" id="2_je6ad"]
+[ext_resource type="Shader" uid="uid://bu84nepp2pfct" path="res://Shaders/Defeat.gdshader" id="2_je6ad"]
 [ext_resource type="Texture2D" uid="uid://doxmmxqgnhfh5" path="res://Assets/Sprites/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Torpedo Ship - Base.png" id="2_vbo2n"]
 [ext_resource type="FontFile" uid="uid://dk6ts2l4bajko" path="res://Assets/Fonts/TERMINAT.TTF" id="4_dpp40"]
 
@@ -15,10 +15,10 @@ shader_parameter/flicker_intensity = 0.0
 size = Vector2(126, 649)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p81sa"]
-size = Vector2(146, 49)
+size = Vector2(544, 46.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tqd0w"]
-size = Vector2(146, 53)
+size = Vector2(543, 53)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h8sjj"]
 bg_color = Color(1, 0, 0, 1)
@@ -66,24 +66,75 @@ collision_mask = 6
 
 [node name="LeftWing" type="Sprite2D" parent="LEFT WING"]
 texture_filter = 1
-position = Vector2(-391, -76)
+position = Vector2(-791, -93)
 scale = Vector2(8, 8)
 texture = ExtResource("2_vbo2n")
 region_enabled = true
 region_rect = Rect2(0, 19.2146, 27.7868, 27.933)
 
+[node name="LeftWing2" type="Sprite2D" parent="LEFT WING"]
+texture_filter = 1
+position = Vector2(-614, -93)
+scale = Vector2(8, 8)
+texture = ExtResource("2_vbo2n")
+region_enabled = true
+region_rect = Rect2(8.27111, 19.2146, 19.5157, 27.933)
+
+[node name="LeftWing3" type="Sprite2D" parent="LEFT WING"]
+texture_filter = 1
+position = Vector2(-470, -93)
+scale = Vector2(8, 8)
+texture = ExtResource("2_vbo2n")
+region_enabled = true
+region_rect = Rect2(8.27111, 19.2146, 19.5157, 27.933)
+
+[node name="LeftWing4" type="Sprite2D" parent="LEFT WING"]
+texture_filter = 1
+position = Vector2(-342, -93)
+scale = Vector2(8, 8)
+texture = ExtResource("2_vbo2n")
+region_enabled = true
+region_rect = Rect2(8.27111, 19.2146, 16.4378, 27.933)
+
 [node name="LeftCollisionShape" type="CollisionShape2D" parent="LEFT WING" groups=["Boss"]]
-position = Vector2(-362, -84.5)
+position = Vector2(-555, -98.25)
 shape = SubResource("RectangleShape2D_p81sa")
 
 [node name="SpawnPoint1" type="Marker2D" parent="LEFT WING"]
-position = Vector2(-455, -11)
+position = Vector2(-853, -25)
 
 [node name="SpawnPoint2" type="Marker2D" parent="LEFT WING"]
-position = Vector2(-388, -57)
+position = Vector2(-789, -75)
 
 [node name="SpawnPoint3" type="Marker2D" parent="LEFT WING"]
-position = Vector2(-339, -57)
+position = Vector2(-739, -74)
+
+[node name="SpawnPoint4" type="Marker2D" parent="LEFT WING"]
+position = Vector2(-690, -74)
+
+[node name="SpawnPoint5" type="Marker2D" parent="LEFT WING"]
+position = Vector2(-641, -74)
+
+[node name="SpawnPoint6" type="Marker2D" parent="LEFT WING"]
+position = Vector2(-593, -74)
+
+[node name="SpawnPoint7" type="Marker2D" parent="LEFT WING"]
+position = Vector2(-547, -74)
+
+[node name="SpawnPoint8" type="Marker2D" parent="LEFT WING"]
+position = Vector2(-496, -74)
+
+[node name="SpawnPoint9" type="Marker2D" parent="LEFT WING"]
+position = Vector2(-450, -74)
+
+[node name="SpawnPoint10" type="Marker2D" parent="LEFT WING"]
+position = Vector2(-401, -74)
+
+[node name="SpawnPoint11" type="Marker2D" parent="LEFT WING"]
+position = Vector2(-357, -74)
+
+[node name="SpawnPoint12" type="Marker2D" parent="LEFT WING"]
+position = Vector2(-309, -74)
 
 [node name="RIGHT WING" type="Area2D" parent="." groups=["Boss"]]
 collision_layer = 32
@@ -91,25 +142,79 @@ collision_mask = 6
 
 [node name="RightWing" type="Sprite2D" parent="RIGHT WING"]
 texture_filter = 1
-position = Vector2(391, -76)
+position = Vector2(792, -76)
 scale = Vector2(8, 8)
 texture = ExtResource("2_vbo2n")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(0, 19.2146, 27.7868, 27.933)
 
+[node name="RightWing2" type="Sprite2D" parent="RIGHT WING"]
+texture_filter = 1
+position = Vector2(611, -76)
+scale = Vector2(8, 8)
+texture = ExtResource("2_vbo2n")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(10.1956, 19.2146, 17.5912, 27.933)
+
+[node name="RightWing3" type="Sprite2D" parent="RIGHT WING"]
+texture_filter = 1
+position = Vector2(469, -76)
+scale = Vector2(8, 8)
+texture = ExtResource("2_vbo2n")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(9.94988, 19.2146, 17.8369, 27.933)
+
+[node name="RightWing4" type="Sprite2D" parent="RIGHT WING"]
+texture_filter = 1
+position = Vector2(338, -76)
+scale = Vector2(8, 8)
+texture = ExtResource("2_vbo2n")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(9.98191, 19.2146, 14.9552, 27.933)
+
 [node name="RightCollisionShape" type="CollisionShape2D" parent="RIGHT WING" groups=["Boss"]]
-position = Vector2(362, -83.5)
+position = Vector2(560.5, -83.5)
 shape = SubResource("RectangleShape2D_tqd0w")
 
+[node name="SpawnPoint1" type="Marker2D" parent="RIGHT WING"]
+position = Vector2(314, -58)
+
+[node name="SpawnPoint2" type="Marker2D" parent="RIGHT WING"]
+position = Vector2(363, -58)
+
+[node name="SpawnPoint3" type="Marker2D" parent="RIGHT WING"]
+position = Vector2(409, -58)
+
 [node name="SpawnPoint4" type="Marker2D" parent="RIGHT WING"]
-position = Vector2(338, -58)
+position = Vector2(456, -58)
 
 [node name="SpawnPoint5" type="Marker2D" parent="RIGHT WING"]
-position = Vector2(387, -58)
+position = Vector2(504, -58)
 
 [node name="SpawnPoint6" type="Marker2D" parent="RIGHT WING"]
-position = Vector2(455, -12)
+position = Vector2(551, -58)
+
+[node name="SpawnPoint7" type="Marker2D" parent="RIGHT WING"]
+position = Vector2(600, -58)
+
+[node name="SpawnPoint8" type="Marker2D" parent="RIGHT WING"]
+position = Vector2(648, -58)
+
+[node name="SpawnPoint9" type="Marker2D" parent="RIGHT WING"]
+position = Vector2(695, -58)
+
+[node name="SpawnPoint10" type="Marker2D" parent="RIGHT WING"]
+position = Vector2(741, -58)
+
+[node name="SpawnPoint11" type="Marker2D" parent="RIGHT WING"]
+position = Vector2(787, -58)
+
+[node name="SpawnPoint12" type="Marker2D" parent="RIGHT WING"]
+position = Vector2(856, -9)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://bxvjq0najgwcn"]
 
-[ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_iopuc"]
+[ext_resource type="Script" uid="uid://cf0nu2okdf28j" path="res://Scripts/Player/player.gd" id="1_iopuc"]
 [ext_resource type="Texture2D" uid="uid://fgvvcllvkc4x" path="res://Assets/Sprites/kenney_space-shooter-redux/PNG/Ships/playerShip1_red.png" id="1_tab8v"]
 [ext_resource type="Texture2D" uid="uid://den8lsqssejly" path="res://Assets/Sprites/kenney_space-shooter-redux/PNG/Ships/playerShip1_blue.png" id="3_gsah2"]
 [ext_resource type="Texture2D" uid="uid://njepx503ji5x" path="res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png" id="4_oxqxo"]
@@ -76,9 +76,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t0sli"]
 _data = {
-"BlueMuzzleflash": SubResource("Animation_yi5e8"),
-"RESET": SubResource("Animation_tptno"),
-"RedMuzzleflash": SubResource("Animation_4t3h7")
+&"BlueMuzzleflash": SubResource("Animation_yi5e8"),
+&"RESET": SubResource("Animation_tptno"),
+&"RedMuzzleflash": SubResource("Animation_4t3h7")
 }
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]

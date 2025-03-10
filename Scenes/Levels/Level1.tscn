@@ -1,10 +1,10 @@
 [gd_scene load_steps=23 format=3 uid="uid://dha1gen4k81gu"]
 
-[ext_resource type="Script" path="res://Scripts/Levels/Main Levels/level_1.gd" id="1_vm71l"]
-[ext_resource type="Script" path="res://Scripts/Enemy/Waves System/enemy_pool.gd" id="2_5vlpc"]
+[ext_resource type="Script" uid="uid://ttu15hoqen0a" path="res://Scripts/Levels/Main Levels/level_1.gd" id="1_vm71l"]
+[ext_resource type="Script" uid="uid://dtgpduyi0ori1" path="res://Scripts/Enemy/Waves System/enemy_pool.gd" id="2_5vlpc"]
 [ext_resource type="Texture2D" uid="uid://b064hrwm2665m" path="res://Assets/Sprites/kenney_space-shooter-redux/Backgrounds/black.png" id="2_ueotx"]
 [ext_resource type="PackedScene" uid="uid://ctl21565djtmg" path="res://Scenes/Enemy/Bosses/Tsubasahr(B2).tscn" id="2_wr2dk"]
-[ext_resource type="Script" path="res://Scripts/Visuals/background.gd" id="3_gy1c7"]
+[ext_resource type="Script" uid="uid://cyvtv7csjyfdb" path="res://Scripts/Visuals/background.gd" id="3_gy1c7"]
 [ext_resource type="PackedScene" uid="uid://b03fjsr5evycm" path="res://Scenes/Enemy/Enemy A/BlueEnemyA.tscn" id="3_st7iu"]
 [ext_resource type="Texture2D" uid="uid://c4hth0x6tf4iy" path="res://Assets/Sprites/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 01 - Void.png" id="3_usxtf"]
 [ext_resource type="PackedScene" uid="uid://dno1gnvkkkf1c" path="res://Scenes/Enemy/Enemy A/RedEnemyA.tscn" id="4_kf1ay"]
@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://c5rstnfoa1yfx" path="res://Scenes/Enemy/Enemy B/BlueEnemyB.tscn" id="5_p4v5o"]
 [ext_resource type="Texture2D" uid="uid://bmom80b35jxmm" path="res://Assets/Sprites/GameOver.jpg" id="6_m0k6b"]
 [ext_resource type="PackedScene" uid="uid://rr8mb8xx4lu6" path="res://Scenes/Enemy/Enemy B/RedEnemyB.tscn" id="6_ttn3u"]
-[ext_resource type="Script" path="res://Scripts/Visuals/camera.gd" id="7_3b6ff"]
-[ext_resource type="Script" path="res://Scripts/Enemy/Waves System/waveData.gd" id="7_bm6e7"]
+[ext_resource type="Script" uid="uid://cy1jjq5repic5" path="res://Scripts/Visuals/camera.gd" id="7_3b6ff"]
+[ext_resource type="Script" uid="uid://bhhcoshxhmx4o" path="res://Scripts/Enemy/Waves System/waveData.gd" id="7_bm6e7"]
 [ext_resource type="Resource" uid="uid://cj3o0du5yj3tm" path="res://Scripts/Enemy/Waves System/Level1/L1W1.tres" id="8_vcmuy"]
 [ext_resource type="Resource" uid="uid://i0wuas2jfv5u" path="res://Scripts/Enemy/Waves System/Level1/L1W2.tres" id="9_d7m1r"]
 [ext_resource type="PackedScene" uid="uid://82awlca2q8xw" path="res://Scenes/PauseMenu.tscn" id="11_qnghh"]
@@ -54,8 +54,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bx5ux"]
 _data = {
-"GameOver": SubResource("Animation_4jdtd"),
-"RESET": SubResource("Animation_xaqa0")
+&"GameOver": SubResource("Animation_4jdtd"),
+&"RESET": SubResource("Animation_xaqa0")
 }
 
 [node name="Level1" type="Node"]

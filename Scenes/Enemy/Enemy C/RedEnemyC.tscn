@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c7mpidworr61"]
 
-[ext_resource type="Script" path="res://Scripts/Enemy/Enemy C/redEnemyC.gd" id="1_400n8"]
+[ext_resource type="Script" uid="uid://c23fly1rnpxpt" path="res://Scripts/Enemy/Enemy C/redEnemyC.gd" id="1_400n8"]
 [ext_resource type="Texture2D" uid="uid://dilw66shgjd7c" path="res://Assets/Sprites/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Fighter - Base.png" id="2_8db0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgko6"]

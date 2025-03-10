@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b13v4v2sx72x7"]
 
-[ext_resource type="Script" path="res://Scripts/Visuals/level_hud.gd" id="1_menj6"]
+[ext_resource type="Script" uid="uid://dk2vaf4ss2m1y" path="res://Scripts/Visuals/level_hud.gd" id="1_menj6"]
 [ext_resource type="FontFile" uid="uid://dk6ts2l4bajko" path="res://Assets/Fonts/TERMINAT.TTF" id="2_67hv7"]
 [ext_resource type="FontFile" uid="uid://b65f8kbrkkb3r" path="res://Assets/Fonts/Orbitron-Medium.ttf" id="3_qvpr7"]
 

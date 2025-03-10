@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://caiw1yycx50qc"
+path="res://.godot/imported/Motion 2.mp3-f97e7174976c120da3a3e2d96fe214e2.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Motion 2.mp3"
+dest_files=["res://.godot/imported/Motion 2.mp3-f97e7174976c120da3a3e2d96fe214e2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

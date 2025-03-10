@@ -1,14 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://d333pc343h7pp"]
 
-[ext_resource type="Script" path="res://Scripts/Enemy/Bullets/blueEnemyBullet.gd" id="1_lhnta"]
+[ext_resource type="Script" uid="uid://b007l4go1qedw" path="res://Scripts/Enemy/Bullets/blueEnemyBullet.gd" id="1_lhnta"]
 [ext_resource type="Texture2D" uid="uid://wx8npg65v366" path="res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png" id="2_6g8h8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbib5"]
 size = Vector2(20, 62)
 
 [node name="BlueEnemyBulletA" type="Area2D" groups=["Bullet"]]
-collision_layer = 16
+collision_layer = 0
 collision_mask = 2
+monitorable = false
 script = ExtResource("1_lhnta")
 
 [node name="BlueSprite" type="Sprite2D" parent="."]

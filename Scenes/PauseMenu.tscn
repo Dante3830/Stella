@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://82awlca2q8xw"]
 
 [ext_resource type="FontFile" uid="uid://dk6ts2l4bajko" path="res://Assets/Fonts/TERMINAT.TTF" id="1_cm7uo"]
-[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_pwev5"]
+[ext_resource type="Script" uid="uid://be2alpk5tac34" path="res://Scripts/pause_menu.gd" id="1_pwev5"]
 [ext_resource type="Texture2D" uid="uid://m32ijjurw5wo" path="res://Assets/Sprites/positive.jpg" id="3_y7b0v"]
 [ext_resource type="Texture2D" uid="uid://bfhk66ajxqi0d" path="res://Assets/Sprites/negative.jpg" id="4_5ocsh"]
 [ext_resource type="FontFile" uid="uid://ccfu6pha6fqye" path="res://Assets/Fonts/Arrows.ttf" id="5_v7udh"]
@@ -127,9 +127,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w5p0s"]
 _data = {
-"RESET": SubResource("Animation_8pagv"),
-"close": SubResource("Animation_oprh5"),
-"open": SubResource("Animation_6wptv")
+&"RESET": SubResource("Animation_8pagv"),
+&"close": SubResource("Animation_oprh5"),
+&"open": SubResource("Animation_6wptv")
 }
 
 [node name="PauseMenu" type="Control"]

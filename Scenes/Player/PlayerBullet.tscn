@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dlkq8eh63xjg3"]
 
-[ext_resource type="Script" path="res://Scripts/Player/playerBullet.gd" id="1_g4fao"]
+[ext_resource type="Script" uid="uid://d0enp0nbq1v68" path="res://Scripts/Player/playerBullet.gd" id="1_g4fao"]
 [ext_resource type="Texture2D" uid="uid://wx8npg65v366" path="res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png" id="2_oantk"]
 [ext_resource type="Texture2D" uid="uid://bolg6qe5f3q41" path="res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png" id="3_btag8"]
 

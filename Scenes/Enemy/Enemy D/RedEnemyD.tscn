@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cg63vonsdcpbm"]
 
-[ext_resource type="Script" path="res://Scripts/Enemy/Enemy D/redEnemyD.gd" id="1_6urqu"]
+[ext_resource type="Script" uid="uid://cxaps8oibx2ud" path="res://Scripts/Enemy/Enemy D/redEnemyD.gd" id="1_6urqu"]
 [ext_resource type="Texture2D" uid="uid://7qjiqvfxlknr" path="res://Assets/Sprites/kenney_space-shooter-redux/PNG/Ships/playerShip2_red.png" id="2_18wn3"]
 
 [node name="RedEnemyD" type="CharacterBody2D" groups=["Enemy"]]

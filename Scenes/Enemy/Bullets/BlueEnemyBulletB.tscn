@@ -1,14 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://dn15wvbqwv4wh"]
 
-[ext_resource type="Script" path="res://Scripts/Enemy/Bullets/blueEnemyBullet.gd" id="1_8l2uk"]
+[ext_resource type="Script" uid="uid://b007l4go1qedw" path="res://Scripts/Enemy/Bullets/blueEnemyBullet.gd" id="1_8l2uk"]
 [ext_resource type="Texture2D" uid="uid://d00v4bhcp3w3c" path="res://Assets/Sprites/BlueBullet.png" id="2_hbpjh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f0y3s"]
 radius = 19.2354
 
 [node name="BlueEnemyBullet" type="Area2D" groups=["Bullet"]]
-collision_layer = 16
+collision_layer = 0
 collision_mask = 2
+monitorable = false
 script = ExtResource("1_8l2uk")
 
 [node name="BlueSprite" type="Sprite2D" parent="."]

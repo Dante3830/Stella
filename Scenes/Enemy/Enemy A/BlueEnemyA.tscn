@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b03fjsr5evycm"]
 
-[ext_resource type="Script" path="res://Scripts/Enemy/Enemy A/blueEnemyA.gd" id="1_ccy4d"]
+[ext_resource type="Script" uid="uid://cvgxutam31s0r" path="res://Scripts/Enemy/Enemy A/blueEnemyA.gd" id="1_ccy4d"]
 [ext_resource type="Texture2D" uid="uid://3046jo7ott8l" path="res://Assets/Sprites/kenney_space-shooter-redux/PNG/Ships/playerShip3_blue.png" id="2_1ieay"]
 [ext_resource type="Texture2D" uid="uid://njepx503ji5x" path="res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png" id="4_ni2l0"]
 
@@ -37,8 +37,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t0sli"]
 _data = {
-"RESET": SubResource("Animation_tptno"),
-"muzzleflash": SubResource("Animation_4t3h7")
+&"RESET": SubResource("Animation_tptno"),
+&"muzzleflash": SubResource("Animation_4t3h7")
 }
 
 [node name="BlueEnemyA" type="CharacterBody2D" groups=["Enemy"]]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ddg5hwu5xl3fk"]
 
-[ext_resource type="Script" path="res://Scripts/Screens/main_menu.gd" id="1_qc2t6"]
+[ext_resource type="Script" uid="uid://bu1r28itw4hvb" path="res://Scripts/Screens/main_menu.gd" id="1_qc2t6"]
 [ext_resource type="FontFile" uid="uid://dk6ts2l4bajko" path="res://Assets/Fonts/TERMINAT.TTF" id="2_4ehou"]
 [ext_resource type="Texture2D" uid="uid://8y4mwrqgyn1v" path="res://Assets/Sprites/Title.jpg" id="2_jj6it"]
 
@@ -77,6 +77,18 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_nln3k")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xkl38")
 text = " HOW TO PLAY "
 
+[node name="CreditsButton" type="Button" parent="BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("2_4ehou")
+theme_override_font_sizes/font_size = 51
+theme_override_styles/hover = SubResource("StyleBoxFlat_l665r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nln3k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xkl38")
+text = " CREDITS "
+
 [connection signal="pressed" from="BoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="BoxContainer/VBoxContainer/OptButton" to="." method="_on_opt_button_pressed"]
 [connection signal="pressed" from="BoxContainer/VBoxContainer/HTPButton" to="." method="_on_htp_button_pressed"]
+[connection signal="pressed" from="BoxContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]

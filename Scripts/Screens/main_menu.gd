@@ -11,3 +11,7 @@ func _on_opt_button_pressed():
 # Como jugar
 func _on_htp_button_pressed():
 	pass # Replace with function body.
+
+# Creditos
+func _on_credits_button_pressed():
+	get_tree().change_scene_to_file("res://Scenes/Screens/Credits.tscn")

@@ -2,7 +2,7 @@ extends CPUParticles2D
 
 func _ready():
 	emitting = true
-	$ExplosionCrunch000.play()
+	$ExplosionSound.play()
 
 func _process(_delta):
 	if !emitting:

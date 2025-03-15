@@ -70,14 +70,21 @@ func _physics_process(delta):
 
 func setup_initial_state():
 	$CanvasLayer/WARNING.visible = true
+	
 	var text_elements = [
 		$CanvasLayer/WARNING/Warning,
 		$CanvasLayer/WARNING/Mothership,
 		$CanvasLayer/WARNING/Name,
 		$CanvasLayer/WARNING/NoRefuge
 	]
+	
 	for element in text_elements:
 		element.visible_ratio = 0
+	
+	current_phase_health = phase1_health
+	current_phase_max_health = phase1_health
+	healthBar.max_value = phase1_health
+	healthBar.value = phase1_health
 
 #func shoot_at_player():
 	#var player_position = get_player_position()
@@ -285,6 +292,7 @@ func destroy_wing(side):
 	wing_node.queue_free()
 
 func enemy_hit():
+	print("Jefe golpeado! Salud actual: ", current_phase_health)
 	match phase:
 		1:
 			if Manager.is_red:
@@ -316,6 +324,7 @@ func enemy_hit():
 	
 	if healthBar:
 		healthBar.value = current_phase_health
+		print("Salud actualizada en la barra: ", healthBar.value)
 
 func choose_wing_to_damage(wing_health):
 	var available_sides = []
@@ -335,15 +344,17 @@ func check_phase_transition():
 			phase = 2
 			current_phase_health = phase2_health
 			current_phase_max_health = phase2_health
+			healthBar.max_value = phase2_health
+			healthBar.value = phase2_health
 			$LWAnimationPlayer.play("LeftWing2")
 			$RWAnimationPlayer.play("RightWing2")
-			# Reproducir efectos de transición si los hay
 			play_phase_transition_effects()
-			
 		2:
 			phase = 3
 			current_phase_health = phase3_health
 			current_phase_max_health = phase3_health
+			healthBar.max_value = phase3_health
+			healthBar.value = phase3_health
 			$LWAnimationPlayer.play("LeftWing3")
 			$RWAnimationPlayer.play("RightWing3")
 			play_phase_transition_effects()

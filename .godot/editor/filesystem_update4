@@ -8,3 +8,5 @@ res://Scenes/Enemy/Bosses/Tsubasahr(B2).tscn
 res://Scripts/Screens/main_menu.gd
 res://Scenes/Screens/Credits.tscn
 res://Scenes/Screens/MainMenu.tscn
+res://Scenes/Enemy/Bullets/RedEnemyBulletB.tscn
+res://Scripts/Enemy/Bosses/tsubasahr(b2).gd

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1741314837
+::res://::1746308635
 export_presets.cfg::TextFile/TextFile::-1::1729127120::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::4937016793600591067::1720913996::1741200661::1::::<><><>0<>0<>33b06ed7e3e90c1ea93f41e0afb25a0c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile/TextFile::-1::1720382064::0::1::::<><><>0<>0<><>::
@@ -149,18 +149,18 @@ update_button.gd::GDScript/GDScript::6041833689462418413::1741220109::0::1::::<>
 ::res://Addons/addons/phantom_camera/scripts/panel/viewfinder/::1741220109
 viewfinder.gd::GDScript/GDScript::1061982617306087636::1741220109::0::1::::<>Control<><>0<>1<><>::
 ::res://Addons/addons/phantom_camera/scripts/phantom_camera/::1741220109
-phantom_camera_2d.gd::GDScript/GDScript::2049067213726965986::1741220109::0::1::::PhantomCamera2D<>Node2D<><>0<>1<><>::
-phantom_camera_3d.gd::GDScript/GDScript::5980777736130088547::1741220109::0::1::::PhantomCamera3D<>Node3D<><>0<>1<><>::
+phantom_camera_2d.gd::GDScript/GDScript::2049067213726965986::1741220109::0::1::::PhantomCamera2D<>Node2D<>res://addons/phantom_camera/icons/phantom_camera_2d.svg<>0<>1<><>::
+phantom_camera_3d.gd::GDScript/GDScript::5980777736130088547::1741220109::0::1::::PhantomCamera3D<>Node3D<>res://addons/phantom_camera/icons/phantom_camera_3d.svg<>0<>1<><>::
 phantom_camera_constants.gd::GDScript/GDScript::1096475849442581620::1741220109::0::1::::<>RefCounted<><>0<>1<><>::
-phantom_camera_noise_emitter_2d.gd::GDScript/GDScript::9112718118680373050::1741220109::0::1::::PhantomCameraNoiseEmitter2D<>Node2D<><>0<>1<><>::
-phantom_camera_noise_emitter_3d.gd::GDScript/GDScript::5104028425027344803::1741220109::0::1::::PhantomCameraNoiseEmitter3D<>Node3D<><>0<>1<><>::
+phantom_camera_noise_emitter_2d.gd::GDScript/GDScript::9112718118680373050::1741220109::0::1::::PhantomCameraNoiseEmitter2D<>Node2D<>res://addons/phantom_camera/icons/phantom_camera_noise_emitter_2d.svg<>0<>1<><>::
+phantom_camera_noise_emitter_3d.gd::GDScript/GDScript::5104028425027344803::1741220109::0::1::::PhantomCameraNoiseEmitter3D<>Node3D<>res://addons/phantom_camera/icons/phantom_camera_noise_emitter_3d.svg<>0<>1<><>::
 ::res://Addons/addons/phantom_camera/scripts/phantom_camera_host/::1741220109
-phantom_camera_host.gd::GDScript/GDScript::8438296214058864233::1741220109::0::1::::PhantomCameraHost<>Node<><>0<>1<><>::
+phantom_camera_host.gd::GDScript/GDScript::8438296214058864233::1741220109::0::1::::PhantomCameraHost<>Node<>res://addons/phantom_camera/icons/phantom_camera_host.svg<>0<>1<><>::
 ::res://Addons/addons/phantom_camera/scripts/resources/::1741220109
-camera_3d_resource.gd::GDScript/GDScript::8701434519727056587::1741220109::0::1::::Camera3DResource<>Resource<><>0<>1<><>::
-phantom_camera_noise_2d.gd::GDScript/GDScript::7940007206012329224::1741220109::0::1::::PhantomCameraNoise2D<>Resource<><>0<>1<><>::
-phantom_camera_noise_3d.gd::GDScript/GDScript::874621639880376805::1741220109::0::1::::PhantomCameraNoise3D<>Resource<><>0<>1<><>::
-tween_resource.gd::GDScript/GDScript::1041032006670040428::1741220109::0::1::::PhantomCameraTween<>Resource<><>0<>0<><>::
+camera_3d_resource.gd::GDScript/GDScript::8701434519727056587::1741220109::0::1::::Camera3DResource<>Resource<>res://addons/phantom_camera/icons/phantom_camera_camera_3d_resource.svg<>0<>1<><>::
+phantom_camera_noise_2d.gd::GDScript/GDScript::7940007206012329224::1741220109::0::1::::PhantomCameraNoise2D<>Resource<>res://addons/phantom_camera/icons/phantom_camera_noise_resource.svg<>0<>1<><>::
+phantom_camera_noise_3d.gd::GDScript/GDScript::874621639880376805::1741220109::0::1::::PhantomCameraNoise3D<>Resource<>res://addons/phantom_camera/icons/phantom_camera_noise_resource.svg<>0<>1<><>::
+tween_resource.gd::GDScript/GDScript::1041032006670040428::1741220109::0::1::::PhantomCameraTween<>Resource<>res://addons/phantom_camera/icons/phantom_camera_tween.svg<>0<>0<><>::
 ::res://Assets/::1741200254
 ::res://Assets/Fonts/::1741200660
 Arrows.ttf::FontFile/FontFile::4924811441604472140::1345146210::1741200660::1::::<><><>0<>0<>26ad8eaa2b370a4881ea273f609e2f64<>res://.godot/imported/Arrows.ttf-34f3930fcc1a6647300c0ed2f8c535a7.fontdata::
@@ -175,15 +175,15 @@ Orbitron-Medium.ttf::FontFile/FontFile::4624569212821058717::1725491480::1741200
 Orbitron-Regular.ttf::FontFile/FontFile::4043794727836709219::1725491480::1741200660::1::::<><><>0<>0<>b5fcb2beaf3ee4cbeec55f670c9a9968<>res://.godot/imported/Orbitron-Regular.ttf-c7ca33c347fe125881ec3bf00b41866a.fontdata::
 Orbitron-SemiBold.ttf::FontFile/FontFile::4006814550937178539::1725491480::1741200660::1::::<><><>0<>0<>95d610886796ec1469dd1a6a08531f5d<>res://.godot/imported/Orbitron-SemiBold.ttf-4744efc7c4955b182284efbe83dbe813.fontdata::
 TERMINAT.TTF::FontFile/FontFile::7926333401430607862::1305914836::1741200660::1::::<><><>0<>0<>ecd6b72baf51f14a8b93ba69b98cedf4<>res://.godot/imported/TERMINAT.TTF-f89d163cd28a1b37d6acd2df5fa01e59.fontdata::
-::res://Assets/Music/::1741314932
-Main theme (final).mp3::AudioStreamMP3::8855516379488643616::1741314921::1741314935::1::::<><><>0<>0<>ff0c7fd7c03be5d603a28ddc6f9c300c<>res://.godot/imported/Main theme (final).mp3-b3b33719a0542b31846b2e4b769a37b3.mp3str::
+::res://Assets/Music/::1741314935
+Main theme (final).mp3::AudioStreamMP3/AudioStreamMP3::8855516379488643616::1741314921::1741314935::1::::<><><>0<>0<>ff0c7fd7c03be5d603a28ddc6f9c300c<>res://.godot/imported/Main theme (final).mp3-b3b33719a0542b31846b2e4b769a37b3.mp3str::
 Main theme.mp3::AudioStreamMP3/AudioStreamMP3::806040704882315141::1741200238::1741200660::1::::<><><>0<>0<>a9ffd737adfb18f43cc105ab54cc43a4<>res://.godot/imported/Main theme.mp3-2085ee49ae347261989b3409c0df948a.mp3str::
-Motion 1.mp3::AudioStreamMP3::7001046572160368446::1741200288::1741314838::1::::<><><>0<>0<>f9982e56039d3f5a10cc1332716f85ea<>res://.godot/imported/Motion 1.mp3-68c2c7467eb7d95b7b8f0f311b4bf4eb.mp3str::
+Motion 1.mp3::AudioStreamMP3/AudioStreamMP3::7001046572160368446::1741200288::1741314838::1::::<><><>0<>0<>f9982e56039d3f5a10cc1332716f85ea<>res://.godot/imported/Motion 1.mp3-68c2c7467eb7d95b7b8f0f311b4bf4eb.mp3str::
 Motion 2.mp3::AudioStreamMP3/AudioStreamMP3::4790739891659594406::1741200265::1741200660::1::::<><><>0<>0<>7b82fe005fcc7db85794ee46fbed91e8<>res://.godot/imported/Motion 2.mp3-f97e7174976c120da3a3e2d96fe214e2.mp3str::
 Motion 3.mp3::AudioStreamMP3/AudioStreamMP3::2543273852412156673::1741200276::1741200660::1::::<><><>0<>0<>f5c5726f50a3c1cf6bad85855d62a4e7<>res://.godot/imported/Motion 3.mp3-4ee89dee5e79a50ee0cf2e92331841bd.mp3str::
-Motion 4.mp3::AudioStreamMP3::8415835315833205586::1741314856::1741314935::1::::<><><>0<>0<>c8b8f3920c6ce426cd6d14f8175c1455<>res://.godot/imported/Motion 4.mp3-90334c1f0d979ceba68dbacbff33a2ce.mp3str::
-Motion 5.mp3::AudioStreamMP3::911612759202698877::1741314885::1741314935::1::::<><><>0<>0<>802fdd8ae24415709f2d32889337df15<>res://.godot/imported/Motion 5.mp3-7d0175cc6b393a7be42fd5ba436e6305.mp3str::
-Motion 6.mp3::AudioStreamMP3::5983688352510997999::1741314904::1741314935::1::::<><><>0<>0<>91eb9e5e03026060d3a96476ea671b1d<>res://.godot/imported/Motion 6.mp3-a86b52c618824e59ad080fb8c0328425.mp3str::
+Motion 4.mp3::AudioStreamMP3/AudioStreamMP3::8415835315833205586::1741314856::1741314935::1::::<><><>0<>0<>c8b8f3920c6ce426cd6d14f8175c1455<>res://.godot/imported/Motion 4.mp3-90334c1f0d979ceba68dbacbff33a2ce.mp3str::
+Motion 5.mp3::AudioStreamMP3/AudioStreamMP3::911612759202698877::1741314885::1741314935::1::::<><><>0<>0<>802fdd8ae24415709f2d32889337df15<>res://.godot/imported/Motion 5.mp3-7d0175cc6b393a7be42fd5ba436e6305.mp3str::
+Motion 6.mp3::AudioStreamMP3/AudioStreamMP3::5983688352510997999::1741314904::1741314935::1::::<><><>0<>0<>91eb9e5e03026060d3a96476ea671b1d<>res://.godot/imported/Motion 6.mp3-a86b52c618824e59ad080fb8c0328425.mp3str::
 ::res://Assets/SFX/::1741222026
 Shots.mp3::AudioStreamMP3/AudioStreamMP3::6565694355331646368::1738339606::1741200660::1::::<><><>0<>0<>59a80f37bd92738d261b5c1a97928162<>res://.godot/imported/Shots.mp3-a56858e8b455d577c935d6447303be75.mp3str::
 ::res://Assets/SFX/kenney_sci-fi-sounds/::1741307184
@@ -933,19 +933,19 @@ sheet.png::CompressedTexture2D/CompressedTexture2D::3509950833257549720::1391004
 sheet.xml::TextFile/TextFile::-1::1391004304::0::1::::<><><>0<>0<><>::
 ::res://Assets/Sprites/kenney_space-shooter-redux/Vector/::1741200667
 sheet.svg::CompressedTexture2D/CompressedTexture2D::5709819327133487701::1391004268::1741200667::1::::<><><>0<>0<>1c91ca73d49ea6ce5dd0495d27c33024<>res://.godot/imported/sheet.svg-569e9ebf2c218f5b3b7ac01808372e99.s3tc.ctex::
-::res://Scenes/::1741314531
-Explosion.tscn::PackedScene::4987603175600639469::1741314531::0::1::::<><><>0<>0<><>::uid://dvhckykka20la::::res://Assets/Sprites/pixelCircle.png<>uid://d17fargpixsrt::::res://Scripts/Visuals/explosion.gd<>uid://d0w2h0s2jhygh::::res://Assets/SFX/kenney_sci-fi-sounds/explosionCrunch_000.wav
+::res://Scenes/::1741568689
+Explosion.tscn::PackedScene::4987603175600639469::1741568689::0::1::::<><><>0<>0<><>::uid://dvhckykka20la::::res://Assets/Sprites/pixelCircle.png<>uid://d17fargpixsrt::::res://Scripts/Visuals/explosion.gd<>uid://d0w2h0s2jhygh::::res://Assets/SFX/kenney_sci-fi-sounds/explosionCrunch_000.wav
 LevelHUD.tscn::PackedScene/PackedScene::4270461185816889866::1741220020::0::1::::<><><>0<>0<><>::uid://dk2vaf4ss2m1y::::res://Scripts/Visuals/level_hud.gd<>uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF<>uid://b65f8kbrkkb3r::::res://Assets/Fonts/Orbitron-Medium.ttf
 PauseMenu.tscn::PackedScene/PackedScene::2372009907763799640::1741220020::0::1::::<><><>0<>0<><>::uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF<>uid://be2alpk5tac34::::res://Scripts/pause_menu.gd<>uid://m32ijjurw5wo::::res://Assets/Sprites/positive.jpg<>uid://bfhk66ajxqi0d::::res://Assets/Sprites/negative.jpg<>uid://ccfu6pha6fqye::::res://Assets/Fonts/Arrows.ttf
 ::res://Scenes/Enemy/::1737674875
-::res://Scenes/Enemy/Bosses/::1741314777
+::res://Scenes/Enemy/Bosses/::1741568689
 Athalaiah(B1).tscn::PackedScene/PackedScene::8315184223440236733::1741220018::0::1::::<><><>0<>0<><>::uid://hqbhfpmlmtvg::::res://Scripts/Enemy/Bosses/athalaiah(b1).gd<>uid://c8i2gnmhr3yxc::::res://Assets/Sprites/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Battlecruiser - Base.png<>uid://bu84nepp2pfct::::res://Shaders/Defeat.gdshader<>uid://doxmmxqgnhfh5::::res://Assets/Sprites/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Torpedo Ship - Base.png<>uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF
-Tsubasahr(B2).tscn::PackedScene::6130824966206585826::1741314777::0::1::::<><><>0<>0<><>::uid://7enwuawgqfnl::::res://Scripts/Enemy/Bosses/tsubasahr(b2).gd<>uid://bu84nepp2pfct::::res://Shaders/Defeat.gdshader<>uid://g1t5oliskodh::::res://Assets/Sprites/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Designs - Base/PNGs/Nairan - Battlecruiser - Base.png<>uid://c18mjk8mvrjr0::::res://Assets/Sprites/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Designs - Base/PNGs/Nairan - Torpedo Ship - Base.png<>uid://doxmmxqgnhfh5::::res://Assets/Sprites/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Torpedo Ship - Base.png<>uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF<>uid://qv53ko4er2rq::::res://Assets/Sprites/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Designs - Base/PNGs/Nautolan Ship - Torpedo Ship.png<>uid://cxyxmpgjeluux::::res://Shaders/Tsubasahr(B2F3).gdshader
-::res://Scenes/Enemy/Bullets/::1741220493
+Tsubasahr(B2).tscn::PackedScene::6130824966206585826::1741568689::0::1::::<><><>0<>0<><>::uid://7enwuawgqfnl::::res://Scripts/Enemy/Bosses/tsubasahr(b2).gd<>uid://bu84nepp2pfct::::res://Shaders/Defeat.gdshader<>uid://g1t5oliskodh::::res://Assets/Sprites/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Designs - Base/PNGs/Nairan - Battlecruiser - Base.png<>uid://c18mjk8mvrjr0::::res://Assets/Sprites/Foozle_2DS0013_Void_EnemyFleet_2/Nairan/Designs - Base/PNGs/Nairan - Torpedo Ship - Base.png<>uid://doxmmxqgnhfh5::::res://Assets/Sprites/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Base/PNGs/Kla'ed - Torpedo Ship - Base.png<>uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF<>uid://qv53ko4er2rq::::res://Assets/Sprites/Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Designs - Base/PNGs/Nautolan Ship - Torpedo Ship.png<>uid://cxyxmpgjeluux::::res://Shaders/Tsubasahr(B2F3).gdshader
+::res://Scenes/Enemy/Bullets/::1741568689
 BlueEnemyBulletA.tscn::PackedScene/PackedScene::9184079262420499365::1741220018::0::1::::<><><>0<>0<><>::uid://b007l4go1qedw::::res://Scripts/Enemy/Bullets/blueEnemyBullet.gd<>uid://wx8npg65v366::::res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png
 BlueEnemyBulletB.tscn::PackedScene/PackedScene::8127252742520563247::1741220019::0::1::::<><><>0<>0<><>::uid://b007l4go1qedw::::res://Scripts/Enemy/Bullets/blueEnemyBullet.gd<>uid://d00v4bhcp3w3c::::res://Assets/Sprites/BlueBullet.png
 RedEnemyBulletA.tscn::PackedScene/PackedScene::1369037743263992639::1741220019::0::1::::<><><>0<>0<><>::uid://dnrqy26r2sk3h::::res://Scripts/Enemy/Bullets/redEnemyBullet.gd<>uid://bolg6qe5f3q41::::res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png
-RedEnemyBulletB.tscn::PackedScene/PackedScene::6170991177958917270::1741220493::0::1::::<><><>0<>0<><>::uid://dnrqy26r2sk3h::::res://Scripts/Enemy/Bullets/redEnemyBullet.gd<>uid://72a0t5wlap2n::::res://Assets/Sprites/RedBullet.png
+RedEnemyBulletB.tscn::PackedScene::6170991177958917270::1741568689::0::1::::<><><>0<>0<><>::uid://dnrqy26r2sk3h::::res://Scripts/Enemy/Bullets/redEnemyBullet.gd<>uid://72a0t5wlap2n::::res://Assets/Sprites/RedBullet.png
 ::res://Scenes/Enemy/Enemy A/::1741220019
 BlueEnemyA.tscn::PackedScene/PackedScene::4199264981917799704::1741220019::0::1::::<><><>0<>0<><>::uid://cvgxutam31s0r::::res://Scripts/Enemy/Enemy A/blueEnemyA.gd<>uid://3046jo7ott8l::::res://Assets/Sprites/kenney_space-shooter-redux/PNG/Ships/playerShip3_blue.png<>uid://njepx503ji5x::::res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png
 RedEnemyA.tscn::PackedScene/PackedScene::8102208379218480378::1741220019::0::1::::<><><>0<>0<><>::uid://gi7h1begnpm0::::res://Scripts/Enemy/Enemy A/redEnemyA.gd<>uid://b2ijrer4lrrpt::::res://Assets/Sprites/kenney_space-shooter-redux/PNG/Ships/playerShip3_red.png<>uid://m0vo3wlmy4pw::::res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserRed01.png
@@ -963,9 +963,10 @@ Level1.tscn::PackedScene/PackedScene::7652173544629063248::1741220019::0::1::::<
 ::res://Scenes/Player/::1741220019
 Player.tscn::PackedScene/PackedScene::4044692379018977065::1741220019::0::1::::<><><>0<>0<><>::uid://cf0nu2okdf28j::::res://Scripts/Player/player.gd<>uid://fgvvcllvkc4x::::res://Assets/Sprites/kenney_space-shooter-redux/PNG/Ships/playerShip1_red.png<>uid://den8lsqssejly::::res://Assets/Sprites/kenney_space-shooter-redux/PNG/Ships/playerShip1_blue.png<>uid://njepx503ji5x::::res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserBlue01.png<>uid://m0vo3wlmy4pw::::res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserRed01.png<>uid://wx8npg65v366::::res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png<>uid://bolg6qe5f3q41::::res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png<>uid://c0sqa57i4uw37::::res://Assets/SFX/Shots.mp3
 PlayerBullet.tscn::PackedScene/PackedScene::7953013734075243812::1741220019::0::1::::<><><>0<>0<><>::uid://d0enp0nbq1v68::::res://Scripts/Player/playerBullet.gd<>uid://wx8npg65v366::::res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserBlue04.png<>uid://bolg6qe5f3q41::::res://Assets/Sprites/kenney_space-shooter-redux/PNG/Lasers/laserRed04.png
-::res://Scenes/Screens/::1741220019
+::res://Scenes/Screens/::1741568689
+Credits.tscn::PackedScene::629749843662092164::1741315312::0::1::::<><><>0<>0<><>::uid://dcjw8qxfesnnu::::res://Scripts/Screens/how_to_play.gd<>uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF<>uid://bxu3yc4pgxgtn::::res://Assets/Fonts/Orbitron-Regular.ttf
 HowToPlay.tscn::PackedScene/PackedScene::421757604658889668::1741220019::0::1::::<><><>0<>0<><>::uid://dcjw8qxfesnnu::::res://Scripts/Screens/how_to_play.gd<>uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF
-MainMenu.tscn::PackedScene/PackedScene::7384050046662141996::1741220019::0::1::::<><><>0<>0<><>::uid://bu1r28itw4hvb::::res://Scripts/Screens/main_menu.gd<>uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF<>uid://8y4mwrqgyn1v::::res://Assets/Sprites/Title.jpg
+MainMenu.tscn::PackedScene::7384050046662141996::1741568689::0::1::::<><><>0<>0<><>::uid://bu1r28itw4hvb::::res://Scripts/Screens/main_menu.gd<>uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF<>uid://8y4mwrqgyn1v::::res://Assets/Sprites/Title.jpg
 Options.tscn::PackedScene/PackedScene::4974058852499606189::1741220019::0::1::::<><><>0<>0<><>::uid://d30wpepghaufv::::res://Scripts/Screens/options.gd<>uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF
 Results.tscn::PackedScene/PackedScene::2684699933212424713::1741220019::0::1::::<><><>0<>0<><>::uid://fsewqcbm2eoe::::res://Scripts/Screens/results.gd<>uid://dk6ts2l4bajko::::res://Assets/Fonts/TERMINAT.TTF
 ::res://Scripts/::1741200659
@@ -973,9 +974,9 @@ manager.gd::GDScript/GDScript::6683369274000231211::1738888097::0::1::::<>Node<>
 pause_menu.gd::GDScript/GDScript::2722934706024551117::1734307300::0::1::::<>Control<><>0<>0<><>::
 settingsManager.gd::GDScript/GDScript::8913785141660963508::1734045903::0::1::::<>Node<><>0<>0<><>::
 ::res://Scripts/Enemy/::1738349844
-::res://Scripts/Enemy/Bosses/::1741200659
+::res://Scripts/Enemy/Bosses/::1741568686
 athalaiah(b1).gd::GDScript/GDScript::524425453430519916::1739306246::0::1::::<>CharacterBody2D<><>0<>0<><>::
-tsubasahr(b2).gd::GDScript/GDScript::2255130167280382457::1740175471::0::1::::<>CharacterBody2D<><>0<>0<><>::
+tsubasahr(b2).gd::GDScript::2255130167280382457::1741568686::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ::res://Scripts/Enemy/Bullets/::1741200659
 blueEnemyBullet.gd::GDScript/GDScript::4194715339114340716::1728051503::0::1::::<>Area2D<><>0<>0<><>::
 redEnemyBullet.gd::GDScript/GDScript::8107827237959315335::1728051595::0::1::::<>Area2D<><>0<>0<><>::
@@ -1003,18 +1004,18 @@ level_1.gd::GDScript/GDScript::1374073564118393254::1738880596::0::1::::<>Node<>
 ::res://Scripts/Player/::1741200659
 player.gd::GDScript/GDScript::5176221506428228207::1738876198::0::1::::<>CharacterBody2D<><>0<>0<><>::
 playerBullet.gd::GDScript/GDScript::8923058094094964419::1740175329::0::1::::<>Area2D<><>0<>0<><>::
-::res://Scripts/Screens/::1741200659
+::res://Scripts/Screens/::1741315389
 how_to_play.gd::GDScript/GDScript::7319614719318978994::1734826103::0::1::::<>Control<><>0<>0<><>::
-main_menu.gd::GDScript/GDScript::3844953529894576143::1726621231::0::1::::<>Control<><>0<>0<><>::
+main_menu.gd::GDScript::3844953529894576143::1741315389::0::1::::<>Control<><>0<>0<><>::
 options.gd::GDScript/GDScript::9177521911092596991::1734826103::0::1::::<>Control<><>0<>0<><>::
 results.gd::GDScript/GDScript::388386016725960360::1734309214::0::1::::<>Control<><>0<>0<><>::
-::res://Scripts/Visuals/::1741314531
+::res://Scripts/Visuals/::1741566262
 background.gd::GDScript/GDScript::6501918356736427531::1727038875::0::1::::<>Node2D<><>0<>0<><>::
 camera.gd::GDScript/GDScript::6511610848880656986::1727279672::0::1::::<>Camera2D<><>0<>0<><>::
-explosion.gd::GDScript::9050536561620816693::1741314531::0::1::::<>CPUParticles2D<><>0<>0<><>::
+explosion.gd::GDScript::9050536561620816693::1741566262::0::1::::<>CPUParticles2D<><>0<>0<><>::
 level_hud.gd::GDScript/GDScript::7918164051926383156::1726449049::0::1::::<>Control<><>0<>0<><>::
-::res://Shaders/::1741314777
-BlueEnemyC.gdshader::Shader::2113851094747014909::1741314777::0::1::::<><><>0<>0<><>::
-brightness.gdshader::Shader::8777122421811979006::1741314777::0::1::::<><><>0<>0<><>::
-Defeat.gdshader::Shader::3860106264432387123::1741314777::0::1::::<><><>0<>0<><>::
-Tsubasahr(B2F3).gdshader::Shader::6438148555052667975::1741314777::0::1::::<><><>0<>0<><>::
+::res://Shaders/::1741834937
+BlueEnemyC.gdshader::Shader::2113851094747014909::1741834937::0::1::::<><><>0<>0<><>::
+brightness.gdshader::Shader::8777122421811979006::1741834937::0::1::::<><><>0<>0<><>::
+Defeat.gdshader::Shader::3860106264432387123::1741834937::0::1::::<><><>0<>0<><>::
+Tsubasahr(B2F3).gdshader::Shader::6438148555052667975::1741834937::0::1::::<><><>0<>0<><>::
